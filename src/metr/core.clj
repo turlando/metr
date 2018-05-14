@@ -12,5 +12,5 @@
   (db/insert-stops! state/db (gtfs/get-stops))
   (db/insert-routes! state/db (gtfs/get-routes))
   (db/insert-trips! state/db (gtfs/get-trips))
-  (db/insert-timetable! state/db (gtfs/get-timetable))
+  (db/insert-timetables! state/db (gtfs/get-timetables))
   nil)

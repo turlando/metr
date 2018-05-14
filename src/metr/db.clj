@@ -22,8 +22,8 @@
 (defn insert-trips! [db trips]
   (jdbc/insert-multi! db "trip" trips))
 
-(defn insert-timetable! [db timetable]
-  (jdbc/insert-multi! db "timetable" timetable))
+(defn insert-timetables! [db timetables]
+  (jdbc/insert-multi! db "timetable" timetables))
 
 (defn query-nearby-stops [db latitude longitude limit]
   (jdbc/query

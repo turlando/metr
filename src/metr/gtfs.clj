@@ -59,8 +59,9 @@
       (dissoc :stop_headsign)
       (dissoc :drop_off_type)
       (dissoc :timepoint)
-      (rename-keys {:arrival_time :time})))
+      (rename-keys {:arrival_time  :time
+                    :stop_sequence :sequence})))
 
-(defn get-timetable []
+(defn get-timetables []
   (->> (get-csv "gtfs/stoptimes.csv")
        (map clean-timetable)))
