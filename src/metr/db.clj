@@ -30,3 +30,9 @@
    db
    [(utils/slurp-resource "sql/query-nearby-stops.sql")
     latitude longitude limit]))
+
+(defn query-routes-by-stop-id [db stop-id]
+  (jdbc/query
+   db
+   [(utils/slurp-resource "sql/query-routes-by-stop.sql")
+    stop-id]))
