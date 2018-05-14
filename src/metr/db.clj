@@ -28,5 +28,5 @@
 (defn query-nearby-stops [db latitude longitude limit]
   (jdbc/query
    db
-   [(utils/slurp-resource "sql/query-near-stops.sql")
+   [(utils/slurp-resource "sql/query-nearby-stops.sql")
     latitude longitude limit]))
