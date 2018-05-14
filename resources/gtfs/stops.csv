@@ -1,0 +1,1485 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon
+1,100,Cavallotti,,38.1868,15.5597
+2,101,"Via I Settembre, Palazzo INA",,38.1888,15.5577
+3,102,"Via I Settembre, Arcivescovado",,38.1905,15.5561
+4,103,"Via Cesare Battisti, Universita",,38.1888,15.5539
+5,104,"Via C. Battisti, Largo Seggiola",,38.1862,15.5519
+6,105,"Via C. Battisti, S. Antonio",,38.1845,15.5505
+7,106,"Via C. Battisti, quartiere Avignone",,38.1828,15.5492
+8,107,Mercato Zaera,,38.1814,15.5482
+9,108,"Via Catania, Colle Reale",,38.1793,15.5472
+10,109,"Via Catania, Scuola Pirandello",,38.177,15.546
+11,110,Gran Camposanto,,38.1745,15.5445
+12,111,"Via Catania, S. Cosimo",,38.1727,15.5435
+13,112,Provinciale,,38.1711,15.5425
+14,113,"Provinciale, Palazzo Palano",,38.1694,15.5415
+15,114,Carcere di Gazzi,,38.1678,15.5406
+16,115,Stadio Celeste,,38.1643,15.5393
+17,116,"Via Bonino, Gazzetta del Sud",,38.1643,15.5404
+18,117,Via Bonino,,38.1662,15.5422
+19,118,"Via La Farina, ATM",,38.1689,15.5445
+20,119,"Via La Farina, S. Pietro e Paolo",,38.1721,15.5475
+21,120,"Via La Farina, inc. via Roma",,38.1747,15.5499
+22,121,"Via La Farina, inc. via Salandra",,38.1765,15.5515
+23,122,"Via La Farina, inc. via Trento",,38.1789,15.5537
+24,123,"Via La Farina, inc. via N. Bixio",,38.1816,15.5561
+25,124,"Via La Farina, inc. via XXVII Luglio",,38.1839,15.5582
+26,125,P.zza della Republica,,38.1862,15.5603
+27,126,"Villa Dante, S. Cosimo",,38.1728,15.5454
+28,127,"Villa Dante, inc. via Roosevelt",,38.1742,15.5469
+29,128,"Piazza Dante, Capolinea",,38.1754,15.5455
+30,1129,"Via T. Cannizzaro, Tribunale",,38.189,15.5524
+31,130,"Via T. Cannizzaro, 166",,38.1897,15.5506
+32,131,"Via T. Cannizzaro, 231",,38.1901,15.5492
+33,132,"Via T. Cannizzaro, 252",,38.1909,15.5476
+34,133,"Viale P. Umberto, Ortobotanico",,38.1921,15.5467
+35,134,"Viale P. Umberto, com. Le Terrazze",,38.1939,15.5465
+36,135,"Viale P. Umberto, 38",,38.195,15.5467
+37,136,"Viale P. Umberto,clinica S. Camillo",,38.1937,15.548
+38,137,"Viale P. Umberto, Cristo Re",,38.1947,15.5494
+39,138,"Viale P. Umberto, Sacrario Cristo Re",,38.1958,15.551
+40,139,"Viale P. Umberto, via Grattoni",,38.1975,15.5496
+41,140,"Viale P. Umberto, 137",,38.1981,15.5477
+42,141,"Viale Boccetta, Archimede",,38.1985,15.5474
+43,142,"Viale Boccetta, 15",,38.1983,15.5489
+44,143,"Viale Boccetta, Buon Pastore",,38.1981,15.5517
+45,144,"Viale Boccetta, Palacultura",,38.198,15.5531
+46,145,"Viale Boccetta, via Romagnosi",,38.1975,15.5553
+47,146,"Via Garibaldi, is. 371",,38.1965,15.5571
+48,147,"Via Garibaldi, Piazza Unione Europea",,38.1935,15.5568
+49,148,"Via Cesare Battisti, p.zza Lepanto",,38.1915,15.5563
+50,149,"Strada Comunale Scoppo, 28",,38.1997,15.5432
+51,150,"Strada Comunale Scoppo, 28 - Fer. 2",,38.2004,15.5425
+52,151,Contrada Scoppo delle Acque,,38.2016,15.5416
+53,152,"Via Antonio Arrosto, Giadinetto",,38.1661,15.5391
+54,153,"V.le Gazzi, Entrata Ovest Policlinico",,38.1665,15.5371
+56,155,Via Rosso da Messina,,38.1672,15.535
+57,156,"Via L. Pirandello, fer. 1",,38.1677,15.5337
+58,157,"Via L. Pirandello, fer. 2",,38.1689,15.532
+59,158,"Via A. di Anfuso, fer. 1",,38.1696,15.5307
+60,159,"Via A. di Anfuso, fer. 2",,38.1704,15.5287
+61,160,"Via A. di Anfuso, fer. 3",,38.1711,15.5271
+62,161,"Rione Aldisio, via A. di Anfuso",,38.1717,15.5254
+63,162,"Rione Aldisio, via G. di Giovanni",,38.1722,15.5271
+1510,1510,"Corso Cavour, Ist. Maurolico",,38.192,15.5531
+65,164,"Torrente Bordonaro, Case Gialle",,38.1734,15.5235
+1511,1511,"Corso Cavour, S. Antonio Abate",,38.195,15.555
+67,166,"Torrente Bordonaro, ponte Autostrada",,38.1752,15.5193
+1513,1513,"Corso Cavour, 205",,38.1967,15.5559
+69,168,"Torrente Bordonaro, inc. via Comunale",,38.1753,15.5173
+71,170,"Torrente Bordonaro, p.za Semiramide",,38.1747,15.5148
+73,172,"Torrente Bordonaro, Capolinea",,38.1751,15.5139
+74,173,"Case GESCAL, via 30 Q",,38.1728,15.5263
+75,174,"Case GESCAL,  Strada 30 A",,38.1724,15.5238
+76,175,"Case GESCAL, St. 174 A inc. via C. Allegra",,38.173,15.522
+77,176,"Case GESCAL, St. 174 A",,38.1726,15.5207
+78,177,"Case GESCAL, via Comunale inc. via C. Gescal",,38.1719,15.5198
+79,178,"Case GESCAL, via Comunale fer. 2",,38.1709,15.5178
+80,179,"Case GESCAL, via Comunale fer. 3",,38.1705,15.5187
+81,180,"Case GESCAL, inc. via C.da Baglio",,38.1693,15.5204
+82,181,"S. Filippo, Statua S. Giovannelo",,38.1693,15.5191
+83,182,"S. Filippo, bivio Piano Stella",,38.1663,15.5159
+84,183,"S. Filippo, Piano Stella fer. 1",,38.1664,15.518
+85,184,"S. Filippo, Piano Stella fer. 2",,38.1665,15.5188
+86,185,"S. Filippo, Piano Stella fer. 3",,38.1669,15.5186
+87,186,"S. Filippo Sup., fer. 1 Cimitero",,38.1659,15.5139
+88,187,"S. Filippo Sup., fer. 2 Cimitero",,38.1659,15.5127
+89,188,"S. Filippo Sup., ",,38.1663,15.5053
+90,189,"S. Filippo Sup., ",,38.1658,15.5039
+91,190,"S. Filippo Sup., Capolinea",,38.1661,15.5012
+93,192,"Viale Gazzi, inc. via del Ciclo",,38.168,15.5342
+94,193,"Fondo Fucile, Largo Diogene n., 5",,38.171,15.5331
+95,194,"Fondo Fucile, inc. via 38 B",,38.1724,15.5333
+96,195,"Fondo Fucile, bivio Sc. A. Luciani",,38.1722,15.5316
+98,197,Via Socrate,,38.1711,15.5305
+99,198,"Via Socrate, bivio Sc. Minutoli",,38.1723,15.5286
+100,199,"Bordonaro, Case Gialle Chiesa",,38.1737,15.524
+101,200,"Bordonaro, Ponte Autostrada",,38.1758,15.5224
+102,201,"Bordonaro, via Comunale n. 58",,38.1765,15.5216
+103,202,"Bordonaro, via Comunale n. 84",,38.1769,15.5196
+104,203,"Bordonaro, via Comunale inc. Oglio Vecchio",,38.1759,15.5172
+105,204,"Bordonaro, Via Ciancciolo n. 90",,38.1764,15.5135
+106,205,"Bordonaro, v.le Ciangiolo n. 120",,38.177,15.5124
+107,206,"Bordonaro, v.le Ciangiolo n. 178",,38.1778,15.5108
+108,207,"Bordonaro, v.le Ciangiolo n. 73",,38.1798,15.5103
+109,208,"Bordonaro, Capolinea",,38.1815,15.5076
+110,209,"Via Sardegna, 11",,38.1787,15.5464
+111,210,"Via del Santo, 56",,38.1782,15.5451
+112,211,Via Palmara,,38.1781,15.5451
+113,212,"Via del Santo, 152",,38.1783,15.5419
+114,213,Vico Baglio,,38.1779,15.5435
+115,214,"Via del Santo, 244",,38.1777,15.5389
+116,215,Vico Torrente Baglio,,38.1769,15.5393
+117,216,"Via del Santo, 257",,38.1765,15.5365
+118,217,"Via del Santo, 20",,38.1759,15.5351
+119,218,"Via del Santo, 57",,38.1753,15.5334
+120,219,Viacolo S. Cosimo,,38.1749,15.5335
+121,220,"Via del Santo, 105",,38.1738,15.5307
+122,221,"Via del Santo, 222",,38.1733,15.5291
+123,222,"Via del Santo, 288",,38.1731,15.5272
+124,223,"Via del Santo, 312",,38.1736,15.5269
+125,224,"Via del Santo, 384",,38.1753,15.525
+126,225,"Bordonaro, Case Gialle n. 20",,38.175,15.5243
+128,227,"Via del Santo, 406",,38.1757,15.5239
+129,228,"Via del Santo, 442",,38.1761,15.5227
+1087,1301,"Via Taormina, Policlinico",,38.1621,15.5384
+1088,1312,"Contesse, SS114 Km 4,800",,38.1481,15.5279
+133,232,"Via Cumia, 23",,38.1767,15.5125
+134,233,"Via Cumia Km 1,000",,38.1732,15.5081
+135,234,"Via Cumia Km 1,500",,38.1739,15.504
+136,235,"Via Cumia, p.zza Cumia Inferiore",,38.1749,15.5031
+137,236,"Via Cumia Km 1,900",,38.1741,15.5026
+138,237,"Via Cumia Km 2,600",,38.172,15.5023
+139,238,"Via Cumia Km 3,000",,38.1714,15.5016
+140,239,"Via Cumia Km 3,200",,38.1725,15.5016
+141,240,"Via Cumia Km 3,350",,38.1727,15.5
+142,241,"Via Cumia Superiore n. 8, Capolinea",,38.1733,15.4983
+143,242,"Via Cesare Battisti, 375",,38.1814,15.5483
+144,243,"Via Cesare Battisti, 309",,38.1826,15.5492
+145,244,"Via Cesare Battisti, 267",,38.1847,15.5507
+146,245,"Via Cesare Battisti, 215",,38.1873,15.5528
+147,246,"Via T. Cannizzaro, via Centonze",,38.1876,15.5547
+148,247,"Via T. Cannizzaro, via Ugo Bassi",,38.1854,15.558
+149,248,"Via Catania, 70",,38.1782,15.5466
+150,249,"Viale Europa, 110",,38.1813,15.5468
+151,250,"Viale Europa, Tribunale dei Minori",,38.1812,15.5466
+152,251,"Viale Europa, Caserma Zuccarello",,38.1823,15.5449
+153,252,"Viale Europa, Pronto Socc. Piemonte",,38.1826,15.544
+154,253,"Viale Europa, Caserma Carabinieri",,38.1835,15.5429
+155,254,"Viale Europa, 205",,38.1833,15.5427
+156,255,"Via Comunale Camaro, 49",,38.1863,15.5389
+157,256,"Via Comunale Camaro, 89",,38.1869,15.5367
+158,257,"Via Comunale Camaro, 111",,38.1872,15.5354
+159,258,"Via Comunale Camaro, 139",,38.1876,15.5323
+160,259,"Via Comunale Camaro, Via Polveriera",,38.188,15.53
+161,260,"Via Comunale Camaro, Sc. Elementare",,38.1886,15.5271
+162,261,"Camaro Superiore, Piazza F. Fazio",,38.1896,15.5244
+163,262,"Camaro Superiore, 13",,38.1896,15.5216
+164,263,"Camaro Superiore, residence Archi",,38.1906,15.5201
+165,264,"Camaro Superiore, c.da Luce",,38.1912,15.5183
+166,265,"Camaro Superiore, c.da Luce n. 10",,38.1909,15.5162
+167,266,"Camaro Sup., Mito Capolinea",,38.1884,15.5177
+168,267,"Via Gerobino Pilli, 13",,38.1841,15.5411
+169,268,"Via Gerobino Pilli, 45",,38.1847,15.5399
+170,269,"Via Gerobino Pilli, 73",,38.1856,15.5385
+171,270,"Via Gerobino Pilli, via G. Empetocle",,38.1862,15.5373
+172,271,"Via Gerobino Pilli, via P. La Badessa",,38.1863,15.5356
+173,272,"Via Tommaso Fazello, 11",,38.1855,15.5346
+174,273,"Salita Monte Santo, comp. Parco Serro",,38.1843,15.5344
+175,274,"Salita Monte Santo, comp. Alma Mater",,38.1833,15.5354
+176,275,"Salita Monte Santo, Cont. Petrazza n. 6",,38.1833,15.5365
+177,276,"Salita Monte Santo, Villa Contino",,38.1815,15.5361
+178,277,"Comunale Petrazza, Lotto F pal. 2",,38.181,15.539
+179,278,"Messina Due, Capolinea",,38.1814,15.5403
+180,279,"Via Comunale Bisconte, ang. v.le Europa",,38.1863,15.5391
+181,280,"Via Comunale Bisconte, Dir. Artiglieria",,38.1897,15.5374
+182,281,"Via Comunale Bisconte, via Caltanissetta",,38.1922,15.5333
+183,282,"Via Comunale Bisconte, ponte ferrovia",,38.1931,15.5323
+184,283,"Via Comunale Catarratti, via Militare",,38.1936,15.5317
+185,284,"Via Comunale Catarratti, 12",,38.1939,15.528
+186,285,"Via Comunale Catarratti, 7",,38.1941,15.5261
+187,286,"Via Comunale Catarratti, 46",,38.1954,15.5246
+188,287,"Catarratti, Chiesa Capolinea",,38.1962,15.5239
+189,288,"Viale Italia, 19",,38.1849,15.5422
+190,289,"Viale Italia, 53",,38.1858,15.5441
+191,290,"Viale Italia, via Iceta",,38.1863,15.5463
+192,291,"Viale Italia, 129",,38.1875,15.5484
+193,292,"Viale Italia, Punto Panoramico Noviziato",,38.1895,15.546
+195,294,"Viale Italia, 113",,38.1907,15.5454
+196,295,"Via P. Castelli, Orto Botanico",,38.192,15.5456
+197,296,"Via P. Castelli, via Turiano",,38.1929,15.5438
+198,297,"Via P. Castelli, 134",,38.1937,15.5422
+199,298,"Via P. Castelli, CittÃ  del Ragazzo",,38.1947,15.5407
+200,299,"Via P. Castelli, S. Maria delle Grazie",,38.1959,15.5393
+201,300,"Bonino, ZIR",,38.1635,15.5399
+202,301,"Via Taormina, Policlinico",,38.1626,15.5387
+203,302,"Via Taormina, Caserma Ainis",,38.1611,15.5373
+204,303,Minissale,,38.1596,15.5352
+205,304,"SS114, Vico Cottone ",,38.1586,15.5344
+206,1305,"Contesse, SS114 Km 3,500",,38.1583,15.5344
+207,306,"Contesse, SS114 Km 3,800",,38.1551,15.5319
+208,1307,"Contesse, SS114 Km 4,000",,38.1545,15.5316
+209,308,"Contesse, McDonald's Messina Drive",,38.1532,15.5309
+210,1309,"Contesse, SS114 Km 4,200",,38.1531,15.5308
+211,310,"Contesse, SS114 Km 4,400",,38.1515,15.5299
+212,1311,"Contesse, SS114 Km 4,450",,38.1513,15.5299
+213,312,"Contesse, SS114 Km 4,800",,38.1484,15.528
+214,313,"Pistunina, Isola Ecologica",,38.1464,15.5265
+215,314,"Pistunina, Poste",,38.1431,15.5249
+216,1315,"Bivio Larderia, SS114 Km 5,000",,38.1411,15.5243
+217,316,"Tremestieri, SS114 Km 5,500",,38.1408,15.524
+218,317,"Tremestieri, SS114 Km 6,000",,38.1385,15.5231
+219,318,"Tremestieri, Centro Commerciale",,38.1367,15.5226
+220,319,"Tremestieri, SS114 Km 6,300",,38.1359,15.5223
+221,320,Porto Tremestieri,,38.1311,15.5216
+222,321,"Tremestieri, SS114 Km 7,200",,38.1276,15.5198
+223,322,"Tremestieri, SS114 Km 7,600",,38.1257,15.5188
+224,323,"Mil Marina, SS114 Km 7,900",,38.1236,15.5168
+225,324,"Mili Marina, SS114 Km 8,300",,38.1211,15.5147
+226,325,Bivio Mili Marina,,38.1195,15.5139
+227,326,"Mili Marina, SS114 Km 8,900",,38.1186,15.5131
+228,327,"Mili Marina, Depuratore",,38.1157,15.5112
+229,328,"Mili Moleti, SS114 Km 9,550",,38.1105,15.5096
+230,329,"Mili Moleti, Bivio Galati S. Anna",,38.1085,15.5083
+231,330,"Mili Moleti, Stazione FFSS Galati",,38.1053,15.5063
+232,331,"S. Margherita, SS114 Km 10,900",,38.0977,15.5049
+233,332,"S. Margherita, SS114 Km 11,200",,38.095,15.5038
+234,333,"S. Margherita, SS114 Km 12,000",,38.0888,15.5013
+235,334,"S. Margherita, SS114 Km 12,400",,38.0859,15.4988
+236,335,"S. Margherita, SS114 Km 12,800",,38.084,15.4972
+237,336,"S. Margherita, SS114 Km 13,000",,38.081,15.4953
+238,337,"Briga Marina, SS114 Km 13,300",,38.0789,15.4946
+239,338,"Briga Marina, SS114 Km 13,550",,38.0765,15.4937
+240,339,"Briga Marina, SS114 Km 13,900",,38.0745,15.4927
+241,340,"Briga Marina, SS114 Km 14,100",,38.0725,15.4911
+242,341,"Giampilieri Mar., SS114 Km 14,300",,38.0694,15.4863
+243,342,"Giampilieri Mar., SS114 Km 14,800",,38.0684,15.485
+244,343,"Giampilieri Mar., SS114 Km 15,000",,38.0671,15.4832
+245,344,"Giampilieri, Bivo Giampilieri Sup.",,38.0653,15.4811
+246,345,"Giampilieri, Staz. FFSS",,38.064,15.4794
+247,346,"Giampilieri,  SP33 Km 0,500",,38.0614,15.4782
+248,347,"Giampilieri,  SP33 Km 0,700",,38.0622,15.4762
+249,348,"Giampilieri,  SP33 Km 0,900",,38.0632,15.4746
+250,349,"Giampilieri,  SP33 Km 1,050",,38.0675,15.4715
+251,350,"Giampilieri Sup., Capolinea",,38.0684,15.4703
+252,351,"Giampilieri Sup., SP33 Km 1,800",,38.0697,15.4681
+253,352,"Giampilieri Sup., SP33 Km 2,500",,38.0722,15.4612
+254,353,"Giampilieri Sup., SP33 Km 2,900",,38.0719,15.4644
+255,354,"Giampilieri Sup., SP33 Km 3,100",,38.0718,15.4665
+256,355,"Giampilieri Sup., Cimitero",,38.0745,15.4603
+257,356,Bivio Molino,,38.0756,15.4588
+258,357,Molino,,38.0752,15.455
+259,358,"Molino, SP33 Km 4,600",,38.0746,15.4535
+260,359,"Altolia,SP33 Km 5,000",,38.076,15.4487
+261,360,"Altolia, SP33 Km 5,350",,38.0769,15.4462
+262,361,"Altolia, Capolinea",,38.0756,15.446
+263,362,"Strada Provinciale 34, fer. 1",,38.0721,15.4841
+264,363,"Strada Provinciale 34, fer. 2",,38.0747,15.4825
+265,364,"Strada Provinciale 34, fer. 3",,38.0766,15.4814
+267,366,Briga Superiore,,38.0778,15.4738
+268,367,Briga Superiore - Capolinea,,38.0785,15.4723
+269,368,C.da Runci,,38.0836,15.496
+270,369,"C.da Runci, Scuola Agraria Calonero",,38.0813,15.4947
+271,370,"Ponte Schiavo,  SP35 Km 0,200",,38.0809,15.4928
+272,371,"Ponte Schiavo,  SP35 Km 0,550",,38.0819,15.4884
+273,372,"Ponte Schiavo,  SP35 Km 0,650",,38.082,15.4873
+274,373,"Ponte Schiavo,  SP35 Km 1,300",,38.0799,15.4913
+275,374,"Ponte Schiavo,  SP35 Km 2,050",,38.0764,15.4887
+276,375,"Ist. Cuppari - SP35 Km 2,630",,38.078,15.4881
+277,376,"Ponte Schiavo,  SP35 Km 3,000",,38.0796,15.4852
+278,377,"Ponte Schiavo,  SP35 Km 3,200",,38.0795,15.4826
+279,378,"Ponte Schiavo,  SP35 Km 4,800",,38.0814,15.4758
+280,379,"Ponte Schiavo,  SP35 Km 5,100",,38.083,15.4742
+281,380,"Ponte Schiavo,  SP35 Km 5,500",,38.0859,15.4684
+282,381,"Ponte Schiavo,  SP35 Km 6,000",,38.0849,15.4658
+283,382,"Ponte Schiavo,  SP35 Km 6,200",,38.0845,15.4638
+284,383,"Ponte Schiavo,  SP35 Km 6,450",,38.0849,15.4621
+285,384,"Ponte Schiavo,  SP35 Km 6,750",,38.0867,15.4609
+286,385,"Ponte Schiavo,  SP35 Km 6,900",,38.0867,15.4599
+287,386,"Pezzolo, Capolinea",,38.0849,15.4597
+1077,478,"Via fratelli Di Mari, fer. 1",,38.2041,15.5557
+289,388,"S. Margherita, via Nazionale",,38.0951,15.503
+290,389,"S. Margherita, SP36 Km 0, 140",,38.0962,15.5017
+291,390,"S. Margherita, SP36 Km 0, 450",,38.0978,15.4989
+292,391,"S. Margherita, SP36 Km 0, 630",,38.0988,15.4972
+293,392,"S. Margherita, SP36 Km 0,800",,38.0994,15.4956
+294,393,"S. Stefano Medio, SP36 Km 0,900",,38.1,15.4949
+295,394,"S. Stefano Medio, SP36 Km 1,000",,38.1011,15.4933
+296,395,"S. Stefano Medio, SP36 Km 1,300",,38.1017,15.491
+297,396,"S. Stefano Medio, SP36 Km 1,550",,38.1013,15.4882
+298,397,"S. Stefano Medio, SP36 Km 1,800",,38.1021,15.486
+299,398,"S. Stefano Medio, SP36 Km 2,000",,38.102,15.4838
+300,399,"S. Stefano Briga, SP36 Km 2,150",,38.1011,15.4828
+301,400,"S. Stefano Briga, Capolinea",,38.1001,15.4811
+302,401,"Galati S. Anna, Via Comunale",,38.1088,15.5066
+303,402,"Galati S. Anna, Via Comunale n. 18",,38.1093,15.5044
+304,403,"Galati S. Anna, Via Comunale",,38.1102,15.503
+305,404,"Galati S. Anna, Via Comunale",,38.1111,15.4996
+306,405,"Galati S. Anna, Via Comunale n 82",,38.1124,15.4981
+307,406,"Galati S. Lucia, Capolinea",,38.112,15.4963
+308,407,"Mili S. Marco, SP38 Km 0,150",,38.1194,15.5117
+309,408,"Mili S. Marco, SP38 Km 0,390",,38.1199,15.5093
+310,409,"Mili S. Marco, SP38 Km 0,600",,38.1211,15.5075
+311,410,"Mili S. Marco, SP38 Km 0,930",,38.1213,15.5049
+312,411,"Mili S. Marco, SP38 Km 1,100",,38.1222,15.5041
+313,412,"Mili S. Marco, SP38 Km 1,200",,38.1226,15.5029
+314,413,"Mili S. Marco, SP38 Km 1,500",,38.1219,15.5015
+315,414,"Mili S. Marco, SP38 Km 2,200",,38.1237,15.4949
+316,415,"Mili S. Marco, SP38 Km 2,400",,38.1238,15.4937
+317,416,"Mili S. Pietro, SP38 Km 2,600",,38.1245,15.4912
+318,417,"Mili S. Pietro, SP38 Km 2,700",,38.1246,15.4905
+319,418,"Mili S. Pietro, SP38 Km 2,900",,38.1262,15.4892
+320,419,"Mili S. Pietro, SP38 Km 3,000",,38.1265,15.4884
+321,420,"Mili S. Pietro, Capolinea",,38.1267,15.4874
+322,421,"Larderia Inf., SP39 Km 0,050",,38.1396,15.5228
+323,422,"Larderia Inf., SP39 Km 0,360",,38.1399,15.5193
+324,423,"Larderia Inf., SP39 Km 0,800",,38.1415,15.5163
+325,424,"Larderia Inf., SP39 Km 1,470",,38.1412,15.5085
+326,425,"Larderia Inf., SP39 Km 1,600",,38.1411,15.5069
+327,426,"Larderia Inf., SP39 Km 1,800",,38.141,15.5051
+328,427,"Larderia Inf., SP39 Km 2,100",,38.1418,15.5034
+329,428,"Larderia Inf., SP39 Km 2,300",,38.1412,15.502
+330,429,"Larderia Inf., SP39 Km 2,500",,38.1418,15.5004
+331,430,"Larderia Inf., SP39 Km 2,700",,38.1433,15.4997
+332,431,"Larderia Sup., SP39 Km 3,000",,38.142,15.4973
+333,432,"Larderia Sup., SP39 Km 3,300",,38.1417,15.4953
+334,433,"Larderia Sup., SP39 Km 3,500",,38.1398,15.4959
+335,434,"Larderia Sup., SP39 Km 3,700",,38.1391,15.4949
+336,435,"Larderia Sup., SP39 Km 3,800",,38.1382,15.495
+337,436,"Larderia Sup., SP39 Km 4,000",,38.1371,15.494
+338,437,"Larderia Sup., SP39 Km 4,500",,38.1359,15.4915
+339,438,"Larderia Sup., SP39 Km 4,900",,38.1338,15.4906
+340,439,"Larderia Sup., SP39 Km 5,100",,38.1332,15.4897
+341,440,"Tipoldo, SP39 Km 5,700",,38.1319,15.486
+342,441,"Tipoldo, Capolinea",,38.1316,15.4849
+343,442,"Tor. Zafferia, via Comunale Km 0,150",,38.1449,15.5238
+344,443,"Tor. Zafferia, via Comunale Km 0,460",,38.1464,15.5209
+345,444,"Tor. Zafferia, via Comunale Km 0,650",,38.1473,15.519
+346,445,"Tor. Zafferia, via Comunale Km 0,840",,38.1477,15.517
+347,446,"Tor. Zafferia, via Comunale Km 0,980",,38.1479,15.5154
+348,447,"Tor. Zafferia, via Comunale Km 1,400",,38.15,15.5117
+349,448,"Zafferia, via Comunale Km 1,800",,38.1526,15.5087
+350,449,"Zafferia, Case Popolari",,38.1535,15.5096
+351,450,"Zafferia, via Comunale Km 2,000",,38.1529,15.5072
+352,451,"Zafferia, Capolinea",,38.1523,15.5064
+353,452,"St. Comunale S. Lucia Km 0,140",,38.1498,15.5273
+354,453,"St. Comunale S. Lucia Km 0,400",,38.1512,15.5252
+355,454,"St. Comunale S. Lucia Km 0,550",,38.1525,15.5251
+356,455,"St. Comunale S. Lucia Km 0,800",,38.1542,15.5242
+357,456,"St. Comunale S. Lucia, Scuola Elemen.",,38.155,15.523
+358,457,"St. Comunale S. Lucia Km 1,100",,38.1562,15.522
+359,458,"St. Comunale S. Lucia Km 0,300",,38.1503,15.5256
+360,459,"St. Militare, Case Arcobaleno inizio",,38.1551,15.5191
+361,460,"St. Militare, Case Arcobaleno n. 173",,38.155,15.5162
+362,461,"St. Militare, Case Arcobaleno fine",,38.156,15.5142
+364,463,"St. Militare, inc. St. Comunale S. Lucia",,38.1582,15.5161
+365,464,"St. Comunale S. Lucia Km 2,000",,38.1605,15.5154
+366,465,"St. Comunale S. Lucia Km 2,300",,38.1619,15.5128
+367,466,"S. Filippo inf., via Liberta",,38.1625,15.5123
+368,467,"S. Filippo inf., via Liberta n. 37",,38.1628,15.5111
+369,468,"S. Filippo inf., via Liberta n. 69",,38.1632,15.51
+370,469,"S. Filippo inf., Capolinea",,38.1636,15.509
+371,470,Chiesa S. Lucia,,38.1568,15.5202
+372,471,"Via S. Lucia, 1",,38.157,15.5187
+373,472,"Via S. Lucia, 2",,38.1581,15.5174
+374,473,"St. Militare, inc. St. Piano di Zona",,38.1553,15.5136
+375,474,"St. Militare, pal. CittÃ  Sole",,38.1533,15.5131
+376,475,"Piano di Zona, Capolinea",,38.1528,15.5151
+379,500,"Via P. Castelli, p.zza G. Versaci",,38.1963,15.5372
+380,501,"Sp. 42, via Pietra Santa",,38.1927,15.5383
+381,502,"Sp. 42, fer. 1",,38.1916,15.5389
+382,503,"Sp. 42, p.zza Gonzaga",,38.1869,15.5415
+383,504,"Via N. Casazza, 69",,38.187,15.5434
+384,505,"Via N. Casazza, via Gelone",,38.1865,15.5444
+385,506,"Via Gelone, 16",,38.1881,15.5429
+386,507,"Via Gelone, p.zza Chiesa del Rosario",,38.1887,15.5418
+387,508,"Via Montepiselli, 33",,38.1902,15.5409
+388,509,"Via Montepiselli, 23",,38.1912,15.5397
+389,510,"Corso Cavour, 28",,38.1903,15.552
+390,511,"Corso Cavour, Ist. Maurolico",,38.1918,15.5531
+391,512,"Corso Cavour, p.zza Antonello",,38.1941,15.5544
+392,513,"Corso Cavour, Teatro V. Emanuele",,38.1958,15.5555
+393,514,"Via Garibaldi, villa Mazzini",,38.198,15.5574
+394,515,"Via Garibaldi, S. Giuliano",,38.2012,15.5577
+395,516,"Via Garibaldi, via P. Salvo",,38.2041,15.558
+396,517,"Viale Giostra, Mercato S. Orsola",,38.207,15.5575
+397,518,"Viale Giostra, via G. Alibrandi",,38.2085,15.555
+398,519,"V.le Regina Elena, 51",,38.2095,15.5552
+399,520,"V.le Regina Elena, Ogliastri",,38.2091,15.5578
+400,521,"V.le Regina Elena, 38",,38.2108,15.56
+401,522,"V.le Regina Elena, 117",,38.2124,15.5596
+402,523,"V. San Licandro, S. Francesco",,38.2138,15.5577
+403,524,"V. San Licandro, 7",,38.2153,15.5559
+404,525,"V. San Licandro, p.zza XXV Aprile",,38.2164,15.5537
+405,526,"V. San Licandro, p.zza XXV Aprile",,38.2166,15.5541
+406,527,"Via L. Sciascia, 31",,38.2185,15.5533
+407,528,"Via L. Sciascia, via Olimpia",,38.2197,15.5531
+408,529,"Via Olimpia, coop. Iride 83",,38.2178,15.5551
+409,530,Via Olimpia,,38.2171,15.5577
+410,531,"Via Cappellani, via Olimpia",,38.2167,15.5587
+411,532,"Via Cappellani, coop. Grifone",,38.2175,15.5595
+412,533,Vico Anastasi,,38.2196,15.5574
+413,534,"Via Leonardi, scuola elementare",,38.221,15.5578
+414,535,"Via Leonardi, 42",,38.2221,15.557
+415,536,"Via Fiore, ist. Basile",,38.2248,15.5567
+416,537,"Via G. A. Bosurgi, 7",,38.2264,15.5553
+417,538,"Via G. A. Bosurgi, comp. Eolo",,38.2273,15.5565
+418,539,"Via G. A. Bosurgi, largo Citola",,38.2285,15.5566
+419,540,"Contrada Citola, 20",,38.2293,15.5555
+420,541,"SP44, Contrada Citola",,38.2308,15.5557
+421,542,Contrada Sorba,,38.2329,15.5548
+422,543,"SP44, rif. La Sterza",,38.2348,15.5538
+423,544,"SP44, Campoitalia coop. Aldebaran",,38.2366,15.5533
+424,545,"SP44, Campo Italia coop. Le Tuie",,38.2368,15.5538
+425,546,"Sp44, Campo Italia coop. Athena",,38.2372,15.5543
+426,547,"SP44, Campo Italia comp. Italia",,38.2387,15.5543
+427,548,"SP44, 16",,38.2374,15.5565
+428,549,"Portella Arena, Capolinea",,38.2428,15.5555
+429,550,"Via Garibaldi, torr. Trapani",,38.2049,15.558
+430,551,"Via Garibaldi, P.zza Juvarra",,38.2032,15.5579
+431,552,"Via Garibaldi, via F. Crispi",,38.2003,15.5575
+432,553,"Viale Giostra, pal.Telegrafo",,38.2065,15.559
+433,554,"V.le della Liberta, San Francesco",,38.208,15.5613
+434,555,"V.le della Liberta, Caronte",,38.2109,15.5613
+435,556,"V.le della Liberta, Ringo",,38.2135,15.5624
+436,557,"V.le della Liberta, Museo",,38.2165,15.5646
+437,558,"V.le Annunziata, Villa Luce",,38.2181,15.5648
+438,559,"V.le Annunziata, S. Elena",,38.2186,15.5629
+439,560,"V.le Annunziata, 14",,38.2189,15.5612
+440,561,"V.le Annunziata, 29",,38.2191,15.5591
+441,562,"V.le Annunziata, 44",,38.2196,15.5579
+442,563,"Via Leonardi, ist. Basile",,38.2243,15.5565
+443,564,Via Fiore,,38.2212,15.5585
+444,565,"Via Fiore, statua Padre Pio",,38.2229,15.5596
+445,566,"Via Fiore, comp. I Falchi",,38.2239,15.559
+446,567,"SP44, Stada Militare per Campo Italia 1",,38.2285,15.5554
+447,568,"SP44, Stada Militare per Campo Italia 2",,38.2281,15.5541
+448,569,"SP44, Stada Militare per Campo Italia 3",,38.227,15.5543
+449,570,"SP44, via A. GiuffrÃ¨",,38.2257,15.5535
+450,571,"V.le Annunziata, scuola E. Vittorini",,38.2238,15.5534
+451,572,"SS. Annunziata, 414",,38.2237,15.553
+452,573,"SS. Annunziata, c.da Conte",,38.2245,15.5516
+453,574,"Via Sofia Idelson, c.da Piano dei Greci",,38.2249,15.5475
+454,575,"Via Sofia Idelson, coop Sperone",,38.224,15.5498
+455,576,"Via Annunziata 101a, sc. Elementare",,38.2222,15.554
+456,577,"Via Annunziata 85, chiesa SS. Annunziata",,38.2209,15.5558
+457,578,Via Annunziata 69,,38.2199,15.5573
+1094,1320,Porto Tremestieri,,38.131,15.5217
+461,582,"V.le Regina Elena, San Licandro",,38.2138,15.5587
+462,583,"V.le Regina Elena, Clinica Cappellani",,38.2143,15.5616
+463,584,"V.le Regina Elena, 363",,38.216,15.562
+464,585,"V.le Regina Elena, S. Elena",,38.218,15.5619
+465,586,Via Gagini,,38.1988,15.5511
+466,587,"V.le Regina Margherita, Osservatorio",,38.2008,15.553
+467,588,"V.le Regina Margherita, chiesa Lourdes",,38.2026,15.552
+468,589,"V.le Regina Margherita,63",,38.204,15.5512
+469,590,"V.le Regina Margherita, ist. Ignatianum",,38.2056,15.5525
+470,591,"V.le Regina Margherita, sal. Cappuccini",,38.2054,15.5528
+471,592,"V.le Regina Margherita, 87",,38.2051,15.5545
+472,593,"V.le Regina Margherita, 87a",,38.2063,15.5531
+473,594,"V.le Regina Elena 10, chiesa S. Domenico",,38.2075,15.553
+474,595,"V.le Regina Elena, 16",,38.2081,15.5536
+475,596,"V.le Regina Elena, 61",,38.2083,15.5538
+476,597,"V.le Giostra, 10",,38.2092,15.5537
+477,598,"V.le Giostra 50, fondo Basile",,38.21,15.5517
+478,599,"V.le Giostra, via M. Scuderi",,38.2104,15.5501
+479,600,"V.le Giostra, 18",,38.211,15.5481
+480,601,"V.le Giostra, via Adamello",,38.2116,15.5466
+481,602,"Viale Giostra, 73",,38.2123,15.545
+482,603,"Viale Giostra, salita Curcuruto",,38.2131,15.5423
+483,604,"Viale Giostra, chiesa Maria di GesÃ¹",,38.2139,15.5396
+484,605,"Viale Giostra, via S. Jachiddu",,38.2146,15.5378
+485,606,"Viale Giostra, 84",,38.2165,15.5349
+486,607,"Viale Giostra, casette Ritiro",,38.2181,15.533
+487,608,"Viale Giostra, svincolo Autostrada",,38.221,15.53
+488,609,"Viale Giostra, chiesa di S. Michele",,38.2218,15.5278
+489,610,SP50 Torrente S. Michele,,38.2235,15.527
+490,611,"SP50 S. Michele, Capolinea",,38.2265,15.5265
+491,612,"V.le Regina Margherita, Villa Salus",,38.1995,15.5494
+492,613,"Salita Ogliastri, 8",,38.2094,15.5542
+493,614,"Salita Ogliastri, 51",,38.2111,15.5556
+494,615,"Salita Ogliastri, bivio Forte Ogliastri",,38.2111,15.5542
+495,616,"Via Seminario Estivo, Casa di Cura Gina",,38.2131,15.5518
+496,617,"Via Seminario Estivo, v.le Giostra",,38.2109,15.5494
+497,618,"Casa Nostra, coop. Casa Nostra",,38.2143,15.5397
+498,619,"Casa Nostra, Capolinea",,38.2164,15.5418
+499,620,"Via S. Jachiddu, 19",,38.2153,15.5377
+500,621,"Via S. Jachiddu, 33",,38.217,15.5358
+501,622,"Via S. Jachiddu, res. S. Jachiddu",,38.2176,15.5363
+502,623,"Via S. Jachiddu, 90",,38.2174,15.5382
+503,624,"Via S. Jachiddu, coop. Azalea 73",,38.2184,15.5392
+504,625,"Via S. Jachiddu, 61",,38.218,15.5414
+505,626,"Via S. Jachiddu, Oasi S. Francesco",,38.2195,15.5441
+506,627,"Salita Tremonti, 40",,38.2188,15.5458
+507,628,"Salita Tremonti, 39",,38.2169,15.5481
+508,629,"Salita Tremonti, coop. Citta Giardino",,38.2159,15.5496
+509,630,"Salita Tremonti, 18",,38.215,15.5517
+510,631,"Salita Tremonti, 1",,38.2141,15.5538
+511,632,"Viale Giostra, villa De Gregorio",,38.2104,15.5496
+512,633,"Viale Giostra, via S. Eduardo",,38.2101,15.5508
+513,634,"Viale Giostra, via Principe Tommaso",,38.2096,15.5523
+515,636,"Via Palermo, 690",,38.2131,15.5375
+516,637,"Via Palermo, 587",,38.2134,15.5355
+517,638,"Via Palermo, 754",,38.2131,15.532
+518,639,"Via Palermo, 731",,38.2123,15.5283
+519,640,"Via Palermo, 846",,38.2112,15.5265
+520,641,"SS113, 1",,38.2095,15.526
+521,642,"SS113, 906",,38.2076,15.5246
+522,643,"SS113, bivio Noviziato Casazza",,38.2033,15.5228
+523,644,"SS113, Centro Neurolesi",,38.2066,15.52
+524,645,"SS113, Centro Neurolesi Ospes",,38.2077,15.5176
+525,646,"SS113, Quattro Strade",,38.2157,15.506
+526,647,"SS113, Locanda 1",,38.2295,15.4978
+527,648,"SS113, Locanda 2",,38.2301,15.4959
+528,649,"SS113, Locanda 3",,38.2306,15.4934
+529,650,"SS113, Locanda 4",,38.2305,15.4893
+530,651,"SS113, Locanda 5",,38.2307,15.4847
+531,652,"SS113, Locanda 6",,38.2306,15.4812
+532,653,"Vill. Gesso, Cimitero",,38.2321,15.4771
+533,654,"Vill. Gesso, c.da Castello",,38.2327,15.475
+534,655,"Vill. Gesso, p.zza Castello",,38.2336,15.4717
+535,656,"Vill. Gesso, Belvedere",,38.2341,15.4693
+536,657,"Vill. Gesso, 37",,38.2351,15.4686
+537,658,"Gesso, p.zza S. Antonio Abate, Capolinea",,38.2364,15.468
+538,659,"SP50, localitÃ  Reginella",,38.228,15.5242
+539,660,"SP50,  Reginella 2",,38.2281,15.5232
+540,661,"SP50, Monte Bandiera",,38.2269,15.5204
+541,662,"Portella Castanea, bivio Salice",,38.2365,15.5254
+542,663,"SP51, fer. 1 -  statua Padre Pio",,38.2377,15.5154
+543,664,"SP51, fer. 2",,38.2378,15.5131
+544,665,"SP51, fer. 3 - chiesa",,38.2382,15.511
+545,666,"SP51, fer. 4",,38.2411,15.5111
+546,667,"SP51, fer. 5",,38.2431,15.5039
+547,668,"SP51, fer. 6",,38.2448,15.5033
+548,669,"SP51, fer. 7 - prima Cimitero",,38.2439,15.4989
+549,670,"SP51, fer. 8 - dopo Cimitero",,38.2452,15.4959
+550,671,"SP51, fer. 9",,38.2467,15.496
+551,672,"SP51, fer. 10 - Madonnina",,38.248,15.496
+552,673,"Salice, via Principe Umberto",,38.2491,15.4971
+553,674,"Salice, via Principe Umberto n. 19",,38.2497,15.4968
+554,675,"Salice, via Principe Umberto , Bar",,38.2503,15.4955
+555,676,"Salice, via Principe Umberto, p.zza Chiesa",,38.2508,15.4938
+556,677,"Salice, via Principe Umberto n. 209",,38.2516,15.4917
+557,678,"Salice, via Principe Umberto n. 239",,38.2527,15.4892
+558,679,"SP51, 12",,38.2569,15.4841
+559,680,"SP51, villa Romeo",,38.2585,15.4817
+560,681,"SP51, villa FerraÃ¹",,38.2595,15.4801
+561,682,"SP51, c/o torrente Marmora",,38.2648,15.474
+562,683,"SS113, Km 30,300",,38.2643,15.4729
+563,684,"SS113, Km 30,700",,38.2622,15.4692
+564,685,"SS113, Km 31,100",,38.2595,15.466
+565,686,"SS113, Campanella",,38.2558,15.4619
+566,687,"SS113, Ortoliuzzo",,38.2522,15.4578
+567,688,"SS113, Pontegallo n.23",,38.2495,15.4547
+568,689,"SS113, Pontegallo n.44",,38.248,15.4533
+569,690,"Ponte Gallo, Capolinea",,38.2455,15.4503
+570,691,"Paradiso, via C. Pompea n. 17",,38.2194,15.5658
+571,692,"Paradiso, via C. Pompea n. 45",,38.2215,15.5656
+572,693,"Paradiso, via C. Pompea n. 245",,38.224,15.5667
+573,694,"Paradiso, via C. Pompea - Poste",,38.2266,15.5685
+574,695,"Contemplazione, via C. Pompea n. 239",,38.2292,15.5698
+575,696,"Contemplazione, via C. Pompea n. 419",,38.2323,15.571
+576,697,"Contemplazione, villa Bosurgi",,38.2343,15.5721
+577,698,"Pace, via C. Pompea torrente Pace",,38.2367,15.5753
+578,699,"Pace, via C. Pompea Trocadero",,38.2382,15.5778
+579,700,"Grotte, via C. Pompea n.836",,38.2419,15.58
+580,701,"Grotte, via C. Pompea c.da Fortino",,38.2442,15.5809
+581,702,"Grotte, via C. Pompea n. 1129",,38.2464,15.5828
+582,703,"Grotte, via C. Pompea n. 1279",,38.2479,15.5847
+583,704,"Grotte, via C. Pompea n. 1349",,38.2494,15.5877
+584,705,"Torrente Guardia, fer. 1",,38.2513,15.5875
+585,706,"Torrente Guardia, fer. 2",,38.2514,15.5867
+586,707,"SP45, Faro Superiore Lam 85",,38.257,15.5968
+587,708,"SP45, Faro Superiore n. 33",,38.2576,15.593
+588,709,"SP45, Faro Superiore Km 2,200",,38.2589,15.5872
+589,710,"Faro Superiore, Via Messina n.4",,38.2607,15.5842
+590,711,"Faro Superiore, Via Messina n.16",,38.2626,15.5835
+591,712,"Faro Superiore, piazza S. Rocco",,38.2648,15.5832
+592,713,"SP45 Faro Superiore, via Lecce n. 46",,38.2634,15.5818
+593,714,"SP45 Faro Superiore, via Lecce",,38.2626,15.5802
+594,715,"SP45 Faro Superiore, Cimitero",,38.2617,15.5804
+595,716,"SP45 Curcuraci, casa Sardella",,38.2619,15.5775
+596,717,SP45 Curcuraci,,38.2624,15.5755
+597,718,"SP45 Curcuraci, comp. Sicim 8",,38.2623,15.5722
+598,719,"SP45 Curcuraci, bivio Marotta",,38.2609,15.569
+599,720,"SP45 Curcuraci, Circolo Tennis",,38.2616,15.5676
+600,721,"SP45 Curcuraci, comp. Delle More",,38.2639,15.5664
+601,722,"SP45 Curcuraci Km 6,200",,38.2617,15.5614
+602,723,"SP45 Curcuraci Km 6,500",,38.261,15.559
+603,724,"SP45 Massa S. Giovanni Km 7,700",,38.2593,15.5489
+604,725,"SP45 Massa S. Giovanni Km 9,700",,38.2594,15.5438
+605,726,"SP45 Massa S. Giovanni Km 9,900",,38.2599,15.5423
+606,727,"SP45 Massa S. Giovanni Km 10,000",,38.2621,15.5424
+607,728,"SP45 Massa S. Giovanni Km 10,200",,38.2629,15.5427
+608,729,"Massa S. Giovanni, chiesa di S. Giovanni",,38.2649,15.5438
+609,730,"Massa S. Giovanni, piazza di S. Giovanni",,38.2659,15.545
+610,731,"SP45 Massa S. Giovanni Km 10,800",,38.2679,15.5459
+611,732,"SP45 Massa S. Lucia Km 11,000",,38.2688,15.5474
+612,733,"SP45 Massa S. Lucia, 5",,38.2686,15.5482
+613,734,"SP45 Massa S. Lucia, scuola elementare",,38.2703,15.5481
+614,735,"SP45 Massa S. Nicola Km 12,000",,38.271,15.5432
+615,736,"SP50 Massa S. Giorgio, inizio",,38.2739,15.5371
+616,737,SP50 Massa S. Giorgio,,38.2752,15.537
+617,738,"SP50 Massa S. Giorgio, 41",,38.2737,15.5368
+618,739,"SP50 Massa S. Giorgio, c.da Vigna Grande",,38.2724,15.5358
+619,740,"SP50 Castanea, inizio",,38.2698,15.531
+620,741,"SP50 Castanea, casa Camarda-Costa",,38.2684,15.5285
+621,742,SP50 Castanea,,38.2675,15.5254
+622,743,"SP50 Castanea, casa vinicola",,38.2659,15.5234
+623,744,"SP50 Castanea, p.zza SS. Rosario",,38.2634,15.5217
+624,745,"SP50 Castanea, 5a",,38.2632,15.5231
+625,746,"SP50 Castanea, Casa Popolari",,38.2619,15.5244
+626,747,"SP50 Castanea, via Calabrisella 47",,38.2603,15.5239
+627,748,"SP50 Castanea, via Calabrisella 31",,38.2598,15.5238
+628,749,"SP50 S. Cosimo, Carabinieri",,38.257,15.5221
+629,750,"SP50 S. Cosimo, 117",,38.2546,15.5233
+630,751,"SP50 S. Cosimo, 125",,38.2521,15.5243
+631,752,"SP50 S. Cosimo, Casa di Riposo",,38.2511,15.5269
+632,753,SP50 C.da Orbo,,38.2481,15.5278
+633,754,SP50,,38.2411,15.5254
+634,755,"Fiumara Guardia, via C. Pompea Autodromo",,38.2511,15.5927
+635,756,"Fiumara Guardia, via C. Pompea n. 52-62",,38.2519,15.5946
+636,757,"S. Agata, via C. Pompea n. 1553",,38.2525,15.5966
+637,758,"S. Agata, via C. Pompea n. 1647",,38.2542,15.6
+638,759,"S. Agata, via C. Pompea n. 1681",,38.2557,15.6028
+639,760,"Ganzirri, via C. Pompea, via Papardo",,38.2566,15.605
+640,761,"Ganzirri, via C. Pompea, scuola Petrarca",,38.2577,15.6067
+641,762,"Ganzirri, via C. Pompea, via Petraro",,38.2596,15.6096
+642,763,"Ganzirri, via C. Pompera n. 1861",,38.2607,15.6124
+643,764,"Ganzirri, via C. Pompea, Ortopedico",,38.2613,15.6151
+644,765,"Ganzirri, via C. Pompea, n. 1929",,38.2622,15.6181
+645,766,"Ganzirri, via C. Pompea, 1955",,38.2628,15.6215
+646,767,"Ganzirri, via C. Pompea, 382",,38.2644,15.6271
+647,768,"Ganzirri, via C. Pompea, 2055",,38.2659,15.6308
+648,769,"Ganzirri, via C. Pompea, 2095",,38.2665,15.6324
+649,770,"Mortelle, Strada Statale 113, Km. 11,200",,38.2692,15.6335
+650,771,"Mortelle, Strada Statale 113, Villa Regina",,38.2706,15.6331
+651,772,"Mortelle, Strada Statale 113, Lido Mortelle",,38.2713,15.6293
+652,773,"Mortelle, Strada Statale 113 n. 33",,38.2714,15.6273
+653,774,"Mortelle, Strada Statale 113, Lido Delfino",,38.2712,15.6238
+654,775,"Mortelle, Strada Statale 113 n. 75a",,38.2711,15.6212
+655,776,"Mortelle, Strada Statale 113 n. 42",,38.271,15.6186
+656,777,"Mortelle, Strada Statale 113, Spiaggia D'Oro",,38.2708,15.6146
+657,778,"Timpazi, Strada Statale 113, Km 13,400",,38.2708,15.6112
+658,779,"Timpazi, Strada Statale 113, Km 13,900",,38.2716,15.605
+659,780,"Timpazi, Strada Statale 113, Km 14,000",,38.2722,15.6016
+660,781,"Timpazi, Strada Statale 113, Km 14,600",,38.2734,15.5968
+661,782,"Timpazi, Strada Statale 113, Km 14,900",,38.2744,15.5939
+662,783,"Casa Bianca, Strada Statale 113, Km 15,150",,38.2771,15.5886
+663,784,"Casa Bianca, Strada Statale 113, Km 15,500",,38.2781,15.5853
+664,785,"Tono, Strada Statale 113, Km 15, 950",,38.2803,15.5805
+665,786,"Tono, Strada Statale 113, Km 16,600",,38.2823,15.5765
+666,787,"Tono, Strada Statale 113, Km 16,900",,38.2842,15.5742
+667,788,"Tono, Strada Statale 113, bivio Faro Sup.",,38.2839,15.5708
+668,789,"Tono, Strada Statale 113, Km 17,200",,38.2859,15.5691
+669,790,"Tono, Strada Statale 113, Torr. Mezzana",,38.2904,15.5632
+670,791,"Piano Rocca, SS113, bivio Acqualadrone",,38.2913,15.5552
+671,792,"Piano Rocca, SS113, Km 20,100",,38.2939,15.5543
+672,793,"Piano Rocca, SS113, Km 20,300",,38.2943,15.552
+673,794,"Piano Rocca, SS113, Km 20,500",,38.2948,15.5485
+674,795,"Spartà - Strada Statale 113, Km 20,800",,38.2933,15.5463
+675,796,"Spartà - Strada Statale 113, Km 21,300",,38.2944,15.5419
+676,797,"Spartà  - Strada Statale 113, Km 21,800",,38.2937,15.5368
+677,798,"Piano Torre, disc. Marina di Mezzacampa",,38.2932,15.5329
+678,799,"Piano Torre, SS113, Km 22,500",,38.2926,15.5287
+679,800,Annunziata,,38.2174,15.566
+680,801,"Piano Torre, SS113, Km 23,000",,38.293,15.524
+681,802,"Piano Torre, SS113, Km 23,400 c.da Ziino",,38.2922,15.5191
+682,803,"Piano Torre, SS113, Km 23,700",,38.2917,15.5166
+683,804,"Calamona, SS113, Pineta",,38.2902,15.5165
+684,805,"Calamona, SS113, Km 24,500",,38.2891,15.5161
+685,806,"Calamona, SS113, Km 25,300",,38.289,15.5084
+686,807,"S. Saba, SS113, Km 25,600",,38.2877,15.5068
+687,808,"S. Saba, SS113, Km 25,800",,38.2865,15.5055
+688,809,"S.Saba, SS113, disc. mare",,38.2846,15.5036
+689,810,"S.Saba, SS113, disc. paese",,38.2827,15.5002
+690,811,"S.Saba, SS113, cont. Musarra",,38.2807,15.4965
+691,812,"S.Saba, SS113, cont.  Corridore",,38.2793,15.4945
+692,813,"S. Saba, SS113, Km 27,350",,38.2777,15.492
+693,814,"S. Saba, SS113, Km 27,500",,38.2768,15.491
+694,815,"Rodia, SS113, Km 27,800",,38.2752,15.4887
+695,816,"Rodia, SS113, Km 28,000",,38.2738,15.487
+696,817,"Rodia, SS113, Km 28,300",,38.2718,15.4845
+697,818,"Rodia, SS113, Km 28,500",,38.2707,15.4832
+698,819,"Rodia, SS113, Km 28,850, farmacia",,38.2678,15.4808
+699,820,"Rodia, SS113, Km 29,200",,38.2669,15.478
+700,821,"Marmora, SS113, ponte di Marmora",,38.2655,15.4744
+701,822,"Ganzirri, via Lago Grande n. 2",,38.259,15.6087
+702,823,"Ganzirri, via Lago Grande n. 41",,38.2577,15.6104
+703,824,"Ganzirri, via Lago Grande n. 70",,38.2583,15.6129
+704,825,"Ganzirri, via Lago Grande n. 87",,38.2589,15.6151
+705,826,"Ganzirri, via Lago Grande n. 98",,38.2603,15.6181
+706,827,"Ganzirri, via Lago Grande n. 106",,38.2609,15.625
+707,828,"Ganzirri, SP46 n.127 ",,38.2607,15.6294
+708,829,"Torre Faro, SP46 ex Motel Faro",,38.2614,15.6332
+709,830,"Torre Faro, via Ciruito n. 170",,38.2627,15.6355
+710,831,"Torre Faro, via Ciruito n. 177",,38.2642,15.6375
+711,832,"Torre Faro, via Circuito statua Padre Pio",,38.2655,15.639
+712,833,"Torre Faro, via Nuova n. 41",,38.265,15.6414
+713,834,"Torre Faro, via Palazzo, p.zza Chiessa",,38.2648,15.6429
+714,835,"Torre Faro, via Palazzo n. 89",,38.266,15.6462
+715,836,"Torre Faro, via Area Torre n. 28",,38.2668,15.649
+716,837,"Torre Faro, via Circonvallazione Tirrena n. 63",,38.2689,15.6508
+717,838,"Torre Faro, Contrada Torre Bianca n. 33",,38.2711,15.6469
+718,839,"Torre Faro, Contrada Torre Bianca n. 17a",,38.2716,15.644
+719,840,"Torre Faro, Contrada Torre Bianca n. 2",,38.271,15.6415
+720,841,"Torre Faro, Poste e Telecomunicazioni",,38.2709,15.6391
+721,842,"Torre Faro, istituto Marino",,38.2705,15.6332
+722,843,"Aqualadroni, via Lungomare n. 13",,38.2963,15.5555
+723,844,"Aqualadroni, via Lungomare n. 189",,38.2978,15.5538
+724,845,"Aqualadroni, via Lungomare n. 249",,38.2988,15.5521
+725,846,"Aqualadroni,  Capolinea",,38.2998,15.5501
+726,847,"St. Panoramica dello Stretto, v.le dei Tigli",,38.2196,15.5638
+727,848,"St. Panoramica dello Stretto, Eden Park",,38.2231,15.5646
+728,849,"St. Panoramica dello Stretto, 574",,38.2253,15.5647
+729,850,"St. Panoramica dello Stretto, Parnaso",,38.2264,15.5657
+730,851,"St. Panoramica dello Stretto, Linea Verde 1",,38.2275,15.5665
+731,852,"St. Panoramica dello Stretto, Linea Verde 2",,38.2293,15.5682
+732,853,"St. Panoramica dello Stretto, Rialto Azzurro",,38.231,15.5683
+733,854,"St. Panoramica dello Stretto, Km 2,200",,38.2329,15.5698
+734,855,"St. Panoramica dello Stretto, Km 2,500",,38.2365,15.5721
+735,856,"St. Panoramica dello Stretto, Cimitero",,38.2391,15.5756
+736,857,"St. Panoramica dello Stretto, Parcheggio",,38.2417,15.5784
+737,858,"St. Panoramica dello Stretto Km 4,400",,38.2484,15.5828
+738,859,"St. Panoramica dello Stretto Km 6,300",,38.258,15.5984
+739,860,"St. Panoramica dello Stretto Km 8,100",,38.2666,15.6158
+740,861,"St. Panoramica dello Stretto Km 8,700",,38.2665,15.6228
+741,862,"Frantinaro  rotatoria, Capolinea",,38.2689,15.6252
+742,863,"Viale Stagno D'Alcontres, via Archimede",,38.2612,15.5996
+743,864,"Viale Stagno D'Alcontres, Eliporto",,38.2619,15.5981
+744,865,"Viale Stagno D'Alcontres, Papardo",,38.2624,15.5962
+745,866,"Viale Stagno D'Alcontres, ponte SP",,38.2602,15.6014
+746,867,Viale Stagno D'Alcontres,,38.2593,15.6024
+747,868,"Viale Stagno D'Alcontres, 327",,38.2571,15.6036
+1093,1319,"Tremestieri, SS114 Km 6,300",,38.1358,15.5224
+1092,1318,"Tremestieri, Centro Commerciale",,38.1368,15.5226
+755,876,"C.da Marotta, Capolinea",,38.2546,15.5656
+758,879,"Via San Raineri, fer. 1",,38.1853,15.5642
+759,880,"Via San Raineri, fer. 2",,38.19,15.5687
+760,881,"Via San Raineri, Base Militare",,38.1928,15.5717
+761,882,"V.le della LibetÃ , is. 431",,38.2047,15.5604
+762,883,"V.le della Liberta, Dante Alighieri",,38.201,15.5588
+763,884,"Via Garibaldi, Teatro",,38.1956,15.5572
+764,885,"Via Garibaldi, Catasto",,38.193,15.5569
+765,886,"Via Garibaldi, Catalani",,38.1916,15.5567
+766,887,"Via I Settembre, 105",,38.1894,15.557
+767,888,"Via I Settembre, Camera del Commecio",,38.1873,15.5589
+768,889,"Via La Farina, inc. via Maddalena",,38.1828,15.5571
+769,890,"Via La Farina, inc. via S. Cecilia",,38.1806,15.5551
+770,891,"Viale Europa, 22",,38.1788,15.5515
+771,892,"Viale San Martino, 347",,38.1785,15.5494
+772,893,"Viale San Matino, Don Orione",,38.1766,15.5475
+774,895,"Via Archimede, 15",,38.2616,15.6001
+775,896,"Via Archimede, 28",,38.2635,15.6005
+776,897,"Via Archimee, 37",,38.2652,15.6012
+777,898,"Serri, Strada Comunale n.32",,38.2663,15.6029
+778,899,"Serri, Strada Comunale, Granatari-Masse",,38.2681,15.6065
+779,900,"C.da Serri, 22",,38.268,15.609
+780,901,"C.da Serri, Capolinea",,38.2681,15.6107
+781,902,"Case Sperone, 2",,38.2661,15.6017
+782,903,"Via Sperone Alto, Chiesa dei Miracoli",,38.2668,15.5998
+783,904,"Via Sperone Alto, via S. Caterina",,38.2679,15.5958
+784,905,"Via Sperone Alto, 39",,38.2687,15.5935
+785,906,C.a Badessa,,38.2717,15.5852
+786,907,"C.da Badessa, coop. Solemar",,38.2701,15.5848
+787,908,"C.da Badessa, Capolinea",,38.2684,15.5843
+788,931,Ringo,,38.215,15.5633
+789,932,Brasile,,38.2116,15.5615
+790,933,San Francesco,,38.209,15.561
+791,934,Trapani,,38.2049,15.5606
+792,935,Alighieri,,38.2011,15.559
+793,936,Boccetta,,38.1977,15.5578
+794,937,Municipio,,38.1938,15.5573
+795,938,Palazzo Reale,,38.1895,15.5574
+796,939,Repubblica,,38.1853,15.5602
+797,940,Cairoli,,38.1858,15.5562
+798,941,Camiciotti,,38.1837,15.5542
+800,947,Curvone Gazzi,,38.1684,15.543
+801,945,Provinciale,,38.171,15.5426
+802,944,Villa Dante,,38.1755,15.5456
+803,943,Don Orione,,38.1771,15.5483
+804,942,Trieste,,38.1806,15.5514
+1086,1303,Minissale,,38.1596,15.5354
+1091,1317,"Tremestieri, SS114 Km 6,000",,38.1387,15.5234
+1045,962,Via Nazionale 216 - Briga Marina,,38.0691,15.487
+1090,1314,"Pistunina, Poste",,38.1432,15.525
+1095,1321,"Tremestieri, SS114 Km 7,200",,38.1275,15.5197
+1044,961,"Via Marco Polo, 125",,38.1596,15.5364
+1043,960,"Via Marco Polo, 215",,38.1578,15.5354
+1042,959,"Via Marco Polo, 293",,38.1559,15.5344
+1041,958,"Via Marco Polo, 335",,38.1551,15.534
+1040,957,"Via Marco Polo, 346",,38.1544,15.5337
+1039,956,"Via Consolare Valeria, 519 - Contesse",,38.1505,15.5304
+1038,955,"Via Consolare Valeria, 75 - Pistunina",,38.1481,15.5296
+1037,954,"Via Consolare Valeria, 195 - Pistunina",,38.1456,15.5287
+1036,953,"Via Consolare Valeria, 212 - Pistunina",,38.144,15.528
+1035,952,"Via Consolare Valeria, 12 - Tremestieri",,38.1415,15.527
+1034,951,"Via Consolare Valeria, 101 - Tremestieri",,38.1399,15.5258
+1033,950,"Via Consolare Valeria, 242 - Tremestieri",,38.1384,15.5252
+1032,949,"Via Consolare Valeria, 16 - Tremestieri",,38.1353,15.5241
+1031,948,"Via Consolare Valeria, 34  - Tremestieri",,38.1345,15.5244
+1046,963,"Via Nazionale, 21 - Briga Marina",,38.0674,15.4847
+1047,964,"Via Nazionale, 67 - Scuole, Briga Marina",,38.0661,15.4822
+1048,965,"Via Nazionale, 151 - Briga Marina",,38.0647,15.4814
+1049,966,"Via Nazionale, 203 - Briga Marina",,38.0633,15.4798
+1050,967,"Via Nazionale, 285 - Chiesa S. Mauro",,38.0615,15.4785
+1051,968,"Via Nazionale, 192 - S. Margherita",,38.0712,15.4886
+1052,969,"Via Nazionale, 201 - S. Margherita",,38.0716,15.4894
+1053,970,"Via Nazionale, 82 - S. Margherita",,38.0744,15.4922
+1054,971,"Via Nazionale, 41C - S. Margherita",,38.077,15.4933
+1055,972,"Via Nazionale, 56 - S. Margherita",,38.0782,15.4937
+1056,973,"Via Nazionale, 165 - S. Margherita",,38.0809,15.4945
+1057,974,"Via Nazionale, 165A - S. Margherita",,38.0829,15.4956
+1058,975,"Via Nazionale, 151-159 - S. Margherita",,38.0849,15.497
+1059,976,"Via Nazionale, 222 - S. Margherita",,38.0867,15.4982
+1060,977,"Via Nazionale, 140 - S. Margherita",,38.0905,15.5005
+1061,978,"Via Nazionale, 85 - S. Margherita",,38.0916,15.5011
+1062,979,"Via Nazionale, 77 - S. Margherita",,38.093,15.502
+1089,1313,"Pistunina, Isola Ecologica",,38.1463,15.5266
+1064,487,"R. Livatino, via 1A",,38.1526,15.5296
+1065,488,"R. Livatino, via 17R",,38.1533,15.5288
+1066,489,"R. Livatino, via Gelsomini",,38.1547,15.5286
+1067,490,"CEP, Capolinea",,38.1554,15.5267
+1068,491,Via degli Agrumi,,38.153,15.527
+1069,492,"Stadio San Filippo, sede II Quartiere",,38.1606,15.5197
+1070,493,"Via Contesse, 20",,38.1534,15.5326
+1071,494,"Via Calispera, 2",,38.1524,15.5333
+1072,495,"Via Calispera, Scuola S. D'Acquisto",,38.1511,15.5324
+1073,496,"Via Calispera, 41",,38.1501,15.5316
+1074,497,"Via Beatrice, 55",,38.1491,15.533
+1075,498,"Via Beatrice, 22",,38.1503,15.5334
+1076,499,"Vill. UNRA, Capolinea",,38.1513,15.5343
+1078,479,"Via fratelli Di Mari, fer. 2",,38.2038,15.5535
+1079,480,"Via Torrente Trapani, 6",,38.2047,15.5506
+1080,481,"Via Torrente Trapani, 16",,38.205,15.5491
+1081,482,"Via Torrente Trapani, 34 Cappuccini",,38.2054,15.5474
+1082,483,"Via Torrente Trapani, 40",,38.2059,15.5458
+1083,484,"Via Torrente Trapani, CittÃ  Nuova fer.1",,38.2064,15.5432
+1084,485,"Via Torrente Trapani, CittÃ  Nuova fer.2",,38.2068,15.5402
+1085,486,"CittÃ  Nuova, Capolinea",,38.2064,15.5347
+1096,1322,"Tremestieri, SS114 Km 7,600",,38.1256,15.5188
+1097,1323,"Mili Marina, SS114 Km 7,900",,38.1235,15.5168
+1098,1324,"Mil Marina, SS114 Km 8,300",,38.1212,15.5147
+1099,1325,Bivio Mili Marina,,38.1193,15.5138
+1100,1326,"Mili Marina, SS114 Km 8,900",,38.1185,15.5131
+1101,1327,"Mili Marina, Depuratore",,38.1156,15.5112
+1102,1328,"Mili Moleti, SS114 Km 9,550",,38.1104,15.5096
+1103,1329,"Mili Moleti, Bivio Galati S. Anna",,38.1084,15.5083
+1104,1330,"Mili Moleti, Stazione FFSS Galati",,38.1052,15.5064
+1105,1331,"S. Margherita, SS114 Km 10,900",,38.0976,15.5049
+1106,1332,"S. Margherita, SS114 Km 11,200",,38.0949,15.5038
+1107,1333,"S. Margherita, SS114 Km 12,000",,38.0887,15.5013
+1108,1334,"S. Margherita, SS114 Km 12,400",,38.0858,15.4988
+1109,1335,"S. Margherita, SS114 Km 12,800",,38.0839,15.4972
+1110,1336,"S. Margherita, SS114 Km 13,000",,38.0809,15.4953
+1111,1337,"Briga Marina, SS114 Km 13,300",,38.0788,15.4946
+1112,1338,"Briga Marina, SS114 Km 13,550",,38.0764,15.4937
+1113,1339,"Briga Marina, SS114 Km 13,900",,38.0744,15.4927
+1114,1340,"Briga Marina, SS114 Km 14,100",,38.0724,15.4911
+1115,1341,"Giampilieri Mar., SS114 Km 14,300",,38.0693,15.4863
+1116,1342,"Giampilieri Mar., SS114 Km 14,800",,38.0683,15.485
+1117,1343,"Giampilieri Mar., SS114 Km 15,000",,38.0671,15.4832
+1118,1344,"Giampilieri, Bivo Giampilieri Sup.",,38.0652,15.4811
+1119,1345,"Giampilieri, Staz. FFSS",,38.0639,15.4794
+1120,1346,"Giampilieri,  SP33 Km 0,500",,38.0613,15.4782
+1121,1347,"Giampilieri,  SP33 Km 0,700",,38.0621,15.4761
+1122,1348,"Giampilieri,  SP33 Km 0,900",,38.0632,15.4745
+1123,1349,"Giampilieri,  SP33 Km 1,050",,38.0675,15.4714
+1124,1931,Ringo,,38.2147,15.563
+1125,1932,Brasile,,38.2112,15.5613
+1126,1933,San Francesco,,38.2086,15.5611
+1127,1934,Trapani,,38.2045,15.5605
+1128,1935,Alighieri,,38.2008,15.5588
+1129,1936,Boccetta,,38.1973,15.5577
+1130,1937,Municipio,,38.1936,15.5573
+1131,1938,Palazzo Reale,,38.1891,15.5577
+1132,1939,Repubblica,,38.1854,15.5599
+1133,1940,Cairoli,,38.1857,15.556
+1134,1941,Camiciotti,,38.1834,15.5539
+1135,1942,Trieste,,38.1803,15.551
+1136,1943,Don Orione,,38.177,15.548
+1137,1944,Villa Dante,,38.1754,15.5454
+1138,1945,Provinciale,,38.1708,15.5424
+1139,1947,Curvone Gazzi,,38.1676,15.5433
+1432,1553,Viale Giostra - pal.Telegrafo,,38.2066,15.5589
+1433,1554,"V.le della Liberta,  San Francesco",,38.208,15.5612
+1434,1555,"V.le della Liberta, Caronte",,38.2109,15.5611
+1435,1556,"V.le della Liberta,  Ringo",,38.2135,15.5623
+1436,1557,"V.le della Liberta,  Museo",,38.2165,15.5645
+1570,1691,Paradiso - via C. Pompea n. 17,,38.2193,15.5658
+1571,1692,Paradiso - via C. Pompea n. 45,,38.2215,15.5655
+1572,1693,Paradiso - via C. Pompea n. 245,,38.224,15.5666
+1573,1694,Paradiso - via C. Pompea - Poste,,38.2266,15.5684
+1574,1695,Contemplazione - via C. Pompea n. 239,,38.2292,15.5697
+1575,1696,Contemplazione - via C. Pompea n. 419,,38.2323,15.5709
+1576,1697,Contemplazione - villa Bosurgi,,38.2343,15.572
+1577,1698,Pace - via C. Pompea torrente Pace,,38.2367,15.5752
+1578,1699,Pace - via C. Pompea Trocadero,,38.2382,15.5778
+1579,1700,Grotte - via C. Pompea n.836,,38.2419,15.5799
+1580,1701,Grotte - via C. Pompea c.da Fortino,,38.2442,15.5808
+1581,1702,Grotte - via C. Pompea n. 1129,,38.2464,15.5827
+1582,1703,Grotte - via C. Pompea n. 1279,,38.2479,15.5846
+1583,1704,Grotte - via C. Pompea n. 1349,,38.2494,15.5876
+1634,1755,Fiumara Guardia - via C. Pompea Autodromo,,38.2511,15.5926
+1635,1756,Fiumara Guardia - via C. Pompea n. 52-62,,38.2519,15.5945
+1636,1757,S. Agata - via C. Pompea n. 1553,,38.2526,15.5965
+1637,1758,S. Agata - via C. Pompea n. 1647,,38.2542,15.5999
+1638,1759,S. Agata - via C. Pompea n. 1681,,38.2558,15.6027
+1639,1760,Ganzirri - via C. Pompea - via Papardo,,38.2566,15.6049
+1640,1761,Ganzirri - via C. Pompea - scuola Petrarca,,38.2577,15.6066
+1252,1351,Giampilieri Sup. - SP33 Km 1 -800,,38.0697,15.468
+1253,1352,Giampilieri Sup. - SP33 Km 2 -500,,38.0723,15.4612
+1254,1353,Giampilieri Sup. - SP33 Km 2 -900,,38.0719,15.4643
+1255,1354,Giampilieri Sup. - SP33 Km 3 -100,,38.0717,15.4664
+1256,1355,Giampilieri Sup. - Cimitero,,38.0745,15.4602
+1257,1356,Bivio Molino,,38.0756,15.4587
+1258,1357,Molino,,38.0751,15.455
+1259,1358,Molino - SP33 Km 4 -600,,38.0745,15.4535
+1260,1359,Altolia -SP33 Km 5 -000,,38.076,15.4486
+1261,1360,Altolia - SP33 Km 5 -350,,38.0768,15.4462
+1262,1361,Altolia - Capolinea,,38.0759,15.4452
+1251,1350,Giampilieri Sup. - Capolinea,,38.0684,15.4702
+1269,1368,C.da Runci,,38.0835,15.4961
+1270,1369,C.da Runci - Scuola Agraria CalonerÃƒÂ²,,38.0812,15.4947
+1271,1370,Ponte Schiavo -  SP35 Km 0 -200,,38.0809,15.4927
+1272,1371,Ponte Schiavo -  SP35 Km 0 -550,,38.0818,15.4883
+1273,1372,Ponte Schiavo -  SP35 Km 0 -650,,38.082,15.4874
+1274,1373,Ponte Schiavo -  SP35 Km 1 -300,,38.0799,15.4912
+1275,1374,Ponte Schiavo -  SP35 Km 2 -050,,38.0764,15.4887
+1276,1375,"Ist. Cuppari -  SP35 Km 2,630",,38.0781,15.4881
+1277,1376,Ponte Schiavo -  SP35 Km 3 -000,,38.0796,15.4853
+1278,1377,Ponte Schiavo -  SP35 Km 3 -200,,38.0794,15.4825
+1279,1378,Ponte Schiavo -  SP35 Km 4 -800,,38.0813,15.4757
+1280,1379,Ponte Schiavo -  SP35 Km 5 -100,,38.083,15.4743
+1281,1380,Ponte Schiavo -  SP35 Km 5 -500,,38.0859,15.4685
+1282,1381,Ponte Schiavo -  SP35 Km 6 -000,,38.0849,15.4658
+1283,1382,Ponte Schiavo -  SP35 Km 6 -200,,38.0845,15.4637
+1284,1383,Ponte Schiavo -  SP35 Km 6 -450,,38.0848,15.4621
+1285,1384,Ponte Schiavo -  SP35 Km 6 -750,,38.0867,15.4608
+1286,1385,Ponte Schiavo -  SP35 Km 6 -900,,38.0867,15.4598
+1168,1267,Via Gerobino Pilli - 13,,38.1841,15.541
+1169,1268,Via Gerobino Pilli - 45,,38.1847,15.5399
+1170,1269,Via Gerobino Pilli - 73,,38.1856,15.5384
+1171,1270,Via Gerobino Pilli - via G. Empetocle,,38.1861,15.5373
+1172,1271,Via Gerobino Pilli - via P. La Badessa,,38.1862,15.5357
+1173,1272,Via Tommaso Fazello - 11,,38.1854,15.5346
+1174,1273,Salita Monte Santo - comp. Parco Serro,,38.1842,15.5344
+1175,1274,Salita Monte Santo - comp. Alma Mater,,38.1833,15.5353
+1176,1275,Salita Monte Santo - Cont. Petrazza n. 6,,38.1833,15.5365
+1177,1276,Salita Monte Santo - Villa Contino,,38.1814,15.536
+1178,1277,Comunale Petrazza - Lotto F pal. 2,,38.1809,15.539
+1302,1401,Galati S. Anna - Via Comunale,,38.1088,15.5063
+1303,1402,Galati S. Anna - Via Comunale n. 18,,38.1093,15.5043
+1304,1403,Galati S. Anna - Via Comunale,,38.1102,15.5029
+1305,1404,Galati S. Anna - Via Comunale,,38.1111,15.4995
+1306,1405,Galati S. Anna - Via Comunale nÃ‚Â°82,,38.1124,15.4981
+1308,1407,Mili S. Marco - SP38 Km 0 -150,,38.1194,15.5116
+1309,1408,Galati S. Anna - Via Comunale n 82,,38.1199,15.5092
+1310,1409,Mili S. Marco - SP38 Km 0 -600,,38.1211,15.5075
+1311,1410,Mili S. Marco - SP38 Km 0 -930,,38.1213,15.5048
+1312,1411,Mili S. Marco - SP38 Km 1 -100,,38.1222,15.504
+1313,1412,Mili S. Marco - SP38 Km 1 -200,,38.1226,15.5028
+1314,1413,Mili S. Marco - SP38 Km 1 -500,,38.1218,15.5014
+1315,1414,Mili S. Marco - SP38 Km 2 -200,,38.1237,15.4948
+1316,1415,Mili S. Marco - SP38 Km 2 -400,,38.1237,15.4936
+1317,1416,Mili S. Pietro - SP38 Km 2 -600,,38.1245,15.4912
+1318,1417,Mili S. Pietro - SP38 Km 2 -700,,38.1246,15.4904
+1319,1418,Mili S. Pietro - SP38 Km 2 -900,,38.1262,15.4892
+1320,1419,Mili S. Pietro - SP38 Km 3 -000,,38.1265,15.4883
+1289,1388,S. Margherita - via Nazionale,,38.0951,15.5029
+1290,1389,S. Margherita - SP36 Km 0 - 140,,38.0962,15.5016
+1291,1390,S. Margherita - SP36 Km 0 - 450,,38.0978,15.4988
+1292,1391,S. Margherita - SP36 Km 0 - 630,,38.0988,15.4972
+1293,1392,S. Margherita - SP36 Km 0 -800,,38.0994,15.4955
+1294,1393,S. Stefano Medio - SP36 Km 0 -900,,38.1,15.4948
+1295,1394,S. Stefano Medio - SP36 Km 1 -000,,38.1011,15.4932
+1296,1395,S. Stefano Medio - SP36 Km 1 -300,,38.1017,15.4909
+1297,1396,S. Stefano Medio - SP36 Km 1 -550,,38.1012,15.4881
+1298,1397,S. Stefano Medio - SP36 Km 1 -800,,38.1021,15.4859
+1299,1398,S. Stefano Medio - SP36 Km 2 -000,,38.1019,15.4838
+1300,1399,S. Stefano Briga - SP36 Km 2 -150,,38.101,15.4828
+1322,1421,Larderia Inf. - SP39 Km 0 -050,,38.1396,15.5227
+1323,1422,Larderia Inf. - SP39 Km 0 -360,,38.1399,15.5192
+1324,1423,Larderia Inf. - SP39 Km 0 -800,,38.1414,15.5163
+1325,1424,Larderia Inf. - SP39 Km 1 -470,,38.1412,15.5084
+1326,1425,Larderia Inf. - SP39 Km 1 -600,,38.1411,15.5068
+1327,1426,Larderia Inf. - SP39 Km 1 -800,,38.1409,15.505
+1328,1427,Larderia Inf. - SP39 Km 2 -100,,38.1417,15.5034
+1329,1428,Larderia Inf. - SP39 Km 2 -300,,38.1413,15.5019
+1330,1429,Larderia Inf. - SP39 Km 2 -500,,38.1418,15.5003
+1331,1430,Larderia Inf. - SP39 Km 2 -700,,38.1432,15.4996
+1332,1431,Larderia Sup. - SP39 Km 3 -000,,38.142,15.4973
+1333,1432,Larderia Sup. - SP39 Km 3 -300,,38.1418,15.4952
+1334,1433,Larderia Sup. - SP39 Km 3 -500,,38.1398,15.4958
+1335,1434,Larderia Sup. - SP39 Km 3 -700,,38.139,15.4949
+1336,1435,Larderia Sup. - SP39 Km 3 -800,,38.1383,15.4951
+1337,1436,Larderia Sup. - SP39 Km 4 -000,,38.137,15.494
+1338,1437,Larderia Sup. - SP39 Km 4 -500,,38.1358,15.4914
+1339,1438,Larderia Sup. - SP39 Km 4 -900,,38.1338,15.4906
+1340,1439,Larderia Sup. - SP39 Km 5 -100,,38.1331,15.4897
+1341,1440,Tipoldo - SP39 Km 5 -700,,38.132,15.486
+1344,1443,Tor. Zafferia - via Comunale Km 0 -460,,38.1464,15.5209
+1345,1444,Tor. Zafferia - via Comunale Km 0 -650,,38.1473,15.5189
+1346,1445,Tor. Zafferia - via Comunale Km 0 -840,,38.1476,15.5169
+1347,1446,Tor. Zafferia - via Comunale Km 0 -980,,38.1479,15.5153
+1348,1447,Tor. Zafferia - via Comunale Km 1 -400,,38.15,15.5116
+1349,1448,Zafferia - via Comunale Km 1 -800,,38.1526,15.5086
+1350,1449,Zafferia - Case Popolari,,38.1534,15.5096
+1343,1442,Tor. Zafferia - via Comunale Km 0 -150,,38.1449,15.5237
+1351,1450,Zafferia - via Comunale Km 2 -000,,38.1529,15.5072
+1353,1452,St. Comunale S. Lucia Km 0 -140,,38.1498,15.5272
+1354,1453,St. Comunale S. Lucia Km 0 -400,,38.1512,15.5252
+1355,1454,St. Comunale S. Lucia Km 0 -550,,38.1525,15.525
+1356,1455,St. Comunale S. Lucia Km 0 -800,,38.1542,15.5243
+1357,1456,St. Comunale S. Lucia - Scuola Elemen.,,38.155,15.523
+1358,1457,St. Comunale S. Lucia Km 1 -100,,38.1562,15.522
+1359,1458,St. Comunale S. Lucia Km 0 -300,,38.1503,15.5255
+1360,1459,St. Militare - Case Arcobaleno inizio,,38.155,15.5191
+1361,1460,St. Militare - Case Arcobaleno n. 173,,38.155,15.5162
+1363,1462,St. Militare - Case Arcobaleno fine,,38.1559,15.5142
+1364,1463,St. Militare - inc. St. Comunale S. Lucia,,38.1582,15.5161
+1365,1464,St. Comunale S. Lucia Km 2 -000,,38.1605,15.5154
+1366,1465,St. Comunale S. Lucia Km 2 -300,,38.1618,15.5127
+1367,1466,S. Filippo inf. - via LibertÃƒÂ ,,38.1624,15.5123
+1368,1467,S. Filippo inf. - via LibertÃƒÂ  n. 37,,38.1627,15.5111
+1369,1468,S. Filippo inf. - via LibertÃƒÂ  n. 69,,38.1631,15.51
+1371,1470,Chiesa S. Lucia,,38.1568,15.5203
+1374,1473,St. Militare - inc. St. Piano di Zona,,38.1553,15.5135
+1377,1476,Via Nuova,,38.1568,15.5173
+1378,1477,Via Nuova - inc. via Scariddi,,38.156,15.5185
+11071,1494,Via Calispera - 2,,38.1523,15.5333
+11072,1495,Via Calispera - Scuola S. D'Acquisto,,38.151,15.5324
+11073,1496,Via Calispera - 41,,38.15,15.5316
+11074,1497,Via Beatrice - 55,,38.149,15.533
+11075,1498,Via Beatrice - 22,,38.1502,15.5334
+11070,1493,Via Contesse - 20,,38.1533,15.5325
+11066,1489,R. Livatino - via Gelsomini,,38.1547,15.5285
+11068,1491,Via degli Agrumi,,38.153,15.5269
+11064,1487,R. Livatino - via 1A,,38.1525,15.5295
+11065,1488,R. Livatino - via 17R,,38.1534,15.5287
+911,911,"Minisale Alto, via Carlo Malatesta",,38.1605,15.5351
+912,912,"Minissale Alto, via N. Piccinino",,38.1613,15.5346
+913,913,"Minissale Alto, Chiesa Evangelica",,38.1624,15.5333
+914,914,"Minissale Alto, coop. Opter",,38.1623,15.532
+915,915,"Minissale Alto, campo di Calcetto",,38.1635,15.5295
+916,916,"Minissale Alto, coop. Valle Verde",,38.1651,15.5287
+917,917,"Minissale Alto, Capolinea",,38.1663,15.5275
+1911,1911,"Minisale Alto, via Carlo Malatesta",,38.1604,15.5351
+1912,1912,"Minissale Alto, via N. Piccinino",,38.1613,15.5345
+1913,1913,"Minissale Alto, Chiesa Evangelica",,38.1623,15.5333
+1914,1914,"Minissale Alto, coop. Opter",,38.1623,15.532
+1915,1915,"Minissale Alto, campo di Calcetto",,38.1635,15.5295
+1916,1916,"Minissale Alto, coop. Valle Verde",,38.1651,15.5287
+1142,1141,Viale Boccetta - Archimede,,38.1984,15.5475
+1143,1142,Viale Boccetta - 15,,38.1983,15.549
+1144,1143,Viale Boccetta - Buon Pastore,,38.1981,15.5518
+1145,1144,Viale Boccetta - Palacultura,,38.198,15.5532
+1146,1145,Viale Boccetta - via Romagnosi,,38.1976,15.5553
+1150,1149,Strada Comunale Scoppo - 28,,38.1997,15.5431
+1151,1150,Strada Comunale Scoppo - 28 - Fer. 2,,38.2004,15.5425
+1758,1879,Via San Raineri - fer. 1,,38.1852,15.5642
+1759,1880,Via San Raineri - fer. 2,,38.1899,15.5687
+2155,1154,V.le Gazzi - Entrata Ovest Policlinico,,38.1666,15.5367
+2156,1155,Via Rosso da Messina,,38.1672,15.5349
+2157,1156,Via L. Pirandello - fer. 1,,38.1677,15.5336
+2158,1157,Via L. Pirandello - fer. 2,,38.1689,15.5319
+2159,1158,Via A. di Anfuso - fer. 1,,38.1695,15.5308
+2160,1159,Via A. di Anfuso - fer. 2,,38.1703,15.5287
+2161,1160,Via A. di Anfuso - fer. 3,,38.171,15.527
+2162,1161,Rione Aldisio - via A. di Anfuso,,38.1717,15.5254
+2164,1163,Rione Aldisio - via G. di Giovanni,,38.1724,15.5268
+2166,1165,Torrente Bordonaro - Case Gialle,,38.1734,15.5238
+2168,1167,Torrente Bordonaro - ponte Autostrada,,38.175,15.5196
+2170,1169,Torrente Bordonaro - inc. via Comunale,,38.1751,15.5176
+2172,1171,Torrente Bordonaro - p.za Semiramide,,38.1747,15.515
+2174,1173,Case GESCAL - via 30 Q,,38.1727,15.5264
+2175,1174,Case GESCAL -  Strada 30 A,,38.1724,15.5239
+2176,1175,Case GESCAL - St. 174 A inc. via C. Allegra,,38.1729,15.5221
+2177,1176,Case GESCAL - St. 174 A,,38.1726,15.5208
+2178,1177,Case GESCAL - via Comunale inc. via C. Gescal,,38.1719,15.5199
+2179,1178,Case GESCAL - via Comunale fer. 2,,38.1709,15.5179
+2180,1179,Case GESCAL - via Comunale fer. 3,,38.1704,15.5187
+2181,1180,Case GESCAL - inc. via C.da Baglio,,38.1692,15.5204
+2182,1181,S. Filippo - Statua S. Giovannelo,,38.1693,15.5191
+2183,1182,S. Filippo - bivio Piano Stella,,38.1662,15.516
+2184,1183,S. Filippo - Piano Stella fer. 1,,38.1664,15.5181
+2185,1184,S. Filippo - Piano Stella fer. 2,,38.1664,15.5188
+2186,1185,S. Filippo - Piano Stella fer. 3,,38.1669,15.5187
+2187,1186,S. Filippo Sup. - fer. 1 Cimitero,,38.1659,15.514
+2188,1187,S. Filippo Sup. - fer. 2 Cimitero,,38.1659,15.5126
+2189,1188,S. Filippo Sup. -,,38.1663,15.5054
+2190,1189,S. Filippo Sup. -,,38.1657,15.504
+1180,1279,Via Comunale Bisconte - ang. v.le Europa,,38.1863,15.539
+1181,1280,Via Comunale Bisconte - Dir. Artiglieria,,38.1897,15.5373
+1182,1281,Via Comunale Bisconte - via Caltanissetta,,38.1922,15.5332
+1183,1282,Via Comunale Bisconte - ponte ferrovia,,38.1931,15.5322
+1184,1283,Via Comunale Catarratti - via Militare,,38.1936,15.5316
+1185,1284,Via Comunale Catarratti - 12,,38.1939,15.5279
+1186,1285,Via Comunale Catarratti - 7,,38.1941,15.526
+1187,1286,Via Comunale Catarratti - 46,,38.1954,15.5245
+1189,1288,Viale Italia - 19,,38.1849,15.5423
+1190,1289,Viale Italia - 53,,38.1857,15.5442
+1191,1290,Viale Italia - via Iceta,,38.1862,15.5464
+1192,1291,Viale Italia - 129,,38.1875,15.5485
+1193,1292,Viale Italia - Punto Panoramico Noviziato,,38.1894,15.5461
+1194,1293,Viale Italia - 109,,38.1902,15.5451
+1196,1295,Via P. Castelli - Orto Botanico,,38.1919,15.5454
+1197,1296,Via P. Castelli - via Turiano,,38.1928,15.5437
+1198,1297,Via P. Castelli - 134,,38.1937,15.5421
+1199,1298,Via P. Castelli - CittÃƒÂ  del Ragazzo,,38.1947,15.5406
+1200,1299,Via P. Castelli - S. Maria delle Grazie,,38.1959,15.5392
+1379,1500,Via P. Castelli - p.zza G. Versaci,,38.1963,15.5373
+1380,1501,Sp. 42 - via Pietra Santa,,38.1927,15.5382
+458,579,Piazza d'Armi,,38.1934,15.5376
+2192,1191,Viale Gazzi - inc. via del Ciclo,,38.1672,15.5352
+2194,1193,Fondo Fucile - Largo Diogene n. - 5,,38.171,15.5332
+2195,1194,Fondo Fucile - inc. via 38 B,,38.1724,15.5333
+2197,1196,Fondo Fucile - via 38 A,,38.1714,15.5316
+2198,1197,Via Socrate,,38.1711,15.5305
+2199,1198,Via Socrate - bivio Sc. Minutoli,,38.1722,15.5286
+21100,1199,Bordonaro - Case Gialle Chiesa,,38.1737,15.5239
+21101,1200,Bordonaro - Ponte Autostrada,,38.1758,15.5225
+21102,1201,Bordonaro - via Comunale n. 58,,38.1765,15.5216
+21103,1202,Bordonaro - via Comunale n. 84,,38.1769,15.5196
+21104,1203,Bordonaro - via Comunale inc. Oglio Vecchio,,38.1759,15.5173
+21105,1204,Bordonaro - Via Ciancciolo n. 90,,38.1764,15.5135
+21106,1205,Bordonaro - v.le Ciangiolo n. 120,,38.1769,15.5124
+21107,1206,Bordonaro - v.le Ciangiolo n. 178,,38.1778,15.5108
+21108,1207,Bordonaro - v.le Ciangiolo n. 73,,38.1797,15.5103
+1229,229,"Via Comunane Bordonaro, 58",,38.1765,15.5216
+1230,230,"Via Comunale Bordonaro, 84",,38.1769,15.5197
+1231,231,"Bordonaro, Via Ciancciolo n. 39",,38.1759,15.5172
+1226,226,"Bordonaro, Case Gialle Chiesa",,38.1737,15.524
+2128,1227,Via del Santo - 406,,38.1756,15.5239
+2129,1228,Via del Santo - 442,,38.1761,15.5227
+21229,1229,"Via Comunane Bordonaro, 58",,38.1765,15.5216
+21230,1230,"Via Comunale Bordonaro, 84",,38.1769,15.5195
+21231,1231,"Bordonaro, Via Ciancciolo n. 39",,38.1759,15.5172
+2133,1232,Via Cumia - 23,,38.1767,15.5126
+2134,1233,Via Cumia Km 1 -000,,38.1731,15.5081
+2135,1234,Via Cumia Km 1 -500,,38.1739,15.504
+2136,1235,Via Cumia - p.zza Cumia Inferiore,,38.1749,15.503
+2137,1236,Via Cumia Km 1 -900,,38.1741,15.5027
+2138,1237,Via Cumia Km 2 -600,,38.1721,15.5023
+2139,1238,Via Cumia Km 3 -000,,38.1715,15.5016
+2140,1239,Via Cumia Km 3 -200,,38.1725,15.5016
+2141,1240,Via Cumia Km 3 -350,,38.1727,15.4999
+2110,1209,Via Sardegna - 11,,38.1786,15.5464
+2121,1220,Via del Santo - 105,,38.1739,15.5307
+2122,1221,Via del Santo - 222,,38.1733,15.5292
+2123,1222,Via del Santo - 288,,38.1731,15.5273
+2125,1224,Via del Santo - 384,,38.1753,15.5251
+2009,1108,Via Catania - Colle Reale,,38.1793,15.5471
+1156,1255,Via Comunale Camaro - 49,,38.1862,15.5388
+1157,1256,Via Comunale Camaro - 89,,38.1869,15.5366
+1158,1257,Via Comunale Camaro - 111,,38.1872,15.5353
+1159,1258,Via Comunale Camaro - 139,,38.1876,15.5322
+1160,1259,Via Comunale Camaro - Via Polveriera,,38.188,15.5301
+1161,1260,Via Comunale Camaro - Sc. Elementare,,38.1885,15.5272
+1162,1261,Camaro Superiore - Piazza F. Fazio,,38.1894,15.5243
+1163,1262,Camaro Superiore - 13,,38.1895,15.5215
+1164,1263,Camaro Superiore - residence Archi,,38.1906,15.52
+1165,1264,Camaro Superiore - c.da Luce,,38.191,15.5183
+1166,1265,Camaro Superiore - c.da Luce n. 10,,38.1908,15.5163
+1420,1541,SP44 - Contrada Citola,,38.2308,15.5557
+1419,1540,Contrada Citola - 20,,38.2293,15.5555
+1418,1539,Via G. A. Bosurgi - largo Citola,,38.2285,15.5565
+1417,1538,Via G. A. Bosurgi - comp. Eolo,,38.2272,15.5565
+1416,1537,Via G. A. Bosurgi - 7,,38.2264,15.5553
+1415,1536,Via Fiore - ist. Basile,,38.2248,15.5566
+1414,1535,Via Leonardi - 42,,38.2221,15.5571
+1413,1534,Via Leonardi - scuola elementare,,38.221,15.5577
+1401,1522,V.le Regina Elena - 117,,38.2123,15.5595
+1400,1521,V.le Regina Elena - 38,,38.2108,15.56
+1399,1520,V.le Regina Elena - Ogliastri,,38.209,15.5578
+1398,1519,V.le Regina Elena - 51,,38.2094,15.5552
+1396,1517,Viale Giostra - Mercato S. Orsola,,38.2069,15.5575
+1397,1518,Viale Giostra - via G. Alibrandi,,38.2085,15.5549
+1421,1542,Contrada Sorba,,38.233,15.5548
+1422,1543,SP44 - rif. La Sterza,,38.2348,15.5539
+1423,1544,SP44 - Campoitalia coop. Aldebaran,,38.2366,15.5532
+1424,1545,SP44 - Campo Italia coop. Le Tuie,,38.2369,15.5538
+1425,1546,Sp44 - Campo Italia coop. Athena,,38.2371,15.5543
+1426,1547,SP44 - Campo Italia comp. Italia,,38.2387,15.5543
+1427,1548,SP44 - 16,,38.2374,15.5566
+1439,1560,V.le Annunziata - 14,,38.2188,15.5612
+1440,1561,V.le Annunziata - 29,,38.219,15.5591
+1441,1562,V.le Annunziata - 44,,38.2195,15.5579
+1461,1582,V.le Regina Elena - San Licandro,,38.2137,15.5587
+1462,1583,V.le Regina Elena - Clinica Cappellani,,38.2144,15.5616
+1463,1584,V.le Regina Elena - 363,,38.216,15.5619
+1464,1585,V.le Regina Elena - S. Elena,,38.218,15.5618
+1446,1567,SP44 - Stada Militare per Campo Italia 1,,38.2284,15.5553
+1447,1568,SP44 - Stada Militare per Campo Italia 2,,38.2281,15.5541
+1448,1569,SP44 - Stada Militare per Campo Italia 3,,38.227,15.5542
+1449,1570,SP44 - via A. GiuffrÃƒÂ¨,,38.2257,15.5535
+1450,1571,V.le Annunziata - scuola E. Vittorini,,38.2238,15.5533
+1451,1572,SS. Annunziata - 414,,38.2237,15.5529
+1452,1573,SS. Annunziata - c.da Conte,,38.2244,15.5515
+1455,1576,Via Annunziata 101a - sc. Elementare,,38.2222,15.554
+1456,1577,Via Annunziata 85 - chiesa SS. Annunziata,,38.2209,15.5557
+1457,1578,Via Annunziata 69,,38.2199,15.5572
+1437,1558,V.le Annunziata - Villa Luce,,38.2181,15.5647
+1438,1559,V.le Annunziata - S. Elena,,38.2186,15.5629
+1402,1523,V. San Licandro - S. Francesco,,38.2138,15.5576
+1403,1524,V. San Licandro - 7,,38.2153,15.5559
+1406,1527,Via L. Sciascia - 31,,38.2184,15.5533
+1407,1528,Via L. Sciascia - via Olimpia,,38.2197,15.553
+1408,1529,Via Olimpia - coop. Iride 83,,38.2178,15.555
+1409,1530,Via Olimpia,,38.2171,15.5576
+1410,1531,Via Cappellani - via Olimpia,,38.2167,15.5588
+1411,1532,Via Cappellani - coop. Grifone,,38.2175,15.5594
+1412,1533,Vico Anastasi,,38.2196,15.5573
+1443,1564,Via Fiore,,38.2211,15.5585
+1444,1565,Via Fiore - statua Padre Pio,,38.2229,15.5597
+1445,1566,Via Fiore - comp. I Falchi,,38.2238,15.559
+2580,580,Piazza Castronovo,,38.2075,15.5583
+3130,129,Via T. Cannizzaro - Tribunale,,38.189,15.5524
+3131,1130,Via T. Cannizzaro - 166,,38.1897,15.5505
+3132,1131,Via T. Cannizzaro - 231,,38.1901,15.5491
+3133,1132,Via T. Cannizzaro - 252,,38.1909,15.5475
+3134,1133,Viale P. Umberto - Ortobotanico,,38.1921,15.5467
+3135,1134,Viale P. Umberto - com. Le Terrazze,,38.1939,15.5464
+3136,1135,Viale P. Umberto - 38,,38.195,15.5466
+3137,1136,Viale P. Umberto -clinica S. Camillo,,38.1937,15.5479
+3138,1137,Viale P. Umberto - Cristo Re,,38.1947,15.5493
+3139,1138,Viale P. Umberto - Sacrario Cristo Re,,38.1958,15.551
+3140,1139,Viale P. Umberto - via Grattoni,,38.1975,15.5496
+3141,1140,Viale P. Umberto - 137,,38.1981,15.5476
+3466,1587,V.le Regina Margherita - Osservatorio,,38.2008,15.5529
+3467,1588,V.le Regina Margherita - chiesa Lourdes,,38.2026,15.5519
+3468,1589,V.le Regina Margherita -63,,38.204,15.5511
+3469,1590,V.le Regina Margherita - ist. Ignatianum,,38.2055,15.5524
+3470,1591,V.le Regina Margherita - sal. Cappuccini,,38.2054,15.5527
+3471,1592,V.le Regina Margherita - 87,,38.2051,15.5544
+3472,1593,V.le Regina Margherita - 87a,,38.2063,15.553
+3473,1594,V.le Regina Elena 10 - chiesa S. Domenico,,38.2075,15.5531
+3474,1595,V.le Regina Elena - 16,,38.208,15.5536
+3475,1596,V.le Regina Elena - 61,,38.2082,15.5538
+3491,1612,V.le Regina Margherita - Villa Salus,,38.1995,15.5493
+1480,1601,V.le Giostra - via Adamello,,38.2115,15.5465
+1481,1602,Viale Giostra - 73,,38.2122,15.545
+1482,1603,Viale Giostra - salita Curcuruto,,38.213,15.5422
+1483,1604,Viale Giostra - chiesa Maria di GesÃƒÂ¹,,38.2137,15.5395
+1484,1605,Viale Giostra - via S. Jachiddu,,38.2146,15.5377
+1485,1606,Viale Giostra - 84,,38.2165,15.5349
+1486,1607,Viale Giostra - casette Ritiro,,38.2181,15.533
+1487,1608,Viale Giostra - svincolo Autostrada,,38.221,15.5299
+1488,1609,Viale Giostra - chiesa di S. Michele,,38.2217,15.5278
+1489,1610,SP50 Torrente S. Michele,,38.2234,15.5271
+11079,1480,Via Torrente Trapani - 6,,38.2047,15.5505
+11080,1481,Via Torrente Trapani - 16,,38.205,15.5491
+11081,1482,Via Torrente Trapani - 34 Cappuccini,,38.2054,15.5473
+11082,1483,Via Torrente Trapani - 40,,38.2058,15.5458
+11083,1484,Via Torrente Trapani - CittÃƒÂ  Nuova fer.1,,38.2063,15.5432
+11084,1485,Via Torrente Trapani - CittÃƒÂ  Nuova fer.2,,38.2067,15.5401
+1514,1635,Chiesa Ritiro,,38.2133,15.5381
+1515,1636,Via Palermo - 690,,38.213,15.5375
+1516,1637,Via Palermo - 587,,38.2134,15.5356
+1517,1638,Via Palermo - 754,,38.2132,15.5319
+1518,1639,Via Palermo - 731,,38.2122,15.5284
+1519,1640,Via Palermo - 846,,38.2112,15.5265
+1520,1641,SS113 - 1,,38.2095,15.526
+1521,1642,SS113 - 906,,38.2075,15.5246
+1522,1643,SS113 - bivio Noviziato Casazza,,38.2032,15.5228
+1523,1644,SS113 - Centro Neurolesi,,38.2066,15.5199
+1524,1645,SS113 - Centro Neurolesi Ospes,,38.2077,15.5177
+1525,1646,SS113 - Quattro Strade,,38.2157,15.5059
+1526,1647,SS113 - Locanda 1,,38.2295,15.4977
+1527,1648,SS113 - Locanda 2,,38.23,15.4958
+1528,1649,SS113 - Locanda 3,,38.2306,15.4933
+1529,1650,SS113 - Locanda 4,,38.2304,15.4893
+1530,1651,SS113 - Locanda 5,,38.2306,15.4847
+1531,1652,SS113 - Locanda 6,,38.2305,15.4811
+1532,1653,Vill. Gesso - Cimitero,,38.2321,15.477
+1533,1654,Vill. Gesso - c.da Castello,,38.2327,15.475
+1534,1655,Vill. Gesso - p.zza Castello,,38.2336,15.4716
+1535,1656,Vill. Gesso - Belvedere,,38.2341,15.4693
+1536,1657,Vill. Gesso - 37,,38.2351,15.4685
+1538,1659,SP50 - localitÃƒÂ  Reginella,,38.2279,15.5242
+1539,1660,SP50 -  Reginella 2,,38.228,15.5232
+1540,1661,SP50 - Monte Bandiera,,38.227,15.5204
+1541,1662,Portella Castanea - bivio Salice,,38.2365,15.5253
+1542,1663,SP51 - fer. 1 -  statua Padre Pio,,38.2377,15.5153
+1543,1664,SP51 - fer. 2,,38.2377,15.5131
+1544,1665,SP51 - fer. 3 - chiesa,,38.2382,15.5109
+1545,1666,SP51 - fer. 4,,38.2411,15.511
+1546,1667,SP51 - fer. 5,,38.243,15.5039
+1547,1668,SP51 - fer. 6,,38.2447,15.5033
+1548,1669,SP51 - fer. 7 - prima Cimitero,,38.2438,15.4989
+1549,1670,SP51 - fer. 8 - dopo Cimitero,,38.2452,15.4958
+1550,1671,SP51 - fer. 9,,38.2467,15.4959
+1551,1672,SP51 - fer. 10 - Madonnina,,38.2479,15.496
+1552,1673,Salice - via Principe Umberto,,38.249,15.4971
+1553,1674,Salice - via Principe Umberto n. 19,,38.2497,15.4967
+1554,1675,Salice - via Principe Umberto  - Bar,,38.2503,15.4954
+1555,1676,Salice - via Principe Umberto - p.zza Chiesa,,38.2508,15.4937
+1556,1677,Salice - via Principe Umberto n. 209,,38.2516,15.4916
+1557,1678,Salice - via Principe Umberto n. 239,,38.2526,15.4891
+1558,1679,SP51 - 12,,38.257,15.484
+1559,1680,SP51 - villa Romeo,,38.2585,15.4817
+1560,1681,SP51 - villa FerraÃƒÂ¹,,38.2594,15.4801
+1561,1682,SP51 - c/o torrente Marmora,,38.2649,15.474
+1562,1683,SS113 - Km 30 -300,,38.2642,15.4729
+1563,1684,SS113 - Km 30 -700,,38.2621,15.4692
+1564,1685,SS113 - Km 31 -100,,38.2594,15.466
+1565,1686,SS113 - Campanella,,38.2557,15.4619
+1566,1687,SS113 - Ortoliuzzo,,38.2521,15.4578
+1567,1688,SS113 - Pontegallo n.23,,38.2495,15.4548
+1568,1689,SS113 - Pontegallo n.44,,38.248,15.4533
+1490,1611,SP50 S. Michele - Capolinea,,38.2266,15.5265
+1739,1860,St. Panoramica dello Stretto Km 8 -100,,38.2666,15.6157
+1740,1861,St. Panoramica dello Stretto Km 8 -700,,38.2666,15.6226
+1742,1863,Viale Stagno D'Alcontres - via Archimede,,38.2611,15.5996
+1743,1864,Viale Stagno D'Alcontres - Eliporto,,38.2617,15.598
+1744,1865,Viale Stagno D'Alcontres - Papardo,,38.2623,15.5961
+1745,1866,Viale Stagno D'Alcontres - ponte SP,,38.2602,15.6013
+1746,1867,Viale Stagno D'Alcontres,,38.2593,15.6023
+1747,1868,Viale Stagno D'Alcontres - 327,,38.257,15.6035
+1726,1847,St. Panoramica dello Stretto - v.le dei Tigli,,38.2196,15.5637
+1727,1848,St. Panoramica dello Stretto - Eden Park,,38.2231,15.5646
+1728,1849,St. Panoramica dello Stretto - 574,,38.2253,15.5646
+1729,1850,St. Panoramica dello Stretto - Parnaso,,38.2264,15.5656
+1730,1851,St. Panoramica dello Stretto - Linea Verde 1,,38.2275,15.5665
+1731,1852,St. Panoramica dello Stretto - Linea Verde 2,,38.2293,15.5681
+1732,1853,St. Panoramica dello Stretto - Rialto Azzurro,,38.2309,15.5682
+1733,1854,St. Panoramica dello Stretto - Km 2 -200,,38.2329,15.5697
+1734,1855,St. Panoramica dello Stretto - Km 2 -500,,38.2366,15.5719
+1735,1856,St. Panoramica dello Stretto - Cimitero,,38.2392,15.5754
+1736,1857,St. Panoramica dello Stretto - Parcheggio,,38.2417,15.5782
+1737,1858,St. Panoramica dello Stretto Km 4 -400,,38.2485,15.5828
+1584,1705,Torrente Guardia - fer. 1,,38.2513,15.5876
+1585,1706,Torrente Guardia - fer. 2,,38.2513,15.5867
+874,874,"Torrente Guardia, fer. 1",,38.2518,15.5864
+875,875,"Torrente Guardia, fer. 2",,38.2523,15.5698
+1586,1707,SP45 - Faro Superiore Lam 85,,38.2569,15.5967
+1587,1708,SP45 - Faro Superiore n. 33,,38.2575,15.5929
+1588,1709,SP45 - Faro Superiore Km 2 -200,,38.2589,15.5871
+1589,1710,Faro Superiore - Via Messina n.4,,38.2607,15.5841
+1590,1711,Faro Superiore - Via Messina n.16,,38.2626,15.5835
+1591,1712,Faro Superiore - piazza S. Rocco,,38.2648,15.5832
+1592,1713,SP45 Faro Superiore - via Lecce n. 46,,38.2634,15.5817
+1593,1714,SP45 Faro Superiore - via Lecce,,38.2626,15.5801
+1594,1715,SP45 Faro Superiore - Cimitero,,38.2617,15.5804
+1595,1716,SP45 Curcuraci - casa Sardella,,38.2618,15.5774
+1596,1717,SP45 Curcuraci,,38.2624,15.5755
+1597,1718,SP45 Curcuraci - comp. Sicim 8,,38.2623,15.5721
+1598,1719,SP45 Curcuraci - bivio Marotta,,38.2609,15.569
+1756,1877,C.da Marotta - 47,,38.2559,15.566
+1757,1878,C.da Marotta - Strada Comunale Bianchi,,38.2584,15.5669
+1774,1895,Via Archimede - 15,,38.2616,15.6001
+1775,1896,Via Archimede - 28,,38.2635,15.6004
+1776,1897,Via Archimee - 37,,38.2652,15.6012
+1781,1902,Case Sperone - 2,,38.2661,15.6017
+1782,1903,Via Sperone Alto - Chiesa dei Miracoli,,38.2668,15.5997
+1783,1904,Via Sperone Alto - via S. Caterina,,38.2678,15.5958
+1784,1905,Via Sperone Alto - 39,,38.2687,15.5935
+1785,1906,C.a Badessa,,38.2717,15.5851
+1786,1907,C.da Badessa - coop. Solemar,,38.27,15.5848
+1647,1768,Ganzirri - via C. Pompea - 2055,,38.2659,15.6307
+1648,1769,Ganzirri - via C. Pompea - 2095,,38.2665,15.6323
+1649,1770,Mortelle - Strada Statale 113 - Km. 11 -200,,38.2692,15.6335
+1650,1771,Mortelle - Strada Statale 113 - Villa Regina,,38.2705,15.633
+1651,1772,Mortelle - Strada Statale 113 - Lido Mortelle,,38.2713,15.6292
+1652,1773,Mortelle - Strada Statale 113 n. 33,,38.2714,15.6272
+1653,1774,Mortelle - Strada Statale 113 - Lido Delfino,,38.2712,15.6237
+1654,1775,Mortelle - Strada Statale 113 n. 75a,,38.271,15.6212
+1655,1776,Mortelle - Strada Statale 113 n. 42,,38.271,15.6186
+1656,1777,Mortelle - Strada Statale 113 - Spiaggia D'Oro,,38.2708,15.6145
+1657,1778,Timpazi - Strada Statale 113 - Km 13 -400,,38.2708,15.6111
+1658,1779,Timpazi - Strada Statale 113 - Km 13 -900,,38.2716,15.6049
+1659,1780,Timpazi - Strada Statale 113 - Km 14 -000,,38.2722,15.6015
+1660,1781,Timpazi - Strada Statale 113 - Km 14 -600,,38.2734,15.5967
+1661,1782,Timpazi - Strada Statale 113 - Km 14 -900,,38.2744,15.5938
+1662,1783,Casa Bianca - Strada Statale 113 - Km 15 -150,,38.2771,15.5885
+1663,1784,Casa Bianca - Strada Statale 113 - Km 15 -500,,38.278,15.5852
+1664,1785,Tono - Strada Statale 113 - Km 15 - 950,,38.2803,15.5804
+1665,1786,Tono - Strada Statale 113 - Km 16 -600,,38.2823,15.5765
+1666,1787,Tono - Strada Statale 113 - Km 16 -900,,38.2842,15.5741
+1667,1788,Tono - Strada Statale 113 - bivio Faro Sup.,,38.2839,15.5707
+1668,1789,Tono - Strada Statale 113 - Km 17 -200,,38.2859,15.569
+1669,1790,Tono - Strada Statale 113 - Torr. Mezzana,,38.2904,15.5631
+1670,1791,Piano Rocca - SS113 - bivio Acqualadrone,,38.2913,15.5551
+1641,1762,Ganzirri - via C. Pompea - via Petraro,,38.2596,15.6095
+1642,1763,Ganzirri - via C. Pompera n. 1861,,38.2607,15.6124
+1643,1764,Ganzirri - via C. Pompea - Ortopedico,,38.2613,15.615
+1644,1765,Ganzirri - via C. Pompea - n. 1929,,38.2621,15.6181
+1645,1766,Ganzirri - via C. Pompea - 1955,,38.2629,15.6215
+1646,1767,Ganzirri - via C. Pompea - 382,,38.2644,15.627
+1722,1843,Aqualadroni - via Lungomare n. 13,,38.2963,15.5555
+1723,1844,Aqualadroni - via Lungomare n. 189,,38.2977,15.5538
+1724,1845,Aqualadroni - via Lungomare n. 249,,38.2988,15.5521
+1671,1792,Piano Rocca - SS113 - Km 20 -100,,38.2938,15.5543
+1672,1793,Piano Rocca - SS113 - Km 20 -300,,38.2942,15.5519
+1673,1794,Piano Rocca - SS113 - Km 20 -500,,38.2948,15.5484
+1674,1795,Spartà - Strada Statale 113 - Km 20 -800,,38.2933,15.5462
+1675,1796,Spartà - Strada Statale 113 - Km 21 -30,,38.2943,15.5419
+1676,1797,Spartà - Strada Statale 113 - Km 21 -800,,38.2937,15.5368
+1677,1798,Piano Torre - disc. Marina di Mezzacampa,,38.2931,15.5329
+1678,1799,Piano Torre - SS113 - Km 22 -500,,38.2925,15.5287
+1680,1801,Piano Torre - SS113 - Km 23 -000,,38.2929,15.5239
+1681,1802,Piano Torre - SS113 - Km 23 -400 c.da Ziino,,38.2922,15.5191
+1682,1803,Piano Torre - SS113 - Km 23 -700,,38.2917,15.5166
+1683,1804,Calamona - SS113 - Pineta,,38.2902,15.5164
+1684,1805,Calamona - SS113 - Km 24 -500,,38.2891,15.516
+1685,1806,Calamona - SS113 - Km 25 -300,,38.2889,15.5084
+1686,1807,S. Saba - SS113 - Km 25 -600,,38.2876,15.5068
+1687,1808,S. Saba - SS113 - Km 25 -800,,38.2864,15.5055
+1688,1809,S.Saba - SS113 - disc. mare,,38.2845,15.5035
+1689,1810,S.Saba - SS113 - disc. paese,,38.2826,15.5002
+1690,1811,S.Saba - SS113 - cont. Musarra,,38.2806,15.4965
+1691,1812,S.Saba - SS113 - cont.  Corridore,,38.2792,15.4945
+1692,1813,S. Saba - SS113 - Km 27 -350,,38.2776,15.492
+1693,1814,S. Saba - SS113 - Km 27 -500,,38.2768,15.491
+1694,1815,Rodia - SS113 - Km 27 -800,,38.2751,15.4887
+1695,1816,Rodia - SS113 - Km 28 -000,,38.2738,15.487
+1696,1817,Rodia - SS113 - Km 28 -300,,38.2717,15.4845
+1697,1818,Rodia - SS113 - Km 28 -500,,38.2706,15.4832
+1698,1819,Rodia - SS113 - Km 28 -850 - farmacia,,38.2678,15.4809
+1699,1820,Rodia - SS113 - Km 29 -200,,38.2668,15.478
+1700,1821,Marmora - SS113 - ponte di Marmora,,38.2654,15.4744
+1619,1740,SP50 Castanea - inizio,,38.2698,15.5309
+1620,1741,SP50 Castanea - casa Camarda-Costa,,38.2683,15.5285
+1621,1742,SP50 Castanea,,38.2674,15.5254
+1622,1743,SP50 Castanea - casa vinicola,,38.2658,15.5234
+1623,1744,SP50 Castanea - p.zza SS. Rosario,,38.2633,15.5217
+1624,1745,SP50 Castanea - 5a,,38.2632,15.523
+1625,1746,SP50 Castanea - Casa Popolari,,38.2618,15.5244
+1626,1747,SP50 Castanea - via Calabrisella 47,,38.2603,15.5238
+1627,1748,SP50 Castanea - via Calabrisella 31,,38.2598,15.5238
+1628,1749,SP50 S. Cosimo - Carabinieri,,38.2569,15.5221
+1629,1750,SP50 S. Cosimo - 117,,38.2545,15.5234
+1630,1751,SP50 S. Cosimo - 125,,38.252,15.5243
+1631,1752,SP50 S. Cosimo - Casa di Riposo,,38.251,15.5269
+1632,1753,SP50 C.da Orbo,,38.248,15.5278
+1633,1754,SP50,,38.241,15.5253
+1599,1720,SP45 Curcuraci - Circolo Tennis,,38.2616,15.5675
+1600,1721,SP45 Curcuraci - comp. Delle More,,38.264,15.5664
+1601,1722,SP45 Curcuraci Km 6 -200,,38.2617,15.5613
+1602,1723,SP45 Curcuraci Km 6 -500,,38.2609,15.559
+1603,1724,SP45 Massa S. Giovanni Km 7 -700,,38.2593,15.5489
+1604,1725,SP45 Massa S. Giovanni Km 9 -700,,38.2594,15.5437
+1605,1726,SP45 Massa S. Giovanni Km 9 -900,,38.2598,15.5422
+1606,1727,SP45 Massa S. Giovanni Km 10 -000,,38.2621,15.5423
+1607,1728,SP45 Massa S. Giovanni Km 10 -200,,38.2629,15.5427
+1608,1729,Massa S. Giovanni - chiesa di S. Giovanni,,38.265,15.5438
+1609,1730,Massa S. Giovanni - piazza di S. Giovanni,,38.266,15.545
+1610,1731,SP45 Massa S. Giovanni Km 10 -800,,38.2679,15.546
+1611,1732,SP45 Massa S. Lucia Km 11 -000,,38.2688,15.5474
+1612,1733,SP45 Massa S. Lucia - 5,,38.2687,15.5482
+1613,1734,SP45 Massa S. Lucia - scuola elementare,,38.2703,15.548
+1614,1735,SP45 Massa S. Nicola Km 12 -000,,38.271,15.5431
+1615,1736,SP50 Massa S. Giorgio - inizio,,38.2739,15.5371
+1616,1737,SP50 Massa S. Giorgio,,38.2752,15.537
+1617,1738,SP50 Massa S. Giorgio - 41,,38.2738,15.5368
+1618,1739,SP50 Massa S. Giorgio - c.da Vigna Grande,,38.2723,15.5358
+1707,1828,Ganzirri - SP46 n.127,,38.2607,15.6293
+1708,1829,Torre Faro - SP46 ex Motel Faro,,38.2614,15.6331
+1709,1830,Torre Faro - via Ciruito n. 170,,38.2627,15.6354
+1710,1831,Torre Faro - via Ciruito n. 177,,38.2643,15.6374
+1711,1832,Torre Faro - via Circuito statua Padre Pio,,38.2655,15.639
+1773,1894,Ganzirri - Lago Grande,,38.2631,15.6264
+1980,980,"Giampilieri Mar., c.da San Paolo",,38.0698,15.4873
+11980,1980,"Giampilieri Mar., c.da San Paolo",,38.0698,15.4873
+1263,1362,Strada Provinciale 34 - fer. 1,,38.0721,15.484
+1264,1363,Strada Provinciale 34 - fer. 2,,38.0747,15.4824
+1265,1364,Strada Provinciale 34 - fer. 3,,38.0766,15.4813
+1267,1366,Briga Superiore,,38.0778,15.4737
+1788,909,"Giampilieri Sup., C.da S. Lucia",,38.0681,15.4699
+1789,910,"Giampilieri Sup., Coop. La Sorgiva",,38.0657,15.472
+1147,1246,"Via T. Cannizzaro, Forestale - Cairoli",,38.1874,15.5551
+21232,387,Stazione Galati RFI,,38.1048,15.5057
+1873,1873,Strada Provinciale 49,,38.2757,15.5758
+1872,1872,Strada Provinciale 49,,38.2749,15.5766
+1871,1871,Strada Provinciale 49,,38.2715,15.5817
+1870,1870,Faro Superiore - V.le Regina Elena,,38.2694,15.5816
+1869,1869,"Faro Superiore - Via Belvedere, 40",,38.2669,15.5818
+1777,1898,"Serri, Strada Comunale n.32",,38.2663,15.6029
+1778,1899,"Serri, Strada Comunale, Granatari-Masse",,38.2681,15.6065
+1779,1900,"C.da Serri, 22",,38.268,15.609
+1919,919,"Torrente Pace, fer. 1",,38.237,15.5756
+1920,920,"Torrente Pace, Cimitero",,38.2388,15.5745
+1921,921,"Torrente Pace, fer. 3",,38.2388,15.5736
+2919,1919,"Torrente Pace, fer. 1",,38.237,15.5756
+2920,1920,"Torrente Pace, Cimitero",,38.2388,15.5745
+2921,1921,"Torrente Pace, fer. 3",,38.2388,15.5736
