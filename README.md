@@ -9,7 +9,7 @@ metr.core=> (require '[metr.state :as state])
 nil
 metr.core=> (require '[metr.db :as db])
 nil
-metr.core=> (-main) ;; this will import the data and could take some time
+metr.core=> (start!) ;; this will import the data and could take some time
 nil
 metr.core=> (db/query-nearby-stops state/db 38.19185 15.55401 3)
 ({:id 390, :code 511, :name "Corso Cavour, Ist. Maurolico", :latitude 38.1918, :longitude 15.5531}

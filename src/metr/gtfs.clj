@@ -3,13 +3,13 @@
             [clojure.data.csv :as csv]
             [metr.utils :as utils]))
 
-(defn get-csv [path]
+(defn- get-csv [path]
   (with-open [reader (utils/resource-reader path)]
     (->> (csv/read-csv reader)
          (utils/csv->maps)
          doall)))
 
-(defn clean-stop [stop]
+(defn- clean-stop [stop]
   (-> stop
       (dissoc :stop_desc)
       (rename-keys {:stop_id   :id
@@ -22,7 +22,7 @@
   (->> (get-csv "gtfs/stops.csv")
        (map clean-stop)))
 
-(defn clean-route [route]
+(defn- clean-route [route]
   (-> route
       (dissoc :agency_id)
       (dissoc :route_desc)
@@ -38,7 +38,7 @@
   (->> (get-csv "gtfs/routes.csv")
        (map clean-route)))
 
-(defn clean-trip [trip]
+(defn- clean-trip [trip]
   (-> trip
       (dissoc :trip_short_name)
       (dissoc :shape_id)
@@ -53,7 +53,7 @@
   (->> (get-csv "gtfs/trips.csv")
        (map clean-trip)))
 
-(defn clean-timetable [timetable]
+(defn- clean-timetable [timetable]
   (-> timetable
       (dissoc :departure_time)
       (dissoc :stop_headsign)

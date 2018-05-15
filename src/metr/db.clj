@@ -7,23 +7,28 @@
   (jdbc/get-connection
    {:connection-uri "jdbc:sqlite::memory:"}))
 
-(defn init! [db]
+(defn init-schema! [db]
   (doall
    (map (fn [q] (jdbc/execute! db q))
         (-> (utils/slurp-resource "sql/init.sql")
-            (string/split #"--;;")))))
+            (string/split #"--;;"))))
+  nil)
 
 (defn insert-stops! [db stops]
-  (jdbc/insert-multi! db "stop" stops))
+  (jdbc/insert-multi! db "stop" stops)
+  nil)
 
 (defn insert-routes! [db routes]
-  (jdbc/insert-multi! db "route" routes))
+  (jdbc/insert-multi! db "route" routes)
+  nil)
 
 (defn insert-trips! [db trips]
-  (jdbc/insert-multi! db "trip" trips))
+  (jdbc/insert-multi! db "trip" trips)
+  nil)
 
 (defn insert-timetables! [db timetables]
-  (jdbc/insert-multi! db "timetable" timetables))
+  (jdbc/insert-multi! db "timetable" timetables)
+  nil)
 
 (defn query-nearby-stops [db latitude longitude limit]
   (jdbc/query

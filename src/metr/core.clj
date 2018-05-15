@@ -5,12 +5,18 @@
             [metr.db :as db]
             [metr.gtfs :as gtfs]))
 
-(defn -main
-  [& args]
+(defn start! []
   (mount/start)
-  (db/init! state/db)
+  (db/init-schema! state/db)
   (db/insert-stops! state/db (gtfs/get-stops))
   (db/insert-routes! state/db (gtfs/get-routes))
   (db/insert-trips! state/db (gtfs/get-trips))
   (db/insert-timetables! state/db (gtfs/get-timetables))
+  nil)
+
+(defn stop! []
+  (mount/stop)
+  nil)
+
+(defn -main [& args]
   nil)
