@@ -2,7 +2,7 @@
   (:require [clojure.data.json :as json]
             [clj-http.client :as client]))
 
-(defn address->coordinates [address]
+(defn- address->coordinates* [address]
   (-> (client/get
        "https://nominatim.openstreetmap.org/search/"
        {:headers      {:accept-language "it-it"}
@@ -15,3 +15,6 @@
       (json/read-str :key-fn keyword)
       first
       (map [:lat :lon])))
+
+(def address->coordinates
+  (memoize address->coordinates*))
