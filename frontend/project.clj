@@ -16,12 +16,14 @@
                  [cljsjs/react-leaflet "1.6.5-0"]]
 
   :source-paths ["src/clj/dev"]
-  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
+  :clean-targets ^{:protect false} ["resources/public/js/compiled"
+                                    "resources/public/css"
+                                    "target"
                                     "test/js"]
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-  :figwheel {:server-port 8081
-             :css-dirs    ["resources/public/css"]}
+  :figwheel {:server-port   8081
+             :css-dirs      ["resources/public/css"]}
 
   :less {:source-paths ["src/less"]
          :target-path  "resources/public/css"}
@@ -47,7 +49,8 @@
   :cljsbuild {:builds
               [{:id           "dev"
                 :source-paths ["src/cljs"]
-                :figwheel     {:on-jsload "metr-fe.core/mount-root"}
+                :figwheel     {:websocket-url "ws://[[server-hostname]]:[[server-port]]/figwheel-ws"
+                               :on-jsload "metr-fe.core/mount-root"}
                 :compiler     {:main                 metr-fe.core
                                :output-to            "resources/public/js/compiled/app.js"
                                :output-dir           "resources/public/js/compiled/out"

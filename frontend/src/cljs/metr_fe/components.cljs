@@ -14,6 +14,10 @@
 (def TileLayer (reagent/adapt-react-class react-leaflet/TileLayer))
 (def Marker (reagent/adapt-react-class react-leaflet/Marker))
 
+(def map-marker-icon
+  (js/L.icon #js {:iconUrl   (str "images/marker-icon.png")
+                  :shadowUrl (str "images/marker-shadow.png")}))
+
 (defn map-component []
   (let [viewport (re-frame/subscribe [::subs/map-viewport])
         stops    (re-frame/subscribe [::subs/stops-in-rect])
@@ -26,15 +30,20 @@
            (re-frame/dispatch
             [::events/set-stops-in-rect (:body x)]))))
 
-    [Map {:className           "map-component"
-          :viewport            @viewport
-          :on-viewport-changed (fn [v]
-                                 (re-frame/dispatch
-                                  [::events/set-map-viewport v]))}
-     [TileLayer {:url (str js/window.location.protocol
-                           "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")}]
+    [Map
+     {:className           "map-component"
+      :viewport            @viewport
+      :on-viewport-changed (fn [v]
+                             (re-frame/dispatch
+                              [::events/set-map-viewport v]))}
+
+     [TileLayer
+      {:url (str js/window.location.protocol
+                 "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")}]
      (when @stops
        (map (fn [s]
+              ^{:key s}
               [Marker
-               {:position (.latLng js/L (:latitude s) (:longitude s))}])
+               {:position (js/L.latLng (:latitude s) (:longitude s))
+                :icon     map-marker-icon}])
             @stops))]))
