@@ -13,6 +13,7 @@
 (def Map (reagent/adapt-react-class react-leaflet/Map))
 (def TileLayer (reagent/adapt-react-class react-leaflet/TileLayer))
 (def Marker (reagent/adapt-react-class react-leaflet/Marker))
+(def Rectangle (reagent/adapt-react-class react-leaflet/Rectangle))
 
 (def map-marker-icon
   (js/L.icon #js {:iconUrl   (str "images/marker-icon.png")
@@ -22,7 +23,7 @@
   (let [viewport (re-frame/subscribe [::subs/map-viewport])
         stops    (re-frame/subscribe [::subs/stops-in-rect])
         rect     (when @viewport
-                   (utils/coordinates->rect (.-center @viewport) 10))]
+                   (utils/coordinates->rect (.-center @viewport) 1))]
 
     (go (async/take!
          (api/get-stops-in-rect rect)
@@ -46,4 +47,9 @@
               [Marker
                {:position (js/L.latLng (:latitude s) (:longitude s))
                 :icon     map-marker-icon}])
-            @stops))]))
+            @stops))
+
+     (when rect
+       [Rectangle {:bounds (js/L.latLngBounds
+                            (js/L.latLng (get rect 0) (get rect 2))
+                            (js/L.latLng (get rect 1) (get rect 3)))}])]))
