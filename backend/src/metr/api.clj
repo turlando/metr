@@ -13,7 +13,7 @@
         lon-max (-> request :params (get "lon-max"))]
     {:status  200
      :headers {"Content-Type" "application/json; charset=utf-8"
-               "Access-Control-Allow-Origin" "http://localhost:3449"}
+               "Access-Control-Allow-Origin" "http://localhost:8081"}
      :body    (-> (db/query-stops-in-rect
                    db/db
                    lat-min lat-max
