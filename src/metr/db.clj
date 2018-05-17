@@ -1,11 +1,16 @@
 (ns metr.db
   (:require [clojure.string :as string]
             [clojure.java.jdbc :as jdbc]
+            [mount.core :as mount]
             [metr.utils :as utils]))
 
 (defn get-connection []
   (jdbc/get-connection
    {:connection-uri "jdbc:sqlite::memory:"}))
+
+(mount/defstate db
+  :start {:connection (get-connection)}
+  :stop  (-> db :connection .close))
 
 (defn init-schema! [db]
   (doall
@@ -30,11 +35,14 @@
   (jdbc/insert-multi! db "timetable" timetables)
   nil)
 
-(defn query-nearby-stops [db latitude longitude limit]
+(defn query-stops-in-rect [db
+                           latitude_min latitude_max
+                           longitude_min longitude_max]
   (jdbc/query
    db
-   [(utils/slurp-resource "sql/query-nearby-stops.sql")
-    latitude longitude limit]))
+   [(utils/slurp-resource "sql/query-stops-in-rect.sql")
+    latitude_min latitude_max
+    longitude_min longitude_max]))
 
 (defn query-routes-by-stop-id [db stop-id]
   (jdbc/query

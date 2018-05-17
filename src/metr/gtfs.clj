@@ -24,11 +24,11 @@
 
 (defn- clean-route [route]
   (-> route
-      (dissoc :agency_id)
-      (dissoc :route_desc)
-      (dissoc :route_url)
-      (dissoc :route_color)
-      (dissoc :route_text_color)
+      (dissoc :agency_id
+              :route_desc
+              :route_url
+              :route_color
+              :route_text_color)
       (rename-keys {:route_id         :id
                     :route_short_name :code
                     :route_long_name  :name
@@ -40,9 +40,9 @@
 
 (defn- clean-trip [trip]
   (-> trip
-      (dissoc :trip_short_name)
-      (dissoc :shape_id)
-      (dissoc :block_id)
+      (dissoc :trip_short_name
+              :shape_id
+              :block_id)
       (rename-keys {:route_id      :route_id
                     :service_id    :service
                     :trip_id       :id
@@ -55,10 +55,10 @@
 
 (defn- clean-timetable [timetable]
   (-> timetable
-      (dissoc :departure_time)
-      (dissoc :stop_headsign)
-      (dissoc :drop_off_type)
-      (dissoc :timepoint)
+      (dissoc :departure_time
+              :stop_headsign
+              :drop_off_type
+              :timepoint)
       (rename-keys {:arrival_time  :time
                     :stop_sequence :sequence})))
 
