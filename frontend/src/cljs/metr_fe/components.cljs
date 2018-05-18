@@ -12,8 +12,9 @@
 
 (def Map (reagent/adapt-react-class react-leaflet/Map))
 (def TileLayer (reagent/adapt-react-class react-leaflet/TileLayer))
-(def Marker (reagent/adapt-react-class react-leaflet/Marker))
 (def Rectangle (reagent/adapt-react-class react-leaflet/Rectangle))
+(def Marker (reagent/adapt-react-class react-leaflet/Marker))
+(def Popup (reagent/adapt-react-class react-leaflet/Popup))
 
 (def map-marker-icon
   (js/L.icon #js {:iconUrl   (str "images/marker-icon.png")
@@ -37,19 +38,22 @@
       :on-viewport-changed (fn [v]
                              (re-frame/dispatch
                               [::events/set-map-viewport v]))}
-
      [TileLayer
       {:url (str js/window.location.protocol
                  "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png")}]
+     (when rect
+       [Rectangle {:bounds (js/L.latLngBounds
+                            (js/L.latLng (get rect 0) (get rect 2))
+                            (js/L.latLng (get rect 1) (get rect 3)))}])
      (when @stops
        (map (fn [s]
               ^{:key s}
               [Marker
                {:position (js/L.latLng (:latitude s) (:longitude s))
-                :icon     map-marker-icon}])
+                :icon     map-marker-icon}
+               [Popup
+                [:div
+                 [:p "Code: " (:code s)]
+                 [:p "Name: " (:name s)]]]])
             @stops))
-
-     (when rect
-       [Rectangle {:bounds (js/L.latLngBounds
-                            (js/L.latLng (get rect 0) (get rect 2))
-                            (js/L.latLng (get rect 1) (get rect 3)))}])]))
+]))
