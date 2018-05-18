@@ -55,5 +55,4 @@
                 [:div
                  [:p "Code: " (:code s)]
                  [:p "Name: " (:name s)]]]])
-            @stops))
-]))
+            @stops))]))
