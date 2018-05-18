@@ -8,7 +8,7 @@
   (jdbc/get-connection
    {:connection-uri "jdbc:sqlite::memory:"}))
 
-(mount/defstate db
+(mount/defstate ^{:on-reload :noop} db
   :start {:connection (get-connection)}
   :stop  (-> db :connection .close))
 
