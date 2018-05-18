@@ -1,5 +1,6 @@
 (ns metr.gtfs
   (:require [clojure.set :refer [rename-keys]]
+            [clojure.string :as string]
             [clojure.data.csv :as csv]
             [metr.utils :as utils]))
 
@@ -64,4 +65,6 @@
 
 (defn get-timetables []
   (->> (get-csv "gtfs/stoptimes.csv")
-       (map clean-timetable)))
+       (map clean-timetable)
+       (filter #((complement string/blank?) (:time %)))
+       (map #(update % :time utils/time->seconds))))

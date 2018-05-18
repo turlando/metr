@@ -42,5 +42,5 @@ CREATE TABLE timetable (
     trip_id TEXT NOT NULL REFERENCES trip (id),
     stop_id INTEGER NOT NULL REFERENCES stop (id),
     sequence INTEGER NOT NULL,
-    time TEXT
+    time INTEGER NOT NULL
 );
