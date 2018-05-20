@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [mount.core :as mount]
             [metr.db :as db]
-            [metr.api :as api]
+            [metr.server :as server]
             [metr.gtfs :as gtfs]))
 
 (defn start! []

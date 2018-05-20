@@ -1,4 +1,4 @@
-(ns metr.api
+(ns metr.server
   (:require [clojure.data.json :as json]
             [mount.core :as mount]
             [org.httpkit.server :as server]
@@ -33,4 +33,3 @@
 (mount/defstate server
   :start (start-server!)
   :stop  (server :timeout 0))
-
