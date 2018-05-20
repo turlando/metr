@@ -49,3 +49,14 @@
    [(utils/slurp-resource "sql/query-stops-in-rect.sql")
     lat-min lat-max
     lon-min lon-max]))
+
+(defn query-timetable-in-rect-in-time [db
+                                       lat-min lat-max
+                                       lon-min lon-max
+                                       time-min time-max]
+  (jdbc/query
+   db
+   [(utils/slurp-resource "sql/query-timetable-in-rect-in-time.sql")
+    lat-min lat-max
+    lon-min lon-max
+    time-min time-max]))

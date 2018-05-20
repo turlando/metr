@@ -22,8 +22,22 @@
      (api/get-stops-in-rect lat-min lat-max
                             lon-min lon-max))))
 
+(defn- get-timetable-in-rect-in-time-handler [request]
+  (let [lat-min (-> request :params (get "lat-min"))
+        lat-max (-> request :params (get "lat-max"))
+        lon-min (-> request :params (get "lon-min"))
+        lon-max (-> request :params (get "lon-max"))
+        time-min (-> request :params (get "time-min"))
+        time-max (-> request :params (get "time-max"))]
+    (json-payload
+     (api/get-timetable-in-rect-in-time-by-stop-code
+      lat-min lat-max
+      lon-min lon-max
+      time-min time-max))))
+
 (compojure/defroutes routes
-  (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler))
+  (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler)
+  (compojure/GET "/timetable-in-rect-in-time" [] get-timetable-in-rect-in-time-handler))
 
 (defn- start-server! []
   (server/run-server
