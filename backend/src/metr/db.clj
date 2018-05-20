@@ -35,17 +35,17 @@
   (jdbc/insert-multi! db "timetable" timetables)
   nil)
 
+(defn query-timetable-by-stop-code [db code]
+  (jdbc/query
+   db
+   [(utils/slurp-resource "sql/query-timetable-by-stop-code.sql")
+    code]))
+
 (defn query-stops-in-rect [db
-                           latitude_min latitude_max
-                           longitude_min longitude_max]
+                           lat-min lat-max
+                           lon-min lon-max]
   (jdbc/query
    db
    [(utils/slurp-resource "sql/query-stops-in-rect.sql")
-    latitude_min latitude_max
-    longitude_min longitude_max]))
-
-(defn query-routes-by-stop-id [db stop-id]
-  (jdbc/query
-   db
-   [(utils/slurp-resource "sql/query-routes-by-stop.sql")
-    stop-id]))
+    lat-min lat-max
+    lon-min lon-max]))

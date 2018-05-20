@@ -13,5 +13,5 @@ JOIN trip ON trip.route_id = route.id
 JOIN timetable ON timetable.trip_id = trip.id
 JOIN stop ON stop.id = timetable.stop_id
 WHERE
-    stop.latitude > ? AND stop.latitude < ? AND
-    stop.longitude > ? AND stop.longitude < ?
+    stop.code = ?
+ORDER BY timetable.time
