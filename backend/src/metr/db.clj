@@ -41,15 +41,6 @@
    [(utils/slurp-resource "sql/query-timetable-by-stop-code.sql")
     code]))
 
-(defn query-stops-in-rect [db
-                           lat-min lat-max
-                           lon-min lon-max]
-  (jdbc/query
-   db
-   [(utils/slurp-resource "sql/query-stops-in-rect.sql")
-    lat-min lat-max
-    lon-min lon-max]))
-
 (defn query-timetable-in-rect-in-time [db
                                        lat-min lat-max
                                        lon-min lon-max
@@ -60,3 +51,18 @@
     lat-min lat-max
     lon-min lon-max
     time-min time-max]))
+
+(defn query-stops-in-rect [db
+                           lat-min lat-max
+                           lon-min lon-max]
+  (jdbc/query
+   db
+   [(utils/slurp-resource "sql/query-stops-in-rect.sql")
+    lat-min lat-max
+    lon-min lon-max]))
+
+(defn query-stops-by-route-code [db code]
+  (jdbc/query
+   db
+   [(utils/slurp-resource "sql/query-stops-by-route-code.sql")
+    code]))

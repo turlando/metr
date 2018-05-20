@@ -23,3 +23,7 @@
                                            (utils/time->seconds time-max))
        (map #(update % :timetable_time utils/seconds->time))
        (group-by :stop_code)))
+
+(defn get-stops-by-route-code [code]
+  (->> (db/query-stops-by-route-code db/db code)
+       (map #(update % :timetable_time utils/seconds->time))))
