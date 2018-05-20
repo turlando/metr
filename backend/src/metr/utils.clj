@@ -21,9 +21,9 @@
 
 (defn time->seconds [s]
   (let [t (string/split s #":")]
-    (+ (* 3600 (Integer. (get t 2)))
+    (+ (* 3600 (Integer. (get t 0)))
        (* 60 (Integer. (get t 1)))
-       (Integer. (get t 0)))))
+       (Integer. (get t 2)))))
 
 (defn seconds->time [s]
   (let [hours   (quot s 3600)
