@@ -16,3 +16,4 @@ WHERE
     stop.latitude > ? AND stop.latitude < ? AND
     stop.longitude > ? AND stop.longitude < ? AND
     timetable.time > ? AND timetable.time < ?
+ORDER BY timetable.time
