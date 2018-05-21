@@ -56,9 +56,9 @@
            [Marker
             {:position (js/L.latLng lat lon)
              :icon     map-marker-icon}
-              [Popup
-               [:div
-                [:p name " (" code ")"]
-                (for [time times]
-                  ^{:key time}
-                  [:p (:timetable_time time)])]]])))]))
+            [Popup
+             [:div
+              [:p name " (" code ")"]
+              (for [time times]
+                ^{:key time}
+                [:p (:timetable_time time)])]]])))]))
