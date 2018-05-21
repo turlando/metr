@@ -12,6 +12,11 @@
    (:map-viewport db)))
 
 (re-frame/reg-sub
- ::stops-in-rect
+ ::map-bounds
  (fn [db _]
-   (:stops-in-rect db)))
+   (:map-bounds db)))
+
+(re-frame/reg-sub
+ ::map-stops
+ (fn [db _]
+   (:map-stops db)))

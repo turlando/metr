@@ -16,13 +16,26 @@
   [lat-min lat-max
    lon-min lon-max
    time-min time-max]
-  (->> (db/query-timetable-in-rect-in-time db/db
-                                           lat-min lat-max
-                                           lon-min lon-max
-                                           (utils/time->seconds time-min)
-                                           (utils/time->seconds time-max))
-       (map #(update % :timetable_time utils/seconds->time))
-       (group-by :stop_code)))
+  (let [grouped (->> (db/query-timetable-in-rect-in-time
+                      db/db
+                      lat-min lat-max
+                      lon-min lon-max
+                      (utils/time->seconds time-min)
+                      (utils/time->seconds time-max))
+                     (map #(update % :timetable_time utils/seconds->time))
+                     (group-by :stop_code))]
+    (reduce conj []
+            (for [[code xs] grouped]
+              {:stop {:code (-> xs first :stop_code)
+                      :name (-> xs first :stop_name)
+                      :latitude (-> xs first :stop_latitude)
+                      :longitude (-> xs first :stop_longitude)}
+               :timetable (reduce conj []
+                                  (for [x xs]
+                                    {:route {:code (-> x :route_code)
+                                             :name (-> x :route_name)
+                                             :type (-> x :route_type)}
+                                     :time (-> x :timetable_time)}))}))))
 
 (defn get-stops-by-route-code [code]
   (->> (db/query-stops-by-route-code db/db code)

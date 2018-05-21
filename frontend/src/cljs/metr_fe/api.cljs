@@ -15,8 +15,8 @@
 
 (defn get-stops-in-rect-in-time-by-stop-code
   [lat-min lat-max
-    lon-min lon-max
-    time-min time-max]
+   lon-min lon-max
+   time-min time-max]
   (http/get
    (str state/api-addr "timetable-in-rect-in-time")
    {:with-credentials? false

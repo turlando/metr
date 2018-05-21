@@ -18,6 +18,11 @@
    (assoc db :map-viewport viewport)))
 
 (re-frame/reg-event-db
- ::set-stops-in-rect
+ ::set-map-bounds
+ (fn [db [_ bounds]]
+   (assoc db :map-bounds bounds)))
+
+(re-frame/reg-event-db
+ ::set-map-stops
  (fn [db [_ stops-in-rect ]]
-   (assoc db :stops-in-rect stops-in-rect)))
+   (assoc db :map-stops stops-in-rect)))
