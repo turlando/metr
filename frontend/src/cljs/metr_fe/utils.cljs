@@ -7,3 +7,11 @@
         half_lon_delta   (/ delta_lon_in_deg 2)]
     [(- lat half_lat_delta) (+ lat half_lat_delta)
      (- lon half_lon_delta) (+ lon half_lon_delta)]))
+
+(defn now []
+  (let [d (js/Date.)]
+    (str (.getHours d) ":" (.getMinutes d) ":" (.getSeconds d))))
+
+(defn an-hour-from-now []
+  (let [d (js/Date.)]
+    (str (+ 1 (.getHours d)) ":" (.getMinutes d) ":" (.getSeconds d))))

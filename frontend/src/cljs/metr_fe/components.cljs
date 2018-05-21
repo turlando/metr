@@ -27,10 +27,11 @@
                    (utils/coordinates->rect (.-center @viewport) 1))]
 
     (go (async/take!
-         (api/get-stops-in-rect rect)
+         (apply api/get-stops-in-rect-in-time-by-stop-code
+                (conj rect (utils/now) (utils/an-hour-from-now)))
          (fn [x]
            (re-frame/dispatch
-            [::events/set-stops-in-rect (:body x)]))))
+            [::events/set-stops-in-rect (js->clj (:body x))]))))
 
     [Map
      {:className           "map-component"
@@ -46,13 +47,18 @@
                             (js/L.latLng (get rect 0) (get rect 2))
                             (js/L.latLng (get rect 1) (get rect 3)))}])
      (when @stops
-       (map (fn [s]
-              ^{:key s}
-              [Marker
-               {:position (js/L.latLng (:latitude s) (:longitude s))
-                :icon     map-marker-icon}
-               [Popup
-                [:div
-                 [:p "Code: " (:code s)]
-                 [:p "Name: " (:name s)]]]])
-            @stops))]))
+       (for [[stop times] @stops]
+         (let [code (-> times first :stop_code)
+               name (-> times first :stop_name)
+               lat  (-> times first :stop_latitude)
+               lon  (-> times first :stop_longitude)]
+           ^{:key code}
+           [Marker
+            {:position (js/L.latLng lat lon)
+             :icon     map-marker-icon}
+              [Popup
+               [:div
+                [:p name " (" code ")"]
+                (for [time times]
+                  ^{:key time}
+                  [:p (:timetable_time time)])]]])))]))
