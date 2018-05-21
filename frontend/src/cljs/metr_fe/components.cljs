@@ -60,5 +60,5 @@
              [:div
               [:p name " (" code ")"]
               (for [time times]
-                ^{:key time}
-                [:p (:timetable_time time)])]]])))]))
+                ^{:key (:timetable_time time)}
+                [:p (str (:route_code time) " - " (:timetable_time time))])]]])))]))
