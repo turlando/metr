@@ -34,50 +34,53 @@
         bounds   (re-frame/subscribe [::subs/map-bounds])
         stops    (re-frame/subscribe [::subs/map-stops])]
 
-    (when @bounds
-      (go (async/take!
-           (api/get-stops-in-rect-in-time-by-stop-code
-            (-> @bounds :min :latitude)
-            (-> @bounds :max :latitude)
-            (-> @bounds :min :longitude)
-            (-> @bounds :max :longitude)
-            (utils/now)
-            (utils/an-hour-from-now))
-           (fn [x]
-             (re-frame/dispatch
-              [::events/set-map-stops (js->clj (:body x))])))))
+    (reagent/create-class
+     {:display-name "map-component"
 
-    [Map
-     {:className           "map-component"
-      :viewport            @viewport
-      :on-viewport-changed (fn [v]
-                             (re-frame/dispatch
-                              [::events/set-map-viewport v]))
-      :on-move-end         (fn [e]
-                             (re-frame/dispatch
-                              [::events/set-map-bounds
-                               (-> e .-target .getBounds bounds->rect)]))
-      :on-zoom-end         (fn [e]
-                             (re-frame/dispatch
-                              [::events/set-map-bounds
-                               (-> e .-target .getBounds bounds->rect)]))}
+      :component-will-update
+      (fn []
+        (go (async/take!
+             (api/get-stops-in-rect-in-time-by-stop-code
+              (-> @bounds :min :latitude)
+              (-> @bounds :max :latitude)
+              (-> @bounds :min :longitude)
+              (-> @bounds :max :longitude)
+              (utils/now)
+              (utils/an-hour-from-now))
+             (fn [x]
+               (re-frame/dispatch
+                [::events/set-map-stops (js->clj (:body x))])))))
 
-     [TileLayer
-      {:url tiles-url}]
-
-
-     (for [stop @stops]
-       ^{:key (-> stop :stop :code)}
-       [Marker
-        {:position (js/L.latLng
-                    (-> stop :stop :latitude)
-                    (-> stop :stop :longitude))
-         :icon     map-marker-icon}
-        [Popup
-         [:div
-          [:p (-> stop :stop :name) " (" (-> stop :stop :code) ")"]
-          (for [timetable (-> stop :timetable)]
-            ^{:key timetable}
-            [:p (-> timetable :route :code) " - "
-             (-> timetable :route :name) " - "
-             (-> timetable :time)])]]])]))
+      :reagent-render
+      (fn []
+        [Map
+         {:className           "map-component"
+          :viewport            @viewport
+          :on-viewport-changed (fn [v]
+                                 (re-frame/dispatch
+                                  [::events/set-map-viewport v]))
+          :on-move-end         (fn [e]
+                                 (re-frame/dispatch
+                                  [::events/set-map-bounds
+                                   (-> e .-target .getBounds bounds->rect)]))
+          :on-zoom-end         (fn [e]
+                                 (re-frame/dispatch
+                                  [::events/set-map-bounds
+                                   (-> e .-target .getBounds bounds->rect)]))}
+         [TileLayer
+          {:url tiles-url}]
+         (for [stop @stops]
+           ^{:key (-> stop :stop :code)}
+           [Marker
+            {:position (js/L.latLng
+                        (-> stop :stop :latitude)
+                        (-> stop :stop :longitude))
+             :icon     map-marker-icon}
+            [Popup
+             [:div
+              [:p (-> stop :stop :name) " (" (-> stop :stop :code) ")"]
+              (for [timetable (-> stop :timetable)]
+                ^{:key timetable}
+                [:p (-> timetable :route :code) " - "
+                 (-> timetable :route :name) " - "
+                 (-> timetable :time)])]]])])})))
