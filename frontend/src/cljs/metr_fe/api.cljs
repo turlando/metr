@@ -1,9 +1,11 @@
 (ns metr-fe.api
-  (:require [cljs-http.client :as http]
+  (:require-macros [cljs.core.async.macros :as async.macros])
+  (:require [cljs.core.async :as async]
+            [cljs-http.client :as http]
             [metr-fe.state :as state]))
 
-(defn get-stops-in-rect [[lat-min lat-max
-                          lon-min lon-max]]
+(defn get-stops-in-rect [lat-min lat-max
+                         lon-min lon-max]
   (http/get
    (str state/api-addr "stops-in-rect")
    {:with-credentials? false
@@ -12,6 +14,17 @@
      "lat-max" lat-max
      "lon-min" lon-min
      "lon-max" lon-max}}))
+
+(defn get-stops-in-rect! [lat-min lat-max
+                          lon-min lon-max
+                          callback]
+  (async.macros/go
+    (async/take!
+     (get-stops-in-rect lat-min lat-max
+                        lon-min lon-max)
+     (fn [response]
+       (callback response))))
+  nil)
 
 (defn get-stops-in-rect-in-time-by-stop-code
   [lat-min lat-max

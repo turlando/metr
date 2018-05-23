@@ -17,6 +17,16 @@
    (:map-bounds db)))
 
 (re-frame/reg-sub
+ ::map-seen-bounds
+ (fn [db _]
+   (:map-seen-bounds db)))
+
+(re-frame/reg-sub
  ::map-stops
  (fn [db _]
    (:map-stops db)))
+
+(re-frame/reg-sub
+ ::map-visible-stops
+ (fn [db _]
+   (:map-visible-stops db)))

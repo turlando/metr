@@ -8,6 +8,6 @@
    :zoom   14})
 
 (def db
-  {:map-viewport default-viewport
-   :map-bounds   {}
-   :map-stops    []})
+  {:map-viewport    default-viewport
+   :map-bounds      {}
+   :map-stops       []})

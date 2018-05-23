@@ -19,8 +19,9 @@
         lon-min (-> request :params (get "lon-min"))
         lon-max (-> request :params (get "lon-max"))]
     (json-payload
-     (api/get-stops-in-rect lat-min lat-max
-                            lon-min lon-max))))
+     (api/get-stops-in-rect
+      lat-min lat-max
+      lon-min lon-max))))
 
 (defn- get-timetable-in-rect-in-time-handler [request]
   (let [lat-min (-> request :params (get "lat-min"))
@@ -30,7 +31,7 @@
         time-min (-> request :params (get "time-min"))
         time-max (-> request :params (get "time-max"))]
     (json-payload
-     (api/get-timetable-in-rect-in-time-by-stop-code
+     (api/get-timetable-in-rect-in-time
       lat-min lat-max
       lon-min lon-max
       time-min time-max))))

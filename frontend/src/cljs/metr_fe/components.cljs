@@ -1,6 +1,5 @@
 (ns metr-fe.components
-  (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [cljs.core.async :as async]
+  (:require [clojure.set :as set]
             [reagent.core :as reagent]
             [re-frame.core :as re-frame]
             [react-leaflet :as leaflet]
@@ -30,26 +29,15 @@
          :longitude (-> b .getSouthEast .-lng)}})
 
 (defn map-component []
-  (let [viewport (re-frame/subscribe [::subs/map-viewport])
-        bounds   (re-frame/subscribe [::subs/map-bounds])
-        stops    (re-frame/subscribe [::subs/map-stops])]
+  (let [viewport      (re-frame/subscribe [::subs/map-viewport])
+        stops         (re-frame/subscribe [::subs/map-stops])]
 
     (reagent/create-class
      {:display-name "map-component"
 
       :component-will-update
       (fn []
-        (go (async/take!
-             (api/get-stops-in-rect-in-time-by-stop-code
-              (-> @bounds :min :latitude)
-              (-> @bounds :max :latitude)
-              (-> @bounds :min :longitude)
-              (-> @bounds :max :longitude)
-              (utils/now)
-              (utils/an-hour-from-now))
-             (fn [x]
-               (re-frame/dispatch
-                [::events/set-map-stops (js->clj (:body x))])))))
+        nil)
 
       :reagent-render
       (fn []
@@ -58,29 +46,24 @@
           :viewport            @viewport
           :on-viewport-changed (fn [v]
                                  (re-frame/dispatch
-                                  [::events/set-map-viewport v]))
+                                  [::events/set-map-viewport v])
+                                 nil)
           :on-move-end         (fn [e]
                                  (re-frame/dispatch
                                   [::events/set-map-bounds
-                                   (-> e .-target .getBounds bounds->rect)]))
+                                   (-> e .-target .getBounds bounds->rect)])
+                                 nil)
           :on-zoom-end         (fn [e]
                                  (re-frame/dispatch
                                   [::events/set-map-bounds
-                                   (-> e .-target .getBounds bounds->rect)]))}
+                                   (-> e .-target .getBounds bounds->rect)])
+                                 nil)}
          [TileLayer
           {:url tiles-url}]
          (for [stop @stops]
-           ^{:key (-> stop :stop :code)}
+           ^{:key (-> stop :code)}
            [Marker
             {:position (js/L.latLng
-                        (-> stop :stop :latitude)
-                        (-> stop :stop :longitude))
-             :icon     map-marker-icon}
-            [Popup
-             [:div
-              [:p (-> stop :stop :name) " (" (-> stop :stop :code) ")"]
-              (for [timetable (-> stop :timetable)]
-                ^{:key timetable}
-                [:p (-> timetable :route :code) " - "
-                 (-> timetable :route :name) " - "
-                 (-> timetable :time)])]]])])})))
+                        (-> stop :latitude)
+                        (-> stop :longitude))
+             :icon     map-marker-icon}])])})))
