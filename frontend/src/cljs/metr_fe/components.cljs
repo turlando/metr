@@ -14,6 +14,9 @@
 (def Marker (reagent/adapt-react-class react-leaflet/Marker))
 (def Popup (reagent/adapt-react-class react-leaflet/Popup))
 
+(def screen-width
+  (-> js/document .-documentElement .-clientWidth))
+
 (def tiles-url
   (str js/window.location.protocol
        "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"))
@@ -29,11 +32,15 @@
          :longitude (-> b .getSouthEast .-lng)}})
 
 (defn map-component []
-  (let [viewport (re-frame/subscribe [::subs/map-viewport])
-        stops    (re-frame/subscribe [::subs/map-stops])]
+  (let [viewport    (re-frame/subscribe [::subs/map-viewport])
+        stops       (re-frame/subscribe [::subs/map-stops])
+        stop-data   (re-frame/subscribe [::subs/active-map-stop-data])]
     [Map
      {:className           "map-component"
       :viewport            @viewport
+      :on-click            (fn []
+                             (re-frame/dispatch
+                              [::events/set-active-map-stop nil]))
       :on-viewport-changed (fn [v]
                              (re-frame/dispatch
                               [::events/set-map-viewport v])
@@ -50,10 +57,30 @@
                              nil)}
      [TileLayer
       {:url tiles-url}]
-     (for [stop @stops]
-       ^{:key (-> stop :code)}
-       [Marker
-        {:position (js/L.latLng
-                    (-> stop :latitude)
-                    (-> stop :longitude))
-         :icon     map-marker-icon}])]))
+     (doall
+      (for [stop @stops]
+        ^{:key (-> stop :code)}
+        [Marker
+         {:on-click (fn []
+                      (re-frame/dispatch
+                       [::events/set-active-map-stop (-> stop :code)]))
+          :position (js/L.latLng
+                     (-> stop :latitude)
+                     (-> stop :longitude))
+          :icon     map-marker-icon}
+         [Popup
+          {:max-width screen-width}
+          [:div.stop-popup
+           [:header
+            [:h1 (-> stop :name)]
+            [:h2 (-> stop :code)]]
+           (when @stop-data
+             [:table
+              [:tbody
+               (for [d @stop-data]
+                 ^{:key d}
+                 [:tr
+                  [:td (-> d :timetable_time)]
+                  [:td
+                   [:span.route-code (-> d :route_code)]
+                   [:span.trip-destination (-> d :trip_destination)]]])]])]]]))]))

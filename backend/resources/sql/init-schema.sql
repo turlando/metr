@@ -44,3 +44,6 @@ CREATE TABLE timetable (
     sequence INTEGER NOT NULL,
     time INTEGER NOT NULL
 );
+--;;
+CREATE INDEX timetable_idx_sequence ON timetable (sequence);
+CREATE INDEX timetable_idx_time ON timetable (time);

@@ -15,7 +15,7 @@
 (defn init-schema! [db]
   (doall
    (map (fn [q] (jdbc/execute! db q))
-        (-> (utils/slurp-resource "sql/init.sql")
+        (-> (utils/slurp-resource "sql/init-schema.sql")
             (string/split #"--;;"))))
   nil)
 
@@ -35,22 +35,11 @@
   (jdbc/insert-multi! db "timetable" timetables)
   nil)
 
-(defn query-timetable-by-stop-code [db code]
+(defn query-timetable-by-stop-code [db code time-min time-max]
   (jdbc/query
    db
-   [(utils/slurp-resource "sql/query-timetable-by-stop-code.sql")
-    code]))
-
-(defn query-timetable-in-rect-in-time [db
-                                       lat-min lat-max
-                                       lon-min lon-max
-                                       time-min time-max]
-  (jdbc/query
-   db
-   [(utils/slurp-resource "sql/query-timetable-in-rect-in-time.sql")
-    lat-min lat-max
-    lon-min lon-max
-    time-min time-max]))
+   [(utils/slurp-resource "sql/query-timetables-by-stop-code.sql")
+    code time-min time-max]))
 
 (defn query-stops-in-rect [db
                            lat-min lat-max
@@ -60,9 +49,3 @@
    [(utils/slurp-resource "sql/query-stops-in-rect.sql")
     lat-min lat-max
     lon-min lon-max]))
-
-(defn query-stops-by-route-code [db code]
-  (jdbc/query
-   db
-   [(utils/slurp-resource "sql/query-stops-by-route-code.sql")
-    code]))
