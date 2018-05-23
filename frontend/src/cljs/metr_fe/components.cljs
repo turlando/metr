@@ -29,41 +29,31 @@
          :longitude (-> b .getSouthEast .-lng)}})
 
 (defn map-component []
-  (let [viewport      (re-frame/subscribe [::subs/map-viewport])
-        stops         (re-frame/subscribe [::subs/map-stops])]
-
-    (reagent/create-class
-     {:display-name "map-component"
-
-      :component-will-update
-      (fn []
-        nil)
-
-      :reagent-render
-      (fn []
-        [Map
-         {:className           "map-component"
-          :viewport            @viewport
-          :on-viewport-changed (fn [v]
-                                 (re-frame/dispatch
-                                  [::events/set-map-viewport v])
-                                 nil)
-          :on-move-end         (fn [e]
-                                 (re-frame/dispatch
-                                  [::events/set-map-bounds
-                                   (-> e .-target .getBounds bounds->rect)])
-                                 nil)
-          :on-zoom-end         (fn [e]
-                                 (re-frame/dispatch
-                                  [::events/set-map-bounds
-                                   (-> e .-target .getBounds bounds->rect)])
-                                 nil)}
-         [TileLayer
-          {:url tiles-url}]
-         (for [stop @stops]
-           ^{:key (-> stop :code)}
-           [Marker
-            {:position (js/L.latLng
-                        (-> stop :latitude)
-                        (-> stop :longitude))
-             :icon     map-marker-icon}])])})))
+  (let [viewport (re-frame/subscribe [::subs/map-viewport])
+        stops    (re-frame/subscribe [::subs/map-stops])]
+    [Map
+     {:className           "map-component"
+      :viewport            @viewport
+      :on-viewport-changed (fn [v]
+                             (re-frame/dispatch
+                              [::events/set-map-viewport v])
+                             nil)
+      :on-move-end         (fn [e]
+                             (re-frame/dispatch
+                              [::events/set-map-bounds
+                               (-> e .-target .getBounds bounds->rect)])
+                             nil)
+      :on-zoom-end         (fn [e]
+                             (re-frame/dispatch
+                              [::events/set-map-bounds
+                               (-> e .-target .getBounds bounds->rect)])
+                             nil)}
+     [TileLayer
+      {:url tiles-url}]
+     (for [stop @stops]
+       ^{:key (-> stop :code)}
+       [Marker
+        {:position (js/L.latLng
+                    (-> stop :latitude)
+                    (-> stop :longitude))
+         :icon     map-marker-icon}])]))
