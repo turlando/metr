@@ -10,7 +10,9 @@ CREATE INDEX stop_idx_code ON stop (code);
 --;;
 CREATE INDEX stop_idx_name ON stop (name);
 --;;
-CREATE INDEX stop_idx_latitude_longitude ON stop (latitude, longitude);
+CREATE INDEX
+    stop_idx_latitude_longitude
+    ON stop (latitude, longitude);
 --;;
 
 CREATE TABLE route (
@@ -20,11 +22,11 @@ CREATE TABLE route (
     type INTEGER
 );
 --;;
-CREATE INDEX route_idx_name_short ON route (code);
+CREATE INDEX route_idx_code ON route (code);
 --;;
-CREATE INDEX route_idx_name_long ON route (name);
+CREATE INDEX route_idx_name ON route (name);
 --;;
-CREATE INDEX route_idx_name_type ON route (type);
+CREATE INDEX route_idx_type ON route (type);
 --;;
 
 CREATE TABLE shape_point (
@@ -32,14 +34,13 @@ CREATE TABLE shape_point (
     sequence INTEGER NOT NULL,
     latitude REAL NOT NULL,
     longitude REAL NOT NULL,
+    distance REAL NOT NULL,
     PRIMARY KEY (shape_id, sequence)
 );
 --;;
-CREATE INDEX shape_point_idx_shape_id ON shape_point (shape_id);
---;;
-CREATE INDEX shape_point_idx_sequence ON shape_point (sequence);
---;;
-CREATE INDEX shape_point_idx_latitude_longitude ON shape_point (latitude, longitude);
+CREATE INDEX
+    shape_point_idx_latitude_longitude
+    ON shape_point (latitude, longitude);
 --;;
 
 CREATE TABLE trip (
@@ -53,15 +54,18 @@ CREATE TABLE trip (
 --;;
 CREATE INDEX trip_idx_service ON trip (service);
 --;;
+CREATE INDEX trip_idx_route_id ON trip (route_id);
+--;;
+CREATE INDEX trip_idx_shape_id ON trip (shape_id);
+--;;
 
-CREATE TABLE timetable (
+CREATE TABLE stop_time (
     trip_id TEXT NOT NULL REFERENCES trip (id),
     stop_id INTEGER NOT NULL REFERENCES stop (id),
     sequence INTEGER NOT NULL,
     time INTEGER,
+    distance REAL NOT NULL,
     PRIMARY KEY (trip_id, stop_id, sequence)
 );
 --;;
-CREATE INDEX timetable_idx_sequence ON timetable (sequence);
---;;
-CREATE INDEX timetable_idx_time ON timetable (time);
+CREATE INDEX stop_time_idx_time ON stop_time (time);

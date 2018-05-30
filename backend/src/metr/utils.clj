@@ -1,6 +1,11 @@
 (ns metr.utils
   (:require [clojure.java.io :as io]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [geo.spatial :as spatial]))
+
+(defn map-vals [f m]
+  (zipmap (keys m)
+          (map f (vals m))))
 
 (defn slurp-resource [path]
   (-> path
@@ -30,3 +35,8 @@
         minutes (rem (quot s 60) 60)
         seconds (rem s 60)]
     (format "%02d:%02d:%02d" hours minutes seconds)))
+
+(defn distance [from to]
+  (let [from* (spatial/spatial4j-point (:latitude from) (:longitude from))
+        to*   (spatial/spatial4j-point (:latitude to) (:longitude to))]
+    (spatial/distance from* to*)))

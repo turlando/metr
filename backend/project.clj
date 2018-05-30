@@ -14,7 +14,8 @@
                  [clj-http "2.3.0"]
                  [http-kit "2.2.0"]
                  [ring/ring-core "1.6.3"]
-                 [compojure "1.6.1"]]
+                 [compojure "1.6.1"]
+                 [factual/geo "1.2.0"]]
 
   :main ^:skip-aot metr.core
 

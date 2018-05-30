@@ -1,7 +1,7 @@
 (ns metr.gtfs
-  (:require [clojure.set :refer [rename-keys]]
+  (:require [clojure.data.csv :as csv]
+            [clojure.set :refer [rename-keys]]
             [clojure.string :as string]
-            [clojure.data.csv :as csv]
             [metr.utils :as utils]))
 
 (defn- get-csv [path]
@@ -10,9 +10,9 @@
          (utils/csv->maps)
          doall)))
 
-(defn- clean-shapes [shape]
-  (-> shape
-      (rename-keys {:id_fermata       :id
+(defn- clean-shape-points [point]
+  (-> point
+      (rename-keys {:id_fermata       :shape_id
                     :lat_fermata      :latitude
                     :lon_fermata      :longitude
                     :sequenza_fermate :sequence})
@@ -20,9 +20,33 @@
       (update :latitude #(Float. %))
       (update :longitude #(Float. %))))
 
-(defn get-shapes []
+(defn- add-distance-to-points-in-shape [points]
+  "Given a list of shape points belonging to the same shape, this function
+  assocs to each point the distance between itself and the previous point."
+  (reduce (fn [acc x]
+            (conj acc
+                  (assoc x :distance
+                         (if (empty? acc)
+                           0.0
+                           (utils/distance
+                            (select-keys x [:latitude :longitude])
+                            (select-keys (last acc) [:latitude :longitude]))))))
+          [] points))
+
+(defn- add-distance-to-shape-points [points]
+  "Given a list of shape points belonging to different shapes, for each shape
+  this function assocs to each point in the shape the distance between itself
+  and the previous point."
+  (->> points
+       (group-by :shape_id)
+       (utils/map-vals #(sort-by :sequence %))
+       (utils/map-vals add-distance-to-points-in-shape)
+       (reduce-kv (fn [s k v] (concat s v)) [])))
+
+(defn get-shape-points []
   (->> (get-csv "gtfs/shapes.csv")
-       (map clean-shapes)))
+       (map clean-shape-points)
+       add-distance-to-shape-points))
 
 (defn- clean-stop [stop]
   (-> stop
@@ -68,8 +92,8 @@
   (->> (get-csv "gtfs/trips.csv")
        (map clean-trip)))
 
-(defn- clean-timetable [timetable]
-  (-> timetable
+(defn- clean-stop-times [stop-times]
+  (-> stop-times
       (dissoc :departure_time
               :stop_headsign
               :drop_off_type
@@ -77,10 +101,64 @@
       (rename-keys {:arrival_time  :time
                     :stop_sequence :sequence})
       (update :sequence #(Integer. %))
-      (update :time (if (string/blank? (:time timetable))
+      (update :time (if (string/blank? (:time stop-times))
                       (constantly nil)
                       utils/time->seconds))))
 
-(defn get-timetables []
+(defn- add-distance-to-stop-times [stops trips shape-points stop-times]
+  "Given all the stop times, stops, trips and shape points in the dataset,
+  for each trip this function will assoc to each stop the distance between
+  itself and the previous stop, computed as a sum of the distance between
+  the closest points to the shape associated to the trip."
+  (let [stops-by-id              (->> stops
+                                      (group-by :id)
+                                      (reduce-kv (fn [m k v]
+                                                   (assoc m k (first v))) {}))
+        trips-by-id              (->> trips
+                                      (group-by :id)
+                                      (reduce-kv (fn [m k v]
+                                                   (assoc m k (first v))) {}))
+        shape-points-by-shape-id (->> shape-points
+                                      (group-by :shape_id)
+                                      (utils/map-vals #(sort-by :sequence %)))
+        stop-times-by-trip-id    (->> stop-times
+                                      (group-by :trip_id)
+                                      (utils/map-vals #(sort-by :sequence %)))]
+    (apply concat
+           (for [[trip-id stop-times] stop-times-by-trip-id]
+             (let [shape-id      (-> (get trips-by-id trip-id) :shape_id)
+                   shape-points* (get shape-points-by-shape-id shape-id)
+                   stop-times*   (get stop-times-by-trip-id trip-id)
+                   stop-ids      (map :stop_id stop-times)
+                   stops*        (select-keys stops-by-id stop-ids)]
+               (reduce
+                (fn [new-stop-times stop-time]
+                  (let [stop-id       (-> stop-time :stop_id)
+                        stop          (get stops-by-id stop-id)
+                        points        (->> (map
+                                            (fn [x]
+                                              (assoc x :distance*
+                                                     (utils/distance
+                                                      (select-keys stop [:latitude :longitude])
+                                                      (select-keys x [:latitude :longitude]))))
+                                            shape-points*)
+                                           (sort-by :distance*))
+                        point         (-> points
+                                          first
+                                          (dissoc :distance*))
+                        distance-sum  (reduce + 0.0 (map :distance
+                                                         (take-while (fn [x]
+                                                                       (> (:sequence point)
+                                                                          (:sequence x)))
+                                                                     shape-points*)))
+                        prev-distance (if (empty? new-stop-times)
+                                        0.0
+                                        (reduce + 0.0 (map :distance new-stop-times)))]
+                    (conj new-stop-times (assoc stop-time :distance
+                                                (- distance-sum prev-distance)))))
+                [] stop-times*))))))
+
+(defn get-stop-times []
   (->> (get-csv "gtfs/stoptimes.csv")
-       (map clean-timetable)))
+       (map clean-stop-times)
+       (add-distance-to-stop-times (get-stops) (get-trips) (get-shape-points))))

@@ -1,17 +1,30 @@
 (ns metr.core
   (:gen-class)
-  (:require [mount.core :as mount]
+  (:require [clojure.java.jdbc :as jdbc]
             [metr.db :as db]
-            [metr.server :as server]
-            [metr.gtfs :as gtfs]))
+            [metr.gtfs :as gtfs]
+            [mount.core :as mount]))
+
+(defn insert-gtfs-data! [conn]
+  (db/insert-stops! conn (gtfs/get-stops))
+  (db/insert-routes! conn (gtfs/get-routes))
+  (db/insert-shape-points! conn (gtfs/get-shape-points))
+  (db/insert-trips! conn (gtfs/get-trips))
+  (db/insert-stop-times! conn (gtfs/get-stop-times))
+  nil)
+
+(defn dump-db! []
+  (jdbc/with-db-transaction [tx {:connection (db/get-connection
+                                              "jdbc:sqlite:metr.db")}]
+    (db/init-schema! tx)
+    (insert-gtfs-data! tx))
+  nil)
 
 (defn start! []
   (mount/start)
-  (db/init-schema! db/db)
-  (db/insert-stops! db/db (gtfs/get-stops))
-  (db/insert-routes! db/db (gtfs/get-routes))
-  (db/insert-trips! db/db (gtfs/get-trips))
-  (db/insert-timetables! db/db (gtfs/get-timetables))
+  (jdbc/with-db-transaction [tx (db/db)]
+    (db/init-schema! db/db)
+    (insert-gtfs-data! db/db))
   nil)
 
 (defn stop! []

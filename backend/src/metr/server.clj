@@ -1,10 +1,10 @@
 (ns metr.server
   (:require [clojure.data.json :as json]
+            [compojure.core :as compojure]
+            [metr.api :as api]
             [mount.core :as mount]
             [org.httpkit.server :as server]
-            [ring.middleware.params :as middleware.params]
-            [compojure.core :as compojure]
-            [metr.api :as api]))
+            [ring.middleware.params :as middleware.params]))
 
 (defn- json-payload [payload]
   {:status  200
@@ -13,12 +13,12 @@
    :body    (-> payload
                 json/write-str)})
 
-(defn- get-timetables-by-stop-code [request]
+(defn- get-stop-times-by-stop-code [request]
   (let [code     (-> request :params (get "code"))
         time-min (-> request :params (get "time-min"))
         time-max (-> request :params (get "time-max"))]
     (json-payload
-     (api/get-timetables-by-stop-code
+     (api/get-stop-times-by-stop-code
       code
       time-min time-max))))
 
@@ -33,14 +33,14 @@
       lon-min lon-max))))
 
 (compojure/defroutes routes
-  (compojure/GET "/timetables-by-stop-code" [] get-timetables-by-stop-code)
+  (compojure/GET "/timetables-by-stop-code" [] get-stop-times-by-stop-code)
   (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler))
 
 (defn- start-server! []
   (server/run-server
    (-> routes
        middleware.params/wrap-params)
-   {:port 8080
+   {:port  8080
     :join? false}))
 
 (mount/defstate server

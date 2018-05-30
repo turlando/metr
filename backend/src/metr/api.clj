@@ -2,9 +2,9 @@
   (:require [metr.db :as db]
             [metr.utils :as utils]))
 
-(defn get-timetables-by-stop-code [code
+(defn get-stop-times-by-stop-code [code
                                    time-min time-max]
-  (->> (db/query-timetable-by-stop-code
+  (->> (db/query-stop-times-by-stop-code
         db/db
         code
         (utils/time->seconds time-min)
