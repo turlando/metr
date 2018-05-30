@@ -54,7 +54,7 @@
    (if (nil? code)
      (re-frame/dispatch
       [::set-active-map-stop-data nil])
-     (api/get-timetable-by-stop-code!
+     (api/get-stop-times-by-stop-code!
       code
       (utils/now)
       (utils/an-hour-from-now)

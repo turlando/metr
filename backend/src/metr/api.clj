@@ -9,7 +9,7 @@
         code
         (utils/time->seconds time-min)
         (utils/time->seconds time-max))
-       (map #(update % :timetable_time utils/seconds->time))))
+       (map #(update % :stop_time_time utils/seconds->time))))
 
 (defn get-stops-in-rect
   [lat-min lat-max

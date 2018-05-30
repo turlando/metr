@@ -33,7 +33,7 @@
       lon-min lon-max))))
 
 (compojure/defroutes routes
-  (compojure/GET "/timetables-by-stop-code" [] get-stop-times-by-stop-code)
+  (compojure/GET "/stop-times-by-stop-code" [] get-stop-times-by-stop-code)
   (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler))
 
 (defn- start-server! []

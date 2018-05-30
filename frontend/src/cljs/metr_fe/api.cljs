@@ -4,22 +4,22 @@
             [cljs-http.client :as http]
             [metr-fe.state :as state]))
 
-(defn get-timetable-by-stop-code [code
+(defn get-stop-times-by-stop-code [code
                                   time-min time-max]
   (http/get
-   (str state/api-addr "timetables-by-stop-code")
+   (str state/api-addr "stop-times-by-stop-code")
    {:with-credentials? false
     :query-params
     {"code" code
      "time-min" time-min
      "time-max" time-max}}))
 
-(defn get-timetable-by-stop-code! [code
+(defn get-stop-times-by-stop-code! [code
                                    time-min time-max
                                    callback]
   (async.macros/go
     (async/take!
-     (get-timetable-by-stop-code code
+     (get-stop-times-by-stop-code code
                                  time-min time-max)
      (fn [response]
        (callback response))))

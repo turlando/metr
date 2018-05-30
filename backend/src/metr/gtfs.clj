@@ -92,8 +92,8 @@
   (->> (get-csv "gtfs/trips.csv")
        (map clean-trip)))
 
-(defn- clean-stop-times [stop-times]
-  (-> stop-times
+(defn- clean-stop-times [stop-time]
+  (-> stop-time
       (dissoc :departure_time
               :stop_headsign
               :drop_off_type
@@ -101,9 +101,10 @@
       (rename-keys {:arrival_time  :time
                     :stop_sequence :sequence})
       (update :sequence #(Integer. %))
-      (update :time (if (string/blank? (:time stop-times))
-                      (constantly nil)
-                      utils/time->seconds))))
+      (update :time (fn [x]
+                      (if (string/blank? x)
+                        nil
+                        (utils/time->seconds x))))))
 
 (defn- add-distance-to-stop-times [stops trips shape-points stop-times]
   "Given all the stop times, stops, trips and shape points in the dataset,

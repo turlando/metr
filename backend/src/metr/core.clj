@@ -3,6 +3,7 @@
   (:require [clojure.java.jdbc :as jdbc]
             [metr.db :as db]
             [metr.gtfs :as gtfs]
+            [metr.server :as server]
             [mount.core :as mount]))
 
 (defn insert-gtfs-data! [conn]
@@ -22,7 +23,7 @@
 
 (defn start! []
   (mount/start)
-  (jdbc/with-db-transaction [tx (db/db)]
+  (jdbc/with-db-transaction [tx db/db]
     (db/init-schema! db/db)
     (insert-gtfs-data! db/db))
   nil)

@@ -80,7 +80,7 @@
                (for [d @stop-data]
                  ^{:key d}
                  [:tr
-                  [:td (-> d :timetable_time)]
+                  [:td (-> d :stop_time_time)]
                   [:td
                    [:span.route-code (-> d :route_code)]
                    [:span.trip-destination (-> d :trip_destination)]]])]])]]]))]))
