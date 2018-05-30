@@ -1,6 +1,6 @@
 (ns metr.geocoder
-  (:require [clojure.data.json :as json]
-            [clj-http.client :as client]))
+  (:require [clj-http.client :as client]
+            [clojure.data.json :as json]))
 
 (defn- address->coordinates* [address]
   (-> (client/get
