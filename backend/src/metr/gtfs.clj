@@ -126,38 +126,37 @@
                                       (group-by :trip_id)
                                       (utils/map-vals #(sort-by :sequence %)))]
     (apply concat
-           (for [[trip-id stop-times] stop-times-by-trip-id]
-             (let [shape-id      (-> (get trips-by-id trip-id) :shape_id)
-                   shape-points* (get shape-points-by-shape-id shape-id)
-                   stop-times*   (get stop-times-by-trip-id trip-id)
-                   stop-ids      (map :stop_id stop-times)
-                   stops*        (select-keys stops-by-id stop-ids)]
+           (for [[trip-id stop-times-in-trip] stop-times-by-trip-id]
+             (let [shape-id         (-> (get trips-by-id trip-id) :shape_id)
+                   points-in-shape  (get shape-points-by-shape-id shape-id)
+                   stop-ids-in-trip (map :stop_id stop-times-in-trip)]
                (reduce
                 (fn [new-stop-times stop-time]
-                  (let [stop-id       (-> stop-time :stop_id)
-                        stop          (get stops-by-id stop-id)
-                        points        (->> (map
-                                            (fn [x]
-                                              (assoc x :distance*
-                                                     (utils/distance
-                                                      (select-keys stop [:latitude :longitude])
-                                                      (select-keys x [:latitude :longitude]))))
-                                            shape-points*)
-                                           (sort-by :distance*))
-                        point         (-> points
-                                          first
-                                          (dissoc :distance*))
-                        distance-sum  (reduce + 0.0 (map :distance
-                                                         (take-while (fn [x]
-                                                                       (> (:sequence point)
-                                                                          (:sequence x)))
-                                                                     shape-points*)))
-                        prev-distance (if (empty? new-stop-times)
-                                        0.0
-                                        (reduce + 0.0 (map :distance new-stop-times)))]
-                    (conj new-stop-times (assoc stop-time :distance
-                                                (- distance-sum prev-distance)))))
-                [] stop-times*))))))
+                  (let [stop-id        (-> stop-time :stop_id)
+                        stop           (get stops-by-id stop-id)
+                        closest-points (->> (map
+                                             (fn [point]
+                                               (assoc point :distance*
+                                                      (utils/distance
+                                                       (select-keys stop [:latitude :longitude])
+                                                       (select-keys point [:latitude :longitude]))))
+                                             points-in-shape)
+                                            (sort-by :distance*))
+                        closest-point  (-> closest-points
+                                           first
+                                           (dissoc :distance*))
+                        points-to-sum  (take-while
+                                        (fn [point]
+                                          (<= (:sequence point)
+                                              (:sequence closest-point)))
+                                        points-in-shape)
+                        distance       (apply + (map :distance points-to-sum))
+                        prev-distance  (if (empty? new-stop-times)
+                                         0.0
+                                         (apply + (map :distance new-stop-times)))]
+                   (conj new-stop-times
+                         (assoc stop-time :distance (- distance prev-distance)))))
+                [] stop-times-in-trip))))))
 
 (defn get-stop-times []
   (->> (get-csv "gtfs/stoptimes.csv")
