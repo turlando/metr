@@ -10,6 +10,37 @@
          (utils/csv->maps)
          doall)))
 
+(defn- clean-stop [stop]
+  (-> stop
+      (dissoc :stop_desc)
+      (rename-keys {:stop_id   :id
+                    :stop_code :code
+                    :stop_name :name
+                    :stop_lat  :latitude
+                    :stop_lon  :longitude})
+      (update :latitude #(Float. %))
+      (update :longitude #(Float. %))))
+
+(defn- get-stops []
+  (->> (get-csv "gtfs/stops.csv")
+       (map clean-stop)))
+
+(defn- clean-route [route]
+  (-> route
+      (dissoc :agency_id
+              :route_desc
+              :route_url
+              :route_color
+              :route_text_color)
+      (rename-keys {:route_id         :id
+                    :route_short_name :code
+                    :route_long_name  :name
+                    :route_type       :type})))
+
+(defn- get-routes []
+  (->> (get-csv "gtfs/routes.csv")
+       (map clean-route)))
+
 (defn- clean-shape-points [point]
   (-> point
       (rename-keys {:id_fermata       :shape_id
@@ -48,37 +79,6 @@
        (map clean-shape-points)
        add-distance-to-shape-points))
 
-(defn- clean-stop [stop]
-  (-> stop
-      (dissoc :stop_desc)
-      (rename-keys {:stop_id   :id
-                    :stop_code :code
-                    :stop_name :name
-                    :stop_lat  :latitude
-                    :stop_lon  :longitude})
-      (update :latitude #(Float. %))
-      (update :longitude #(Float. %))))
-
-(defn get-stops []
-  (->> (get-csv "gtfs/stops.csv")
-       (map clean-stop)))
-
-(defn- clean-route [route]
-  (-> route
-      (dissoc :agency_id
-              :route_desc
-              :route_url
-              :route_color
-              :route_text_color)
-      (rename-keys {:route_id         :id
-                    :route_short_name :code
-                    :route_long_name  :name
-                    :route_type       :type})))
-
-(defn get-routes []
-  (->> (get-csv "gtfs/routes.csv")
-       (map clean-route)))
-
 (defn- clean-trip [trip]
   (-> trip
       (dissoc :trip_short_name
@@ -88,7 +88,7 @@
                     :trip_headsign :destination
                     :direction_id  :direction})))
 
-(defn get-trips []
+(defn- get-trips []
   (->> (get-csv "gtfs/trips.csv")
        (map clean-trip)))
 
@@ -104,67 +104,16 @@
       (update :time (fn [x]
                       (if (string/blank? x)
                         nil
-                        (utils/time->seconds x))))))
+                        (utils/time->seconds x))))
+      (update :distance (fn [x] nil))))
 
-(defn- closest-point-in-shape-to-stop [stop shape-points]
-  (let [shape-points* (map (fn [point]
-                             (assoc
-                              point :distance*
-                              (utils/distance
-                               (select-keys stop [:latitude :longitude])
-                               (select-keys point [:latitude :longitude]))))
-                           shape-points)
-        sorted-points (sort-by :distance* shape-points*)]
-    (-> sorted-points
-        first
-        (dissoc :distance*))))
-
-(defn- group-by-uniq [coll key]
-  (->> coll
-       (group-by key)
-       (reduce-kv (fn [m k v]
-                    (assoc m k (first v))) {})))
-
-(defn- group-by-sort [coll key sort-key]
-  (->> coll
-       (group-by key)
-       (utils/map-vals #(sort-by sort-key %))))
-
-(defn- add-distance-to-stop-times [stops trips shape-points stop-times]
-  "Given all the stop times, stops, trips and shape points in the dataset,
-  for each trip this function will assoc to each stop the distance between
-  itself and the previous stop, computed as a sum of the distance between
-  the closest points to the shape associated to the trip."
-  (let [stops-by-id              (group-by-uniq stops :id)
-        trips-by-id              (group-by-uniq trips :id)
-        shape-points-by-shape-id (group-by-sort shape-points :shape_id :sequence)
-        stop-times-by-trip-id    (group-by-sort stop-times :trip_id :sequence)]
-    (apply concat
-           (for [[trip-id stop-times-in-trip] stop-times-by-trip-id]
-             (let [shape-id         (-> (get trips-by-id trip-id) :shape_id)
-                   points-in-shape  (get shape-points-by-shape-id shape-id)
-                   stop-ids-in-trip (map :stop_id stop-times-in-trip)]
-               (reduce
-                (fn [new-stop-times stop-time]
-                  (let [stop-id       (-> stop-time :stop_id)
-                        stop          (get stops-by-id stop-id)
-                        closest-point (closest-point-in-shape-to-stop stop points-in-shape)
-                        points-to-sum (take-while
-                                       (fn [point]
-                                         (<= (:sequence point)
-                                             (:sequence closest-point)))
-                                       points-in-shape)
-                        distance      (apply + (map :distance points-to-sum))
-                        prev-distance (if (empty? new-stop-times)
-                                        0.0
-                                        (apply + (map :distance new-stop-times)))
-                        curr-distance (- distance prev-distance)]
-                    ;; FIXME: curr-distance is garbage often times
-                    (conj new-stop-times
-                          (assoc stop-time :distance distance))))
-                [] stop-times-in-trip))))))
-
-(defn get-stop-times []
+(defn- get-stop-times []
   (->> (get-csv "gtfs/stoptimes.csv")
-       (map clean-stop-times)
-       (add-distance-to-stop-times (get-stops) (get-trips) (get-shape-points))))
+       (map clean-stop-times)))
+
+(defn build-dataset []
+    {:stops        (get-stops)
+     :routes       (get-routes)
+     :shape-points (get-shape-points)
+     :trips        (get-trips)
+     :stop-times   (get-stop-times)})

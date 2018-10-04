@@ -6,12 +6,13 @@
             [metr.server :as server]
             [mount.core :as mount]))
 
-(defn insert-gtfs-data! [conn]
-  (db/insert-stops! conn (gtfs/get-stops))
-  (db/insert-routes! conn (gtfs/get-routes))
-  (db/insert-shape-points! conn (gtfs/get-shape-points))
-  (db/insert-trips! conn (gtfs/get-trips))
-  (db/insert-stop-times! conn (gtfs/get-stop-times))
+(defn insert-gtfs-data! [db]
+  (let [data (gtfs/build-dataset)]
+    (db/insert-stops! db (-> data :stops))
+    (db/insert-routes! db (-> data :routes))
+    (db/insert-shape-points! db (-> data :shape-points))
+    (db/insert-trips! db (-> data :trips))
+    (db/insert-stop-times! db (-> data :stop-times)))
   nil)
 
 (defn dump-db! []
@@ -21,15 +22,23 @@
     (insert-gtfs-data! tx))
   nil)
 
-(defn start! []
-  (mount/start)
-  (jdbc/with-db-transaction [tx db/db]
-    (db/init-schema! db/db)
-    (insert-gtfs-data! db/db))
-  nil)
-
 (defn stop! []
   (mount/stop)
+  nil)
+
+(defn start! []
+  (db/register-mount!)
+  (server/register-mount!)
+  (mount/start)
+
+  (try
+    (jdbc/with-db-transaction [tx db/db]
+      (db/init-schema! db/db)
+      (insert-gtfs-data! db/db))
+    (catch Exception e
+      (stop!)
+      (throw e)))
+
   nil)
 
 (defn -main [& args]

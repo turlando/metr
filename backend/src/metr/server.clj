@@ -9,7 +9,7 @@
 (defn- json-payload [payload]
   {:status  200
    :headers {"Content-Type"                "application/json; charset=utf-8"
-             "Access-Control-Allow-Origin" "http://localhost:8081"}
+             "Access-Control-Allow-Origin" "*"}
    :body    (-> payload
                 json/write-str)})
 
@@ -43,6 +43,7 @@
    {:port  8080
     :join? false}))
 
-(mount/defstate server
-  :start (start-server!)
-  :stop  (server :timeout 0))
+(defn register-mount! []
+  (mount/defstate server
+    :start (start-server!)
+    :stop  (server :timeout 0)))

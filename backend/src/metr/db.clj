@@ -14,9 +14,10 @@
       (jdbc/execute! conn statement)))
   nil)
 
-(mount/defstate ^{:on-reload :noop} db
-  :start {:connection (get-connection "jdbc:sqlite::memory:")}
-  :stop  (-> db :connection .close))
+(defn register-mount! []
+  (mount/defstate ^{:on-reload :noop} db
+    :start {:connection (get-connection "jdbc:sqlite::memory:")}
+    :stop  (-> db :connection .close)))
 
 (defn insert-stops! [conn stops]
   (jdbc/insert-multi! conn "stop" stops)
