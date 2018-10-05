@@ -63,7 +63,7 @@ CREATE TABLE stop_time (
     trip_id TEXT NOT NULL REFERENCES trip (id),
     stop_id INTEGER NOT NULL REFERENCES stop (id),
     sequence INTEGER NOT NULL,
-    time INTEGER,
+    time INTEGER NOT NULL,
     distance REAL,
     PRIMARY KEY (trip_id, stop_id, sequence)
 );

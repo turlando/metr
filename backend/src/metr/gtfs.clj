@@ -74,7 +74,7 @@
        (utils/map-vals add-distance-to-points-in-shape)
        (reduce-kv (fn [s k v] (concat s v)) [])))
 
-(defn get-shape-points []
+(defn- get-shape-points []
   (->> (get-csv "gtfs/shapes.csv")
        (map clean-shape-points)
        add-distance-to-shape-points))
@@ -92,7 +92,7 @@
   (->> (get-csv "gtfs/trips.csv")
        (map clean-trip)))
 
-(defn- clean-stop-times [stop-time]
+(defn- clean-stop-time [stop-time]
   (-> stop-time
       (dissoc :departure_time
               :stop_headsign
@@ -107,9 +107,30 @@
                         (utils/time->seconds x))))
       (update :distance (fn [x] nil))))
 
+(defn- interpolate-time-in-stop-times-in-trip [stop-times]
+  (let [first* (-> stop-times first :time)
+        last*  (-> stop-times last :time)
+        diff*  (- last* first*)
+        count* (count stop-times)
+        sample (quot diff* count*)]
+    (map (fn [stop-time]
+           (update stop-time :time
+                   (fn [_]
+                     (+ first*
+                        (* sample (-> stop-time :sequence))))))
+         stop-times)))
+
+(defn- interpolate-time-in-stop-times [stop-times]
+  (->> stop-times
+      (group-by :trip_id)
+      (utils/map-vals #(sort-by :sequence %))
+      (utils/map-vals interpolate-time-in-stop-times-in-trip)
+      (reduce-kv (fn [s k v] (concat s v)) [])))
+
 (defn- get-stop-times []
   (->> (get-csv "gtfs/stoptimes.csv")
-       (map clean-stop-times)))
+       (map clean-stop-time)
+       interpolate-time-in-stop-times))
 
 (defn build-dataset []
     {:stops        (get-stops)
