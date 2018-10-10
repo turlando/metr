@@ -7,20 +7,19 @@
 ```
 % lein repl
 [...]
-metr.core=> (start!) ;; this will import the data and could take some time
+metr.core=> (def _s start!) ;; this will import the data and could take some time
 nil
 ```
 
 It will bind at `0.0.0.0:8080`.
 
-## Hacking
-
 ```
-metr.core=> (require '[metr.db :as db])
+metr.core=> (stop! _s)
 nil
-metr.core=> (db/query-routes-by-stop-id db/db 390)
-({:name "PONTE GALLO - CAVALLOTTI"})
 ```
+
+Will stop the server and delete the database.
+
 ## GTFS Feed
 
 Data taken from [SmartMe][SmartMe-GTFS].
