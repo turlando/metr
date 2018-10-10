@@ -1,11 +1,15 @@
 (ns metr.db
   (:require [clojure.java.jdbc :as jdbc]
             [clojure.string :as string]
-            [metr.utils :as utils]
-            [mount.core :as mount]))
+            [metr.utils :as utils]))
 
-(defn get-connection [uri]
-  (jdbc/get-connection {:connection-uri uri}))
+(defn get-file-connection [file]
+  {:connection (jdbc/get-connection
+                {:connection-uri (str "jdbc:sqlite:" file)})})
+
+(defn get-in-memory-connection []
+  {:connection (jdbc/get-connection
+                {:connection-uri "jdbc:sqlite::memory:"})})
 
 (defn init-schema! [conn]
   (let [statements (-> (utils/slurp-resource "sql/init-schema.sql")
@@ -13,11 +17,6 @@
     (doseq [statement statements]
       (jdbc/execute! conn statement)))
   nil)
-
-(defn register-mount! []
-  (mount/defstate ^{:on-reload :noop} db
-    :start {:connection (get-connection "jdbc:sqlite::memory:")}
-    :stop  (-> db :connection .close)))
 
 (defn insert-stops! [conn stops]
   (jdbc/insert-multi! conn "stop" stops)

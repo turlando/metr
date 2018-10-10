@@ -2,33 +2,34 @@
   (:require [clojure.data.json :as json]
             [compojure.core :as compojure]
             [metr.api :as api]
-            [mount.core :as mount]
             [org.httpkit.server :as server]
-            [ring.middleware.params :as middleware.params]))
+            [ring.middleware.params :as middleware.params]
+            [ring.middleware.json :as middleware.json]))
 
-(defn- json-payload [payload]
+(defn- ok-response [body]
   {:status  200
-   :headers {"Content-Type"                "application/json; charset=utf-8"
-             "Access-Control-Allow-Origin" "*"}
-   :body    (-> payload
-                json/write-str)})
+   :body    body})
 
 (defn- get-stop-times-by-stop-code [request]
-  (let [code     (-> request :params (get "code"))
+  (let [db-conn  (-> request :db-conn)
+        code     (-> request :params (get "code"))
         time-min (-> request :params (get "time-min"))
         time-max (-> request :params (get "time-max"))]
-    (json-payload
+    (ok-response
      (api/get-stop-times-by-stop-code
+      db-conn
       code
       time-min time-max))))
 
 (defn- get-stops-in-rect-handler [request]
-  (let [lat-min (-> request :params (get "lat-min"))
+  (let [db-conn (-> request :db-conn)
+        lat-min (-> request :params (get "lat-min"))
         lat-max (-> request :params (get "lat-max"))
         lon-min (-> request :params (get "lon-min"))
         lon-max (-> request :params (get "lon-max"))]
-    (json-payload
+    (ok-response
      (api/get-stops-in-rect
+      db-conn
       lat-min lat-max
       lon-min lon-max))))
 
@@ -36,14 +37,31 @@
   (compojure/GET "/stop-times-by-stop-code" [] get-stop-times-by-stop-code)
   (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler))
 
-(defn- start-server! []
+(defn- cors-response [response]
+  (assoc-in response [:headers "Access-Control-Allow-Origin"] "*"))
+
+(defn- wrap-cors [handler]
+  (fn wrap-cors*
+    ([request]
+     (-> (handler request) cors-response))
+    ([request respond raise]
+     (handler request #(respond (cors-response %)) raise))))
+
+(defn- wrap-db-conn [handler db-conn]
+  (fn wrap-db-conn* [request]
+    (handler (assoc request :db-conn db-conn))))
+
+(defn start!
+  [{:keys [db-conn]
+    :as args}]
   (server/run-server
    (-> routes
-       middleware.params/wrap-params)
+       (wrap-db-conn db-conn)
+       middleware.params/wrap-params
+       middleware.json/wrap-json-response
+       wrap-cors)
    {:port  8080
     :join? false}))
 
-(defn register-mount! []
-  (mount/defstate server
-    :start (start-server!)
-    :stop  (server :timeout 0)))
+(defn stop! [s]
+  (s :timeout 0))
