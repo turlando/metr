@@ -48,8 +48,11 @@
      (handler request #(respond (cors-response %)) raise))))
 
 (defn- wrap-db-conn [handler db-conn]
-  (fn wrap-db-conn* [request]
-    (handler (assoc request :db-conn db-conn))))
+  (fn wrap-db-conn*
+    ([request]
+     (handler (assoc request :db-conn db-conn)))
+    ([request respond raise]
+     (handler (assoc request :db-conn db-conn) #(respond %) raise))))
 
 (defn start!
   [{:keys [db-conn]
