@@ -52,3 +52,9 @@
    conn
    [(utils/slurp-resource "sql/query-stop-times-by-stop-code.sql")
     code time-min time-max]))
+
+(defn query-stops-by-trip-id [conn trip-id]
+  (jdbc/query
+   conn
+   [(utils/slurp-resource "sql/query-stops-by-trip-id.sql")
+    trip-id]))
