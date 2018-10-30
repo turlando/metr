@@ -17,9 +17,9 @@ CREATE INDEX
 
 CREATE TABLE route (
     id INTEGER PRIMARY KEY,
-    code TEXT,
-    name TEXT,
-    type INTEGER
+    code TEXT NOT NULL,
+    name TEXT NOT NULL,
+    type INTEGER NOT NULL
 );
 --;;
 CREATE INDEX route_idx_code ON route (code);
@@ -64,7 +64,6 @@ CREATE TABLE stop_time (
     stop_id INTEGER NOT NULL REFERENCES stop (id),
     sequence INTEGER NOT NULL,
     time INTEGER NOT NULL,
-    distance REAL,
     PRIMARY KEY (trip_id, stop_id, sequence)
 );
 --;;

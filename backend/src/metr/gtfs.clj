@@ -104,8 +104,7 @@
       (update :time (fn [x]
                       (if (string/blank? x)
                         nil
-                        (utils/time->seconds x))))
-      (update :distance (fn [x] nil))))
+                        (utils/time->seconds x))))))
 
 (defn- interpolate-time-in-stop-times-in-trip [stop-times]
   (let [first* (-> stop-times first :time)
