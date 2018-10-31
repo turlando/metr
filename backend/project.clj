@@ -15,7 +15,8 @@
                  [ring/ring-core "1.6.3"]
                  [ring/ring-json "0.4.0"]
                  [compojure "1.6.1"]
-                 [factual/geo "1.2.0"]]
+                 [factual/geo "1.2.0"]
+                 [ubergraph "0.5.2"]]
 
   :main ^:skip-aot metr.core
 
