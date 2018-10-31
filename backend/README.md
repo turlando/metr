@@ -7,12 +7,9 @@
 
 ## Hacking
 
-The backend can be is made of two components: the database connection and the
-HTTP server serving the APIs through the web.
-
-The database is a mandatory component, while the HTTP server is not required.
-This can be specified when starting the backend and you will find it handy
-while debugging.
+The backend is made of two components: the database connection and the
+HTTP server serving the APIs through the web. The database is a mandatory
+component, while the HTTP server is not.
 
 The data is imported to the database upon startup and it is never modified
 afterwards. Because of this this you can run this software entirely in memory
