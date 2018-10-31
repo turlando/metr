@@ -7,6 +7,8 @@ SELECT
 FROM stop_time, trip, stop
 WHERE
     trip.id = ?
+    AND stop_time.time > ?
+    AND stop_time.time < ?
     AND trip.id = stop_time.trip_id
     AND stop_time.stop_id = stop.id
 ORDER BY stop_time.sequence
