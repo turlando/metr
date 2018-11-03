@@ -11,8 +11,8 @@
   {:connection (jdbc/get-connection
                 {:connection-uri "jdbc:sqlite::memory:"})})
 
-(defn close-connection! [^org.sqlite.SQLiteConnection conn]
-  (.close conn)
+(defn close-connection! [conn]
+  (.close ^org.sqlite.SQLiteConnection (:connection conn))
   nil)
 
 (defn query [conn params]
