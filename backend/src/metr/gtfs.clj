@@ -11,8 +11,8 @@
                     :stop_name :name
                     :stop_lat  :latitude
                     :stop_lon  :longitude})
-      (update :latitude #(Float. %))
-      (update :longitude #(Float. %))))
+      (update :latitude #(utils/read-float %))
+      (update :longitude #(utils/read-float %))))
 
 (defn get-stops []
   (->> (utils/read-csv "gtfs/stops.csv")
@@ -40,9 +40,9 @@
                     :lat_fermata      :latitude
                     :lon_fermata      :longitude
                     :sequenza_fermate :sequence})
-      (update :sequence #(Integer. %))
-      (update :latitude #(Float. %))
-      (update :longitude #(Float. %))))
+      (update :sequence #(utils/read-int %))
+      (update :latitude #(utils/read-float %))
+      (update :longitude #(utils/read-float %))))
 
 (defn- add-distance-to-points-in-shape [points]
   "Given a list of shape points belonging to the same shape, this function
@@ -93,7 +93,7 @@
               :timepoint)
       (rename-keys {:arrival_time  :time
                     :stop_sequence :sequence})
-      (update :sequence #(Integer. %))
+      (update :sequence #(utils/read-int %))
       (update :time (fn [x]
                       (if (string/blank? x)
                         nil

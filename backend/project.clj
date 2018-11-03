@@ -18,6 +18,8 @@
                  [factual/geo "1.2.0"]]
 
   :main ^:skip-aot metr.core
+  :global-vars {*warn-on-reflection* true}
 
   :target-path "target/%s"
+
   :profiles {:uberjar {:aot :all}})

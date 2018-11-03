@@ -4,6 +4,12 @@
             [clojure.java.io :as io]
             [geo.spatial :as spatial]))
 
+(defn read-int [s]
+  (Integer/parseInt (re-find #"^-?\d+$" s)))
+
+(defn read-float [s]
+  (Float/parseFloat (re-find #"^-?\d+\.\d+$" s)))
+
 (defn map-vals [f m]
   (zipmap (keys m)
           (map f (vals m))))
@@ -13,7 +19,7 @@
       io/resource
       slurp))
 
-(defn resource-reader [path]
+(defn ^java.io.Reader resource-reader [path]
   (-> path
       io/resource
       io/reader))
@@ -32,10 +38,13 @@
          doall)))
 
 (defn time->seconds [s]
-  (let [t (string/split s #":")]
-    (+ (* 3600 (Integer. (get t 0)))
-       (* 60 (Integer. (get t 1)))
-       (Integer. (get t 2)))))
+  (let [t (string/split s #":")
+        h (get t 0)
+        m (get t 1)
+        s (get t 2)]
+    (+ (* 3600 (read-int h))
+       (* 60 (read-int m))
+       (read-int s))))
 
 (defn seconds->time [s]
   (let [hours   (quot s 3600)
