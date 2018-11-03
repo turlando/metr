@@ -21,8 +21,8 @@
             import-data?       true}
      :as   args}]
    (let [db-conn     (if (= :memory db-path)
-                       (db/get-in-memory-connection!)
-                       (db/get-file-connection! db-path))
+                       (db/open-in-memory-connection!)
+                       (db/open-file-connection! db-path))
          http-server (if start-http-server?
                        (server/start! {:db-conn db-conn})
                        :none)]

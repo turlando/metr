@@ -3,11 +3,11 @@
             [clojure.string :as string]
             [metr.utils :as utils]))
 
-(defn get-file-connection! [file]
+(defn open-file-connection! [file]
   {:connection (jdbc/get-connection
                 {:connection-uri (str "jdbc:sqlite:" file)})})
 
-(defn get-in-memory-connection! []
+(defn open-in-memory-connection! []
   {:connection (jdbc/get-connection
                 {:connection-uri "jdbc:sqlite::memory:"})})
 
