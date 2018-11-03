@@ -8,14 +8,16 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/data.csv "0.1.4"]
                  [org.clojure/data.json "0.2.6"]
-                 [org.clojure/java.jdbc "0.7.6"]
-                 [org.xerial/sqlite-jdbc "3.21.0.1"]
+                 [org.clojure/java.jdbc "0.7.8"]
+                 [org.xerial/sqlite-jdbc "3.25.2"]
                  [clj-http "2.3.0"]
-                 [http-kit "2.2.0"]
-                 [ring/ring-core "1.6.3"]
+                 [http-kit "2.3.0"]
+                 [ring/ring-core "1.7.1"
+                  :exclusions [commons-codec]]
                  [ring/ring-json "0.4.0"]
                  [compojure "1.6.1"]
-                 [factual/geo "1.2.0"]]
+                 [factual/geo "1.2.0"
+                  :exclusions [com.fasterxml.jackson.core/jackson-core]]]
 
   :main ^:skip-aot metr.core
   :global-vars {*warn-on-reflection* true}
