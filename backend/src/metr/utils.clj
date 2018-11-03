@@ -1,6 +1,7 @@
 (ns metr.utils
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]
+  (:require [clojure.string :as string]
+            [clojure.data.csv :as csv]
+            [clojure.java.io :as io]
             [geo.spatial :as spatial]))
 
 (defn map-vals [f m]
@@ -23,6 +24,12 @@
             (map keyword)
             repeat)
        (rest csv)))
+
+(defn read-csv [path]
+  (with-open [reader (resource-reader path)]
+    (->> (csv/read-csv reader)
+         csv->maps
+         doall)))
 
 (defn time->seconds [s]
   (let [t (string/split s #":")]

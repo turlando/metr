@@ -25,19 +25,16 @@
                        (db/get-file-connection db-path))
          http-server (if start-http-server?
                        (server/start! {:db-conn db-conn})
-                       :none)
-         dataset     (if import-data?
-                       (gtfs/build-dataset)
                        :none)]
      (when import-data?
        (try
          (jdbc/with-db-transaction [tx db-conn]
            (db/init-schema! tx)
-           (db/insert-stops! tx (-> dataset :stops))
-           (db/insert-routes! tx (-> dataset :routes))
-           (db/insert-shape-points! tx (-> dataset :shape-points))
-           (db/insert-trips! tx (-> dataset :trips))
-           (db/insert-stop-times! tx (-> dataset :stop-times)))
+           (db/insert-stops! tx (gtfs/get-stops))
+           (db/insert-routes! tx (gtfs/get-routes))
+           (db/insert-shape-points! tx (gtfs/get-shape-points))
+           (db/insert-trips! tx (gtfs/get-trips))
+           (db/insert-stop-times! tx (gtfs/get-stop-times)))
          (catch Exception e
            (stop! {:db-conn     db-conn
                    :http-server http-server})

@@ -1,14 +1,7 @@
 (ns metr.gtfs
-  (:require [clojure.data.csv :as csv]
+  (:require [clojure.string :as string]
             [clojure.set :refer [rename-keys]]
-            [clojure.string :as string]
             [metr.utils :as utils]))
-
-(defn- get-csv [path]
-  (with-open [reader (utils/resource-reader path)]
-    (->> (csv/read-csv reader)
-         (utils/csv->maps)
-         doall)))
 
 (defn- clean-stop [stop]
   (-> stop
@@ -21,8 +14,8 @@
       (update :latitude #(Float. %))
       (update :longitude #(Float. %))))
 
-(defn- get-stops []
-  (->> (get-csv "gtfs/stops.csv")
+(defn get-stops []
+  (->> (utils/read-csv "gtfs/stops.csv")
        (map clean-stop)))
 
 (defn- clean-route [route]
@@ -37,8 +30,8 @@
                     :route_long_name  :name
                     :route_type       :type})))
 
-(defn- get-routes []
-  (->> (get-csv "gtfs/routes.csv")
+(defn get-routes []
+  (->> (utils/read-csv "gtfs/routes.csv")
        (map clean-route)))
 
 (defn- clean-shape-points [point]
@@ -74,8 +67,8 @@
        (utils/map-vals add-distance-to-points-in-shape)
        (reduce-kv (fn [s k v] (concat s v)) [])))
 
-(defn- get-shape-points []
-  (->> (get-csv "gtfs/shapes.csv")
+(defn get-shape-points []
+  (->> (utils/read-csv "gtfs/shapes.csv")
        (map clean-shape-points)
        add-distance-to-shape-points))
 
@@ -88,8 +81,8 @@
                     :trip_headsign :destination
                     :direction_id  :direction})))
 
-(defn- get-trips []
-  (->> (get-csv "gtfs/trips.csv")
+(defn get-trips []
+  (->> (utils/read-csv "gtfs/trips.csv")
        (map clean-trip)))
 
 (defn- clean-stop-time [stop-time]
@@ -121,19 +114,12 @@
 
 (defn- interpolate-time-in-stop-times [stop-times]
   (->> stop-times
-      (group-by :trip_id)
-      (utils/map-vals #(sort-by :sequence %))
-      (utils/map-vals interpolate-time-in-stop-times-in-trip)
-      (reduce-kv (fn [s k v] (concat s v)) [])))
+       (group-by :trip_id)
+       (utils/map-vals #(sort-by :sequence %))
+       (utils/map-vals interpolate-time-in-stop-times-in-trip)
+       (reduce-kv (fn [s k v] (concat s v)) [])))
 
-(defn- get-stop-times []
-  (->> (get-csv "gtfs/stoptimes.csv")
+(defn get-stop-times []
+  (->> (utils/read-csv "gtfs/stoptimes.csv")
        (map clean-stop-time)
        interpolate-time-in-stop-times))
-
-(defn build-dataset []
-    {:stops        (get-stops)
-     :routes       (get-routes)
-     :shape-points (get-shape-points)
-     :trips        (get-trips)
-     :stop-times   (get-stop-times)})
