@@ -15,10 +15,6 @@
   (.close ^org.sqlite.SQLiteConnection (:connection conn))
   nil)
 
-(defn query [conn params]
-  (jdbc/query conn params
-              {:as-arrays? true}))
-
 (defn init-schema! [conn]
   (let [statements (-> (utils/slurp-resource "sql/init-schema.sql")
                        (string/split #"--;;"))]
@@ -49,20 +45,20 @@
 (defn query-stops-in-rect [conn
                            lat-min lat-max
                            lon-min lon-max]
-  (query
+  (jdbc/query
    conn
    [(utils/slurp-resource "sql/query-stops-in-rect.sql")
     lat-min lat-max
     lon-min lon-max]))
 
 (defn query-stop-times-by-stop-code [conn code time-min time-max]
-  (query
+  (jdbc/query
    conn
    [(utils/slurp-resource "sql/query-stop-times-by-stop-code.sql")
     code time-min time-max]))
 
 (defn query-stops-by-trip-id [conn trip-id]
-  (query
+  (jdbc/query
    conn
    [(utils/slurp-resource "sql/query-stops-by-trip-id.sql")
     trip-id]))
