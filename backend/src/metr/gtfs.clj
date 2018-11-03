@@ -7,7 +7,7 @@
 (defn- get-csv [path]
   (with-open [reader (utils/resource-reader path)]
     (->> (csv/read-csv reader)
-         (utils/csv->maps)
+         utils/csv->maps
          doall)))
 
 (defn- clean-stop [stop]

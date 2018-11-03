@@ -5,7 +5,8 @@
   (->> xs
        (group-by key)
        (map (fn [[k v]]
-              [k (-> (first v)
+              [k {}]
+              #_[k (-> (first v)
                      (dissoc key))]))))
 
 (defn build-relations [key xs props]
@@ -18,5 +19,5 @@
 
 (defn build-graph [nodes relations]
   (-> (ubergraph/multidigraph)
-      (ubergraph/add-nodes* nodes)
+      (ubergraph/add-nodes-with-attrs* nodes)
       (ubergraph/add-directed-edges* relations)))

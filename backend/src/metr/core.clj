@@ -8,7 +8,7 @@
 (defn stop!
   [{:keys [db-conn http-server]
     :as   args}]
-  (when-not (= http-server :none)
+  (when (not= :none http-server)
     (server/stop! http-server))
   (-> db-conn :connection .close)
   nil)
@@ -20,13 +20,15 @@
             start-http-server? true
             import-data?       true}
      :as   args}]
-   (let [db-conn     (if (= db-path :memory)
+   (let [db-conn     (if (= :memory db-path)
                        (db/get-in-memory-connection)
                        (db/get-file-connection db-path))
          http-server (if start-http-server?
                        (server/start! {:db-conn db-conn})
                        :none)
-         dataset     (gtfs/build-dataset)]
+         dataset     (if import-data?
+                       (gtfs/build-dataset)
+                       :none)]
      (when import-data?
        (try
          (jdbc/with-db-transaction [tx db-conn]

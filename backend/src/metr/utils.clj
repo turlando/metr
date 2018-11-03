@@ -1,7 +1,8 @@
 (ns metr.utils
   (:require [clojure.java.io :as io]
             [clojure.string :as string]
-            [geo.spatial :as spatial]))
+            [geo.spatial :as spatial])
+  (:import [org.apache.commons.io.input BOMInputStream]))
 
 (defn map-vals [f m]
   (zipmap (keys m)
@@ -16,6 +17,16 @@
   (-> path
       io/resource
       io/reader))
+
+(defn resource-reader-bom [path]
+  (-> path
+      io/resource
+      io/input-stream
+      BOMInputStream.
+      io/reader))
+
+(defn strip-nonprintable [s]
+  (string/replace s #"\p{C}" ""))
 
 (defn csv->maps [csv]
   (map zipmap
