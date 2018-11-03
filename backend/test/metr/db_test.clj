@@ -5,23 +5,23 @@
             [clojure.java.jdbc :as jdbc]))
 
 (deftest test-database-connection
-  (testing "in-memory database creation and destruction"
-    (let [conn (sut/open-in-memory-connection!)]
-      (let [result   (jdbc/query conn ["SELECT 1 AS test"])
-            expected '({:test 1})]
-        (is (= expected result)))
-      (sut/close-connection! conn)
-      (is (thrown-with-msg?
-           java.sql.SQLException #"database connection closed"
-           (jdbc/query conn ["SELECT 1 AS test"])))))
-  (testing "in filesystem database creation and destruction"
-    (let [file (java.io.File/createTempFile "metr" "db")
-          conn (sut/open-file-connection! file)]
-      (let [result   (jdbc/query conn ["SELECT 1 AS test"])
-            expected '({:test 1})]
-        (is (= expected result)))
-      (sut/close-connection! conn)
-      (io/delete-file file)
-      (is (thrown-with-msg?
-           java.sql.SQLException #"database connection closed"
-           (jdbc/query conn ["SELECT 1 AS test"]))))))
+  (let [query    "SELECT 1 AS test"
+        expected '({:test 1})]
+    (testing "in-memory database creation and destruction"
+      (let [conn (sut/open-in-memory-connection!)]
+        (is (= expected
+               (jdbc/query conn query)))
+        (sut/close-connection! conn)
+        (is (thrown-with-msg?
+             java.sql.SQLException #"database connection closed"
+             (jdbc/query conn query)))))
+    (testing "in filesystem database creation and destruction"
+      (let [file (java.io.File/createTempFile "metr" "db")
+            conn (sut/open-file-connection! file)]
+        (is (= expected
+               (jdbc/query conn query)))
+        (sut/close-connection! conn)
+        (io/delete-file file)
+        (is (thrown-with-msg?
+             java.sql.SQLException #"database connection closed"
+             (jdbc/query conn query)))))))
