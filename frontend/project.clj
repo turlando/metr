@@ -18,8 +18,7 @@
   :source-paths ["src/clj/dev"]
   :clean-targets ^{:protect false} ["resources/public/js/compiled"
                                     "resources/public/css"
-                                    "target"
-                                    "test/js"]
+                                    "target"]
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
   :figwheel {:server-port   8081
@@ -64,11 +63,4 @@
                                :output-to       "resources/public/js/compiled/app.js"
                                :optimizations   :advanced
                                :closure-defines {goog.DEBUG false}
-                               :pretty-print    false}}
-               {:id           "test"
-                :source-paths ["src/cljs" "test/cljs"]
-                :compiler     {:main          metr-fe.runner
-                               :output-to     "resources/public/js/compiled/test.js"
-                               :output-dir    "resources/public/js/compiled/test/out"
-                               :target        :nodejs
-                               :optimizations :none}}]})
+                               :pretty-print    false}}]})
