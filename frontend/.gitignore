@@ -5,5 +5,5 @@
 /.rebel_readline_history
 /figwheel_server.log
 /target/
-/resources/public/js/compiled/
+/resources/public/js/
 /resources/public/css/
