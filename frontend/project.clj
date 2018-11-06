@@ -8,31 +8,30 @@
             [deraen/lein-less4j "0.6.2"]]
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.238"]
-                 [reagent "0.8.0"]
-                 [re-frame "0.10.5"]
+                 [org.clojure/clojurescript "1.10.439"]
+                 [reagent "0.8.1"]
+                 [re-frame "0.10.6"]
                  [secretary "1.2.3"]
                  [cljs-http "0.1.45"]
                  [cljsjs/react-leaflet "1.6.5-0"]]
 
-  :source-paths ["src/clj/dev"]
-  :clean-targets ^{:protect false} ["resources/public/js/compiled"
-                                    "resources/public/css"
-                                    "target"]
-
-  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
-  :figwheel {:server-port   8081
-             :css-dirs      ["resources/public/css"]}
+  :clean-targets ^{:protect false} ["target"
+                                    "resources/public/js"
+                                    "resources/public/css"]
 
   :less {:source-paths ["src/less"]
          :target-path  "resources/public/css"}
 
+  :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
+  :figwheel {:server-port   8081
+             :css-dirs      ["resources/public/css"]}
+
   :profiles
-  {:dev  {:plugins      [[lein-figwheel "0.5.16"]
+  {:dev  {:plugins      [[lein-figwheel "0.5.17"]
                          [lein-doo "0.1.10"]]
           :dependencies [[binaryage/devtools "0.9.10"]
-                         [figwheel-sidecar "0.5.16"]
-                         [com.cemerick/piggieback "0.2.2"]]
+                         [figwheel-sidecar "0.5.17"]
+                         [cider/piggieback "0.3.10"]]
           :less         {:source-map true}}
    :prod {}}
 
