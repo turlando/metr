@@ -14,9 +14,11 @@
 
 (defn get-stops-in-rect
   [db-conn
-   lat-min lat-max
-   lon-min lon-max]
+   latitude-min  latitude-max
+   longitude-min longitude-max]
   (db/query-stops-in-rect
    db-conn
-   lat-min lat-max
-   lon-min lon-max))
+   :latitude-min  latitude-min
+   :latitude-max  latitude-max
+   :longitude-min longitude-min
+   :longitude-max longitude-max))

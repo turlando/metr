@@ -3,6 +3,8 @@
             [clojure.string :as string]
             [metr.utils :as utils]))
 
+(def ^:private default-query-limit 250)
+
 (defn open-file-connection! [file]
   {:connection (jdbc/get-connection
                 {:connection-uri (str "jdbc:sqlite:" file)})})
@@ -42,14 +44,23 @@
   (jdbc/insert-multi! conn "stop_time" stop-times)
   nil)
 
-(defn query-stops-in-rect [conn
-                           lat-min lat-max
-                           lon-min lon-max]
-  (jdbc/query
+(defn query-stops-by-coordinates
+  [conn & {:keys [latitude-min longitude-min
+                  latitude-max longitude-max
+                  limit]
+           :or   {limit default-query-limit}
+           :as   args}]
+  {:pre [(every? (partial contains? args)
+                 [:latitude-min :longitude-min
+                  :latitude-max :longitude-max])]}
+  (utils/sql-query
    conn
-   [(utils/slurp-resource "sql/query-stops-in-rect.sql")
-    lat-min lat-max
-    lon-min lon-max]))
+   (utils/slurp-resource "sql/query-stops-by-coordinates.sql")
+   {:latitude_min  latitude-min
+    :latitude_max  latitude-max
+    :longitude_min longitude-min
+    :longitude_max longitude-max
+    :limit         limit}))
 
 (defn query-stop-times-by-stop-code [conn code time-min time-max]
   (jdbc/query
