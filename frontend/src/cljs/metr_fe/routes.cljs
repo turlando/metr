@@ -18,5 +18,5 @@
 (defn app-routes []
   (secretary/set-config! :prefix "")
   (defroute "/" []
-    (re-frame/dispatch [::events/set-active-panel :home]))
+    #())
   (hook-browser-navigation!))

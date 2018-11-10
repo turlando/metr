@@ -11,9 +11,7 @@
                  [org.clojure/clojurescript "1.10.439"]
                  [reagent "0.8.1"]
                  [re-frame "0.10.6"]
-                 [secretary "1.2.3"]
-                 [cljs-http "0.1.45"]
-                 [cljsjs/react-leaflet "1.6.5-0"]]
+                 [secretary "1.2.3"]]
 
   :clean-targets ^{:protect false} ["target"
                                     "resources/public/js"
