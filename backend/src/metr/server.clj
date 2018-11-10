@@ -21,21 +21,23 @@
       code
       time-min time-max))))
 
-(defn- get-stops-in-rect-handler [request]
+(defn- get-stops-by-coordinates [request]
   (let [db-conn (-> request :db-conn)
         lat-min (-> request :params (get "lat-min"))
-        lat-max (-> request :params (get "lat-max"))
         lon-min (-> request :params (get "lon-min"))
+        lat-max (-> request :params (get "lat-max"))
         lon-max (-> request :params (get "lon-max"))]
     (ok-response
-     (api/get-stops-in-rect
+     (api/get-stops-by-coordinates
       db-conn
-      lat-min lat-max
-      lon-min lon-max))))
+      :latitude-min  lat-min
+      :longitude-min lon-min
+      :latitude-max  lat-max
+      :longitude-max lon-max))))
 
 (compojure/defroutes routes
   (compojure/GET "/stop-times-by-stop-code" [] get-stop-times-by-stop-code)
-  (compojure/GET "/stops-in-rect" [] get-stops-in-rect-handler))
+  (compojure/GET "/stops-by-coordinates" [] get-stops-by-coordinates))
 
 (defn- cors-response [response]
   (assoc-in response [:headers "Access-Control-Allow-Origin"] "*"))

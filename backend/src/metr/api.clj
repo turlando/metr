@@ -12,13 +12,6 @@
         (utils/time->seconds time-max))
        (map #(update % :stop_time_time utils/seconds->time))))
 
-(defn get-stops-in-rect
-  [db-conn
-   latitude-min  latitude-max
-   longitude-min longitude-max]
-  (db/query-stops-in-rect
-   db-conn
-   :latitude-min  latitude-min
-   :latitude-max  latitude-max
-   :longitude-min longitude-min
-   :longitude-max longitude-max))
+(defn get-stops-by-coordinates
+  [& args]
+  (apply db/query-stops-by-coordinates args))

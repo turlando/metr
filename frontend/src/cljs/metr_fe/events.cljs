@@ -27,7 +27,7 @@
 (re-frame/reg-event-db
  ::update-map-stops
  (fn [db [_ _]]
-   (api/get-stops-in-rect!
+   (api/get-stops-by-coordinates!
     (-> db :map-bounds :min :latitude)
     (-> db :map-bounds :max :latitude)
     (-> db :map-bounds :min :longitude)

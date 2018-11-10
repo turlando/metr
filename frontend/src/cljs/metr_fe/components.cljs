@@ -59,21 +59,21 @@
       {:url tiles-url}]
      (doall
       (for [stop @stops]
-        ^{:key (-> stop :code)}
+        ^{:key (-> stop :stop_code)}
         [Marker
          {:on-click (fn []
                       (re-frame/dispatch
-                       [::events/set-active-map-stop (-> stop :code)]))
+                       [::events/set-active-map-stop (-> stop :stop_code)]))
           :position (js/L.latLng
-                     (-> stop :latitude)
-                     (-> stop :longitude))
+                     (-> stop :stop_latitude)
+                     (-> stop :stop_longitude))
           :icon     map-marker-icon}
          [Popup
           {:max-width screen-width}
           [:div.stop-popup
            [:header
-            [:h1 (-> stop :name)]
-            [:h2 (-> stop :code)]]
+            [:h1 (-> stop :stop_name)]
+            [:h2 (-> stop :stop_code)]]
            (when @stop-data
              [:table
               [:tbody

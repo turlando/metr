@@ -25,10 +25,10 @@
        (callback response))))
   nil)
 
-(defn get-stops-in-rect [lat-min lat-max
-                         lon-min lon-max]
+(defn get-stops-by-coordinates [lat-min lat-max
+                                lon-min lon-max]
   (http/get
-   (str state/api-addr "stops-in-rect")
+   (str state/api-addr "stops-by-coordinates")
    {:with-credentials? false
     :query-params
     {"lat-min" lat-min
@@ -36,13 +36,13 @@
      "lon-min" lon-min
      "lon-max" lon-max}}))
 
-(defn get-stops-in-rect! [lat-min lat-max
-                          lon-min lon-max
-                          callback]
+(defn get-stops-by-coordinates! [lat-min lat-max
+                                 lon-min lon-max
+                                 callback]
   (async.macros/go
     (async/take!
-     (get-stops-in-rect lat-min lat-max
-                        lon-min lon-max)
+     (get-stops-by-coordinates lat-min lat-max
+                               lon-min lon-max)
      (fn [response]
        (callback response))))
   nil)
