@@ -3,7 +3,7 @@
             [metr.utils :as sut]))
 
 (deftest test-sql-query-with-named-params->sql-query
-  (let [f #'metr.utils/sql-query-with-named-params->sql-query]
+  (let [f sut/sql-query-with-named-params->sql-query]
     (testing "distinct params"
       (let [in  ["SELECT a FROM A WHERE a = :a" {:a 1}]
             out ["SELECT a FROM A WHERE a = ?" 1]]

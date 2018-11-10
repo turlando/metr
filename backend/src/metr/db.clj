@@ -17,6 +17,14 @@
   (.close ^org.sqlite.SQLiteConnection (:connection conn))
   nil)
 
+(defn query
+  ([conn query]
+   (jdbc/query conn [query]))
+  ([conn query params]
+   (jdbc/query
+    conn
+    (utils/sql-query-with-named-params->sql-query query params))))
+
 (defn init-schema! [conn]
   (let [statements (-> (utils/slurp-resource "sql/init-schema.sql")
                        (string/split #"--;;"))]
@@ -53,7 +61,7 @@
   {:pre [(every? (partial contains? args)
                  [:latitude-min :longitude-min
                   :latitude-max :longitude-max])]}
-  (utils/sql-query
+  (query
    conn
    (utils/slurp-resource "sql/query-stops-by-coordinates.sql")
    {:latitude_min  latitude-min

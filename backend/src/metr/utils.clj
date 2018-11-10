@@ -38,19 +38,13 @@
          csv->maps
          doall)))
 
-(defn- sql-query-with-named-params->sql-query [query params]
+(defn sql-query-with-named-params->sql-query [query params]
   (let [pattern    #":[\w_]+"
         keys-in-q  (map #(keyword (string/replace % #"^:" ""))
                         (re-seq pattern query))
         new-query  (string/replace query pattern "?")
         new-params (map #(get params %) keys-in-q)]
     (concat [new-query] new-params)))
-
-(defn sql-query
-  ([conn query]
-   (jdbc/query conn [query]))
-  ([conn query params]
-   (jdbc/query conn (sql-query-with-named-params->sql-query query params))))
 
 (defn time->seconds [s]
   (let [t (string/split s #":")
