@@ -14,8 +14,12 @@
                  [secretary "1.2.3"]]
 
   :clean-targets ^{:protect false} ["target"
+                                    "node_modules"
+                                    "package.json"
+                                    "package-lock.json"
                                     "resources/public/js"
-                                    "resources/public/css"]
+                                    "resources/public/css"
+                                    "figwheel_server.log"]
 
   :cljsbuild
   {:builds
@@ -29,7 +33,9 @@
                     :asset-path           "js/out"
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}}
+                    :external-config      {:devtools/config {:features-to-install :all}}
+                    :npm-deps             {"normalize.css" "8.0.1"}
+                    :install-deps         true}
      :figwheel     {:websocket-url "ws://[[server-hostname]]:[[server-port]]/figwheel-ws"
                     :on-jsload     "metr-fe.core/mount-root"}}
 
@@ -41,24 +47,26 @@
                     :optimizations   :advanced
                     :pretty-print    false}}]}
 
-  :less {:source-paths ["src/less"]
+  :less {:source-paths ["src/less" "node_modules"]
          :target-path  "resources/public/css"}
 
   :profiles
-  {:dev {:plugins      [[lein-figwheel "0.5.17"]
-                        [lein-doo "0.1.10"]]
-         :dependencies [[binaryage/devtools "0.9.10"]
-                        [figwheel-sidecar "0.5.17"]
-                        [cider/piggieback "0.3.10"]]
-         :source-paths ["src/clj/dev"]
-         :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
-         :less         {:source-map true}
-         :figwheel     {:server-port 8081
-                        :css-dirs    ["resources/public/css"]}}}
+  {:dev {:plugins        [[lein-figwheel "0.5.17"]
+                          [lein-doo "0.1.10"]]
+         :dependencies   [[binaryage/devtools "0.9.10"]
+                          [figwheel-sidecar "0.5.17"]
+                          [cider/piggieback "0.3.10"]]
+         :source-paths   ["src/clj/dev"]
+         :resource-paths ["resources" "node_modules"]
+         :repl-options   {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
+         :less           {:source-map true}
+         :figwheel       {:server-port 8081
+                          :css-dirs    ["resources/public/css"]}}}
 
   :aliases
   {"dev"   ["with-profile" "+dev" "do"
             ["clean"]
+            ["cljsbuild" "once" "dev"]
             ["less4j" "once"]
             ["figwheel" "dev"]]
    "build" ["with-profile" "-dev" "do"
