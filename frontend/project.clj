@@ -11,7 +11,8 @@
                  [org.clojure/clojurescript "1.10.439"]
                  [reagent "0.8.1"]
                  [re-frame "0.10.6"]
-                 [secretary "1.2.3"]]
+                 [secretary "1.2.3"]
+                 [cljsjs/semantic-ui-react "0.83.0-0"]]
 
   :clean-targets ^{:protect false} ["target"
                                     "node_modules"
@@ -34,7 +35,8 @@
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
                     :external-config      {:devtools/config {:features-to-install :all}}
-                    :npm-deps             {"normalize.css" "8.0.1"}
+                    :npm-deps             {"normalize.css" "8.0.1"
+                                           "semantic-ui-css" "2.4.1"}
                     :install-deps         true}
      :figwheel     {:websocket-url "ws://[[server-hostname]]:[[server-port]]/figwheel-ws"
                     :on-jsload     "metr-fe.core/mount-root"}}
