@@ -1,3 +1,7 @@
+/////////////////////////////////////////////////////////////////////////////////
+// GLOBAL                                                                      //
+/////////////////////////////////////////////////////////////////////////////////
+
 #app {
     display: block;
     width: 100%;
@@ -11,12 +15,22 @@ main {
     z-index: 0;
 }
 
+
+/////////////////////////////////////////////////////////////////////////////////
+// BACKGROUND MAP                                                              //
+/////////////////////////////////////////////////////////////////////////////////
+
 main #background-map {
     display: block;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// FLOATING CARD                                                               //
+/////////////////////////////////////////////////////////////////////////////////
 
 main #floating-card-container {
     display: grid;
@@ -33,7 +47,27 @@ main #floating-card-container {
 #floating-card-container #floating-card {
     display: block;
     width: 25%;
-    height: 80%;
+    height: auto;
     margin: auto auto auto 10%;
     pointer-events: auto;
+}
+
+#floating-card .content {
+    margin-bottom: 1rem;
+}
+
+#floating-card .content:last-child {
+    margin-bottom: 0;
+}
+
+#floating-card .content .header {
+    margin-bottom: 0.5rem;
+}
+
+#floating-card .content .form > * {
+    margin-bottom: 0.5rem;
+}
+
+#floating-card .content .form > *:last-child {
+    margin-bottom: 0;
 }

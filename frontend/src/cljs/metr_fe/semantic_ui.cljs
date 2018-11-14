@@ -11,5 +11,8 @@
     (apply goog.object/getValueByKeys js/semanticUIReact k ks)
     (goog.object/get js/semanticUIReact k)))
 
-(def card      (component "Card"))
-(def grid      (component "Grid"))
+(def card   (component "Card"))
+(def grid   (component "Grid"))
+(def form   (component "Form"))
+(def input  (component "Input"))
+(def button (component "Button"))
