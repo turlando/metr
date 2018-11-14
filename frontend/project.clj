@@ -12,7 +12,8 @@
                  [reagent "0.8.1"]
                  [re-frame "0.10.6"]
                  [secretary "1.2.3"]
-                 [cljsjs/semantic-ui-react "0.83.0-0"]]
+                 [cljsjs/semantic-ui-react "0.83.0-0"]
+                 [cljsjs/react-leaflet "2.0.1-0"]]
 
   :clean-targets ^{:protect false} ["target"
                                     "node_modules"
