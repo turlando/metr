@@ -1,6 +1,12 @@
 (ns metr-fe.components
-  (:require [metr-fe.semantic-ui :as sui]
+  (:require [re-frame.core :as re-frame]
+            [metr-fe.semantic-ui :as sui]
             [metr-fe.leaflet :as leaflet]))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; BACKGROUND MAP                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn background-map []
   [leaflet/leafmap {:id                 "background-map"
@@ -9,6 +15,11 @@
                     :center             leaflet/default-center
                     :zoom               leaflet/default-zoom}
    [leaflet/tile-layer {:url leaflet/tiles-url}]])
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FLOATING CARD MAIN BLOCKS                                                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn trip-card-block []
   [:> sui/card.Content
@@ -29,7 +40,7 @@
     "Fermate nelle vicinanze"]
    [:> sui/grid
     [:> sui/grid.Row {:centered true}
-     [:> sui/button {:primary true} "Tutte"]
+     [:> sui/button {:primary  true} "Tutte"]
      [:> sui/button "Bus"]
      [:> sui/button "Tram"]]]])
 
@@ -40,7 +51,13 @@
    [:> sui/input {:fluid       true
                   :placeholder "Linea"}]])
 
-(defn floating-card []
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; FLOATING CARD PAGES                                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defmulti floating-card identity)
+
+(defmethod floating-card :main []
   [:div {:id "floating-card-container"}
    [:> sui/card {:id     "floating-card"
                  :raised true}
@@ -48,7 +65,13 @@
     [nearby-stops-block]
     [find-line-block]]])
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MAIN COMPONENT                                                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn main []
-  [:main
-   [background-map]
-   [floating-card]])
+  (let [floating-card-page (re-frame/subscribe [:floating-card-page])]
+    [:main
+     [background-map]
+     [floating-card @floating-card-page]]))
