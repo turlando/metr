@@ -3,9 +3,11 @@
             [metr-fe.leaflet :as leaflet]))
 
 (defn background-map []
-  [leaflet/geomap {:id     "background-map"
-                   :center leaflet/default-center
-                   :zoom   leaflet/default-zoom}
+  [leaflet/leafmap {:id                 "background-map"
+                    :zoomControl        false
+                    :attributionControl false
+                    :center             leaflet/default-center
+                    :zoom               leaflet/default-zoom}
    [leaflet/tile-layer {:url leaflet/tiles-url}]])
 
 (defn trip-card-block []
