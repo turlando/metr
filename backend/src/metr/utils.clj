@@ -39,7 +39,7 @@
          doall)))
 
 (defn sql-query-with-named-params->sql-query [query params]
-  (let [pattern    #":[\w_]+"
+  (let [pattern    #":[\w_?]+"
         keys-in-q  (map #(keyword (string/replace % #"^:" ""))
                         (re-seq pattern query))
         new-query  (string/replace query pattern "?")

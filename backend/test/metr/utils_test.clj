@@ -31,4 +31,10 @@
         (is (= (apply f in) out)))
       (let [in  ["SELECT a FROM A WHERE a = :a_1" {:a_1 1}]
             out ["SELECT a FROM A WHERE a = ?" 1]]
+        (is (= (apply f in) out)))
+      (let [in  ["SELECT a FROM A WHERE a = :?" {:? 1}]
+            out ["SELECT a FROM A WHERE a = ?" 1]]
+        (is (= (apply f in) out)))
+      (let [in  ["SELECT a FROM A WHERE a = :? AND b = :?" {:? 1}]
+            out ["SELECT a FROM A WHERE a = ? AND b = ?" 1 1]]
         (is (= (apply f in) out))))))
