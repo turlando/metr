@@ -4,4 +4,4 @@
 (re-frame/reg-sub
  :floating-card-page
  (fn [db _]
-   (:floating-card-page db)))
+   (get-in db [:floating-card :page])))
