@@ -52,6 +52,12 @@
   (jdbc/insert-multi! conn "stop_time" stop-times)
   nil)
 
+(defn query-routes-by-code-or-name [conn s]
+  (query
+   conn
+   (utils/slurp-resource "sql/query-routes-by-code-or-name.sql")
+   {:? (str "%" s "%")}))
+
 (defn query-stops-by-coordinates
   [conn & {:keys [latitude-min longitude-min
                   latitude-max longitude-max

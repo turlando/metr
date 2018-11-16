@@ -10,6 +10,12 @@
   {:status  200
    :body    body})
 
+(defn- get-routes [request]
+  (let [db-conn (-> request :db-conn)
+        query   (-> request :params (get "q"))]
+    (ok-response
+     (api/get-routes db-conn query))))
+
 (defn- get-stop-times-by-stop-code [request]
   (let [db-conn  (-> request :db-conn)
         code     (-> request :params (get "code"))
@@ -36,6 +42,7 @@
       :longitude-max lon-max))))
 
 (compojure/defroutes routes
+  (compojure/GET "/routes" [] get-routes)
   (compojure/GET "/stop-times-by-stop-code" [] get-stop-times-by-stop-code)
   (compojure/GET "/stops-by-coordinates" [] get-stops-by-coordinates))
 
