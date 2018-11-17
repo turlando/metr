@@ -22,8 +22,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn trip-card-block []
-  [:> sui/card.Content
-   [:> sui/card.Header
+  [:> sui/card-content
+   [:> sui/card-header
     "Dove andiamo?"]
    [:> sui/form
     [:> sui/input {:fluid       true
@@ -35,8 +35,8 @@
      "Vai"]]])
 
 (defn nearby-stops-block []
-  [:> sui/card.Content
-   [:> sui/card.Header
+  [:> sui/card-content
+   [:> sui/card-header
     "Fermate nelle vicinanze"]
    [:> sui/grid
     [:> sui/grid.Row {:centered true}
@@ -45,8 +45,8 @@
      [:> sui/button "Tram"]]]])
 
 (defn find-line-block []
-  [:> sui/card.Content
-   [:> sui/card.Header
+  [:> sui/card-content
+   [:> sui/card-header
     "Trova linea"]
    [:> sui/input {:fluid       true
                   :placeholder "Linea"}]])
