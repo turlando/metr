@@ -48,8 +48,8 @@
   [:> sui/card-content
    [:> sui/card-header
     "Trova linea"]
-   [:> sui/input {:fluid       true
-                  :placeholder "Linea"}]])
+   [:> sui/search {:input       {:fluid true}
+                   :placeholder "Linea"}]])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FLOATING CARD PAGES                                                        ;;

@@ -18,3 +18,4 @@
 (def form         (component "Form"))
 (def input        (component "Input"))
 (def button       (component "Button"))
+(def search       (component "Search"))
