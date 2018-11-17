@@ -8,12 +8,17 @@
             [deraen/lein-less4j "0.6.2"]]
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/clojurescript "1.10.439"]
+                 [org.clojure/clojurescript "1.10.439"
+                  :exclusions [[com.google.errorprone/error_prone_annotations]
+                               [com.google.code.findbugs/jsr305]]]
                  [reagent "0.8.1"]
-                 [re-frame "0.10.6"]
+                 [re-frame "0.10.6"
+                  :exclusions [args4j]]
                  [secretary "1.2.3"]
                  [cljsjs/semantic-ui-react "0.83.0-0"]
-                 [cljsjs/react-leaflet "2.0.1-0"]]
+                 [cljsjs/react-leaflet "2.0.1-0"
+                  :exclusions [[cljsjs/react]
+                               [cljsjs/react-dom]]]]
 
   :clean-targets ^{:protect false} ["target"
                                     "node_modules"
@@ -56,8 +61,12 @@
   {:dev {:plugins        [[lein-figwheel "0.5.17"]
                           [lein-doo "0.1.10"]]
          :dependencies   [[binaryage/devtools "0.9.10"]
-                          [figwheel-sidecar "0.5.17"]
-                          [cider/piggieback "0.3.10"]]
+                          [figwheel-sidecar "0.5.17"
+                           :exclusions [[org.clojure/tools.nrepl]
+                                        [args4j]]]
+                          [cider/piggieback "0.3.10"
+                           :exclusions [[org.clojure/tools.logging]
+                                        [args4j]]]]
          :source-paths   ["src/clj/dev"]
          :resource-paths ["resources" "node_modules"]
          :repl-options   {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
