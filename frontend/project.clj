@@ -14,6 +14,7 @@
                  [reagent "0.8.1"]
                  [re-frame "0.10.6"
                   :exclusions [args4j]]
+                 [day8.re-frame/http-fx "0.1.6"]
                  [secretary "1.2.3"]
                  [antizer "0.3.1"
                   :exclusions [args4j]]

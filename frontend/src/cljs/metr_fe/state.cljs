@@ -4,4 +4,6 @@
 
 (def db
   {:floating-card {:page            default-floating-card-current-page
-                   :find-line-block {:show-loading? false}}})
+                   :find-route-block {:query         ""
+                                      :result        []
+                                      :show-loading? false}}})

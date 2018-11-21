@@ -2,13 +2,16 @@
   (:require [reagent.core :as reagent]
             [re-frame.core :as re-frame]
             [antizer.reagent :as ant]
+            [metr-fe.events :as events]
+            [metr-fe.subs :as subs]
             [metr-fe.leaflet :as leaflet]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ICONS                                                                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(def search-icon [ant/icon {:type "search"}])
+(def search-icon  [ant/icon {:type "search"}])
+(def loading-icon [ant/icon {:type "loading"}])
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -34,7 +37,7 @@
    [ant/form
     [ant/input {:placeholder "Da"}]
     [ant/input {:placeholder "A"}]
-    [ant/button {:type "primary"
+    [ant/button {:type  "primary"
                  :block true}
      "Vai"]]])
 
@@ -46,11 +49,23 @@
     [ant/button "Bus"]
     [ant/button "Tram"]]])
 
-(defn find-line-block []
-  [:div {:class "card-content"}
-   [:h2 "Trova linea"]
-   [ant/input {:placeholder "Linea"
-               :suffix (reagent/as-element search-icon)}]])
+(defn find-route-block []
+  (let [show-loading? (re-frame/subscribe
+                       [::subs/find-route-block-show-loading?])
+        result        (re-frame/subscribe
+                       [::subs/find-route-block-result])
+        handle-result (fn [r]
+                        (str (:route_code r) " - " (:route_name r)))]
+    [:div {:class "card-content"}
+     [:h2 "Trova linea"]
+     [ant/auto-complete
+      {:class       "max-width"
+       :placeholder "Linea"
+       :suffix      (reagent/as-element (if @show-loading?
+                                          loading-icon
+                                          search-icon))
+       :on-change   #(re-frame/dispatch [::events/find-route-query %])
+       :dataSource  (mapv handle-result @result)}]]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -61,12 +76,12 @@
 
 (defmethod floating-card :main []
   [:div {:id "floating-card-container"}
-   [ant/card {:id     "floating-card"}
+   [ant/card {:id "floating-card"}
     [trip-card-block]
     [ant/divider]
     [nearby-stops-block]
     [ant/divider]
-    [find-line-block]]])
+    [find-route-block]]])
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -74,7 +89,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn main []
-  (let [floating-card-page (re-frame/subscribe [:floating-card-page])]
+  (let [floating-card-page (re-frame/subscribe [::subs/floating-card-page])]
     [:main
      [background-map]
      [floating-card @floating-card-page]]))
