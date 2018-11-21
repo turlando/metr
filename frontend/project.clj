@@ -15,7 +15,8 @@
                  [re-frame "0.10.6"
                   :exclusions [args4j]]
                  [secretary "1.2.3"]
-                 [cljsjs/semantic-ui-react "0.83.0-0"]
+                 [antizer "0.3.1"
+                  :exclusions [args4j]]
                  [cljsjs/react-leaflet "2.0.1-0"
                   :exclusions [[cljsjs/react]
                                [cljsjs/react-dom]]]]
@@ -40,9 +41,7 @@
                     :asset-path           "js/out"
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}
-                    :npm-deps             {"semantic-ui-css" "2.4.1"}
-                    :install-deps         true}
+                    :external-config      {:devtools/config {:features-to-install :all}}}
      :figwheel     {:websocket-url "ws://[[server-hostname]]:[[server-port]]/figwheel-ws"
                     :on-jsload     "metr-fe.core/mount-root"}}
 

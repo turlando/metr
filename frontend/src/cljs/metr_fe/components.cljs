@@ -1,6 +1,6 @@
 (ns metr-fe.components
   (:require [re-frame.core :as re-frame]
-            [metr-fe.semantic-ui :as sui]
+            [antizer.reagent :as ant]
             [metr-fe.leaflet :as leaflet]))
 
 
@@ -22,34 +22,27 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn trip-card-block []
-  [:> sui/card-content
-   [:> sui/card-header
-    "Dove andiamo?"]
-   [:> sui/form
-    [:> sui/input {:fluid       true
-                   :placeholder "Da"}]
-    [:> sui/input {:fluid       true
-                   :placeholder "A"}]
-    [:> sui/button {:primary true
-                    :floated "right"}
+  [:div {:class "card-content"}
+   [:h2 "Dove andiamo?"]
+   [ant/form
+    [ant/input {:placeholder "Da"}]
+    [ant/input {:placeholder "A"}]
+    [ant/button {:type "primary"
+                 :block true}
      "Vai"]]])
 
 (defn nearby-stops-block []
-  [:> sui/card-content
-   [:> sui/card-header
-    "Fermate nelle vicinanze"]
-   [:> sui/grid
-    [:> sui/grid.Row {:centered true}
-     [:> sui/button {:primary  true} "Tutte"]
-     [:> sui/button "Bus"]
-     [:> sui/button "Tram"]]]])
+  [:div {:class "card-content"}
+   [:h2 "Fermate nelle vicinanze"]
+   [ant/button-group
+    [ant/button {:type "primary"} "Tutte"]
+    [ant/button "Bus"]
+    [ant/button "Tram"]]])
 
 (defn find-line-block []
-  [:> sui/card-content
-   [:> sui/card-header
-    "Trova linea"]
-   [:> sui/search {:input       {:fluid true}
-                   :placeholder "Linea"}]])
+  [:div {:class "card-content"}
+   [:h2 "Trova linea"]
+   [ant/input {:placeholder "Linea"}]])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FLOATING CARD PAGES                                                        ;;
@@ -59,10 +52,11 @@
 
 (defmethod floating-card :main []
   [:div {:id "floating-card-container"}
-   [:> sui/card {:id     "floating-card"
-                 :raised true}
+   [ant/card {:id     "floating-card"}
     [trip-card-block]
+    [ant/divider]
     [nearby-stops-block]
+    [ant/divider]
     [find-line-block]]])
 
 
