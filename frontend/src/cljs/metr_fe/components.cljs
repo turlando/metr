@@ -1,7 +1,14 @@
 (ns metr-fe.components
-  (:require [re-frame.core :as re-frame]
+  (:require [reagent.core :as reagent]
+            [re-frame.core :as re-frame]
             [antizer.reagent :as ant]
             [metr-fe.leaflet :as leaflet]))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ICONS                                                                      ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(def search-icon [ant/icon {:type "search"}])
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -42,7 +49,9 @@
 (defn find-line-block []
   [:div {:class "card-content"}
    [:h2 "Trova linea"]
-   [ant/input {:placeholder "Linea"}]])
+   [ant/input {:placeholder "Linea"
+               :suffix (reagent/as-element search-icon)}]])
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FLOATING CARD PAGES                                                        ;;
