@@ -36,10 +36,10 @@
     (ok-response
      (api/get-stops-by-coordinates
       db-conn
-      :latitude-min  lat-min
-      :longitude-min lon-min
-      :latitude-max  lat-max
-      :longitude-max lon-max))))
+      {:latitude-min  lat-min
+       :longitude-min lon-min
+       :latitude-max  lat-max
+       :longitude-max lon-max}))))
 
 (compojure/defroutes routes
   (compojure/GET "/routes" [] get-routes)

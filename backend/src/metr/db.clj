@@ -59,11 +59,11 @@
    {:? (str "%" s "%")}))
 
 (defn query-stops-by-coordinates
-  [conn & {:keys [latitude-min longitude-min
-                  latitude-max longitude-max
-                  limit]
-           :or   {limit default-query-limit}
-           :as   args}]
+  [conn {:keys [latitude-min longitude-min
+                latitude-max longitude-max
+                limit]
+         :or   {limit default-query-limit}
+         :as   args}]
   {:pre [(every? (partial contains? args)
                  [:latitude-min :longitude-min
                   :latitude-max :longitude-max])]}
