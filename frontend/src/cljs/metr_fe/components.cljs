@@ -28,7 +28,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; FLOATING CARD MAIN BLOCKS                                                  ;;
+;; FLOATING CARD MAIN PAGE BLOCKS                                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn trip-card-block []
@@ -49,11 +49,19 @@
     [ant/button "Bus"]
     [ant/button "Tram"]]])
 
+(defn find-route-block-option [r]
+  [ant/auto-complete-option
+   {:class "find-route-block-option"
+    :key   (:route_id r)
+    :text  (:route_id r)}
+   [:span {:class "route-code"} (:route_code r)]
+   [:span {:class "route-name"} (:route_name r)]])
+
 (defn find-route-block []
   (let [show-loading? (re-frame/subscribe
-                       [::subs/find-route-block-show-loading?])
+                       [::subs/find-route-show-loading?])
         result        (re-frame/subscribe
-                       [::subs/find-route-block-result])
+                       [::subs/find-route-result])
         handle-result (fn [r]
                         (str (:route_code r) " - " (:route_name r)))]
     [:div {:class "card-content"}
@@ -61,11 +69,14 @@
      [ant/auto-complete
       {:class       "max-width"
        :placeholder "Linea"
+       :filter-option false
        :suffix      (reagent/as-element (if @show-loading?
                                           loading-icon
                                           search-icon))
-       :on-change   #(re-frame/dispatch [::events/find-route-block-set-query %])
-       :dataSource  (mapv handle-result @result)}]]))
+       :on-change   #(re-frame/dispatch [::events/find-route-set-query %])
+       :on-select   #(re-frame/dispatch [::events/floating-card-show-route-detail %1])}
+      (for [r @result]
+        (find-route-block-option r))]]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -82,6 +93,12 @@
     [nearby-stops-block]
     [ant/divider]
     [find-route-block]]])
+
+(defmethod floating-card :route-detail []
+  (let [route-id (re-frame/subscribe [::subs/route-detail-id])]
+    [:div {:id "floating-card-container"}
+     [ant/card {:id "floating-card"}
+      [:h2 (str "Linea " @route-id)]]]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

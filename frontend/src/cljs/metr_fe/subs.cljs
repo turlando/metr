@@ -7,11 +7,16 @@
    (get-in db [:floating-card :page])))
 
 (re-frame/reg-sub
- ::find-route-block-show-loading?
+ ::find-route-show-loading?
  (fn [db _]
-   (get-in db [:floating-card :find-route-block :show-loading?])))
+   (get-in db [:floating-card :find-route :show-loading?])))
 
 (re-frame/reg-sub
- ::find-route-block-result
+ ::find-route-result
  (fn [db _]
-   (get-in db [:floating-card :find-route-block :result])))
+   (get-in db [:floating-card :find-route :result])))
+
+(re-frame/reg-sub
+ ::route-detail-id
+ (fn [db _]
+   (get-in db [:floating-card :route-detail :route-id])))
