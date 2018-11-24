@@ -2,6 +2,7 @@
   (:require [clojure.string :as string]
             [re-frame.core :as re-frame]
             [day8.re-frame.http-fx]
+            [re-frame-fx.dispatch]
             [metr-fe.state :as state]
             [metr-fe.api :as api]
             [ajax.core :as ajax]))
@@ -13,9 +14,12 @@
 
 (re-frame/reg-event-fx
  ::find-route-block-set-query
- (fn [{:keys [db]} [_ s]]
+ (fn [{:keys [db]} [k s]]
    {:db             (assoc-in db [:floating-card :find-route-block :query] s)
-    :dispatch-later [{:ms 250 :dispatch [::find-route-block-fetch]}]}))
+    :dispatch-debounce [{:id k
+                         :timeout 250
+                         :action :dispatch
+                         :event [::find-route-block-fetch]}]}))
 
 (re-frame/reg-event-db
  ::find-route-block-set-loading

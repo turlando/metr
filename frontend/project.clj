@@ -15,6 +15,8 @@
                  [re-frame "0.10.6"
                   :exclusions [args4j]]
                  [day8.re-frame/http-fx "0.1.6"]
+                 [com.7theta/re-frame-fx "0.2.1"
+                  :exclusions [args4j]]
                  [secretary "1.2.3"]
                  [antizer "0.3.1"
                   :exclusions [args4j]]
