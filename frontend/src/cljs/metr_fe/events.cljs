@@ -15,11 +15,11 @@
 (re-frame/reg-event-fx
  ::find-route-block-set-query
  (fn [{:keys [db]} [k s]]
-   {:db             (assoc-in db [:floating-card :find-route-block :query] s)
-    :dispatch-debounce [{:id k
+   {:db                (assoc-in db [:floating-card :find-route-block :query] s)
+    :dispatch-debounce [{:id      k
                          :timeout 250
-                         :action :dispatch
-                         :event [::find-route-block-fetch]}]}))
+                         :action  :dispatch
+                         :event   [::find-route-block-fetch]}]}))
 
 (re-frame/reg-event-db
  ::find-route-block-set-loading
