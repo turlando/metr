@@ -54,6 +54,6 @@
 (re-frame/reg-event-fx
  ::floating-card-show-route-detail
  (fn [{:keys [db]} [_ v]]
-   {:db       (assoc-in db [:floating-card :route-detail :route-id] v)
+   {:db       (assoc-in db [:floating-card :route-detail] v)
     :dispatch [::floating-card-set-page :route-detail]}))
 

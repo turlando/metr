@@ -7,5 +7,7 @@
                    :find-route   {:query         ""
                                   :show-loading? false
                                   :results       []}
-                   :route-detail {:route-id nil}}
+                   :route-detail {:route_id nil
+                                  :route_code nil
+                                  :route_name nil}}
    :map           {}})

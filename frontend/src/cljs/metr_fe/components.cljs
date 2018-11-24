@@ -53,7 +53,8 @@
   [ant/auto-complete-option
    {:class "find-route-block-option"
     :key   (:route_id r)
-    :text  (:route_id r)}
+    :text  (:route_id r)
+    :data  r}
    [:span {:class "route-code"} (:route_code r)]
    [:span {:class "route-name"} (:route_name r)]])
 
@@ -74,7 +75,8 @@
                                           loading-icon
                                           search-icon))
        :on-change   #(re-frame/dispatch [::events/find-route-set-query %])
-       :on-select   #(re-frame/dispatch [::events/floating-card-show-route-detail %1])}
+       :on-select   #(re-frame/dispatch [::events/floating-card-show-route-detail
+                                         (-> %2 .-props .-data (js->clj :keywordize-keys true))])}
       (for [r @result]
         (find-route-block-option r))]]))
 
@@ -95,10 +97,11 @@
     [find-route-block]]])
 
 (defmethod floating-card :route-detail []
-  (let [route-id (re-frame/subscribe [::subs/route-detail-id])]
+  (let [detail (re-frame/subscribe [::subs/route-detail])]
     [:div {:id "floating-card-container"}
      [ant/card {:id "floating-card"}
-      [:h2 (str "Linea " @route-id)]]]))
+      [:h2 (str "Linea " (:route_code @detail))]
+      [:h3 (:route_name @detail)]]]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

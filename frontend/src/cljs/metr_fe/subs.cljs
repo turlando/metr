@@ -17,6 +17,6 @@
    (get-in db [:floating-card :find-route :result])))
 
 (re-frame/reg-sub
- ::route-detail-id
+ ::route-detail
  (fn [db _]
-   (get-in db [:floating-card :route-detail :route-id])))
+   (get-in db [:floating-card :route-detail])))
