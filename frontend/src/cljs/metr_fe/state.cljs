@@ -5,5 +5,6 @@
 (def db
   {:floating-card {:page            default-floating-card-current-page
                    :find-route-block {:query         ""
-                                      :result        []
-                                      :show-loading? false}}})
+                                      :results       []
+                                      :show-loading? false}}
+   :map {}})

@@ -64,7 +64,7 @@
        :suffix      (reagent/as-element (if @show-loading?
                                           loading-icon
                                           search-icon))
-       :on-change   #(re-frame/dispatch [::events/find-route-query %])
+       :on-change   #(re-frame/dispatch [::events/find-route-block-set-query %])
        :dataSource  (mapv handle-result @result)}]]))
 
 
