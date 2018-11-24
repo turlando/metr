@@ -5,6 +5,7 @@
        , type AS route_type
     FROM route
    WHERE
-         code LIKE :?
-      OR name LIKE :?
+         code LIKE :query
+      OR name LIKE :query
 ORDER BY id ASC
+   LIMIT :limit

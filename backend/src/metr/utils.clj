@@ -15,6 +15,9 @@
   (zipmap (keys m)
           (map f (vals m))))
 
+(defn remove-nil-vals [m]
+  (into {} (remove (comp nil? second) m)))
+
 (defn slurp-resource [path]
   (-> path
       io/resource

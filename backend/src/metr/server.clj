@@ -1,10 +1,13 @@
 (ns metr.server
-  (:require [clojure.data.json :as json]
+  (:require [clojure.string :as string]
+            [clojure.data.json :as json]
             [compojure.core :as compojure]
             [metr.api :as api]
             [org.httpkit.server :as server]
             [ring.middleware.params :as middleware.params]
-            [ring.middleware.json :as middleware.json]))
+            [ring.middleware.json :as middleware.json]
+            [clojure.string :as string]
+            [metr.utils :as utils]))
 
 (defn- ok-response [body]
   {:status  200
@@ -12,9 +15,13 @@
 
 (defn- get-routes [request]
   (let [db-conn (-> request :db-conn)
-        query   (-> request :params (get "q"))]
+        q       (-> request :params (get "q"))
+        limit   (-> request :params (get "limit"))]
     (ok-response
-     (api/get-routes db-conn query))))
+     (api/get-routes
+      db-conn
+      (utils/remove-nil-vals {:q     q
+                              :limit limit})))))
 
 (defn- get-stop-times-by-stop-code [request]
   (let [db-conn  (-> request :db-conn)
