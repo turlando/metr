@@ -4,7 +4,7 @@
 
 (def db
   {:floating-card {:page         default-floating-card-current-page
-                   :find-route   {:query         ""
+                   :find-route   {:query         nil
                                   :show-loading? false
                                   :results       []}
                    :route-detail {:route_id nil

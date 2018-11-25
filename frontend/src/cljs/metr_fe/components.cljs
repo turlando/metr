@@ -74,9 +74,11 @@
        :suffix      (reagent/as-element (if @show-loading?
                                           loading-icon
                                           search-icon))
-       :on-change   #(re-frame/dispatch [::events/find-route-set-query %])
-       :on-select   #(re-frame/dispatch [::events/floating-card-show-route-detail
-                                         (-> %2 .-props .-data (js->clj :keywordize-keys true))])}
+       :on-change   #(re-frame/dispatch
+                      [::events/find-route-set-query %])
+       :on-select   #(re-frame/dispatch
+                      [::events/floating-card-show-route-detail
+                       (-> %2 .-props .-data (js->clj :keywordize-keys true))])}
       (for [r @result]
         (find-route-block-option r))]]))
 
