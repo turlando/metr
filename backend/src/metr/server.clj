@@ -9,9 +9,18 @@
             [clojure.string :as string]
             [metr.utils :as utils]))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; RESPONSE BOILERPLATE                                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn- ok-response [body]
   {:status  200
    :body    body})
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; HANDLERS                                                                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn- get-routes [request]
   (let [db-conn (-> request :db-conn)
@@ -23,52 +32,42 @@
       (utils/remove-nil-vals {:q     q
                               :limit limit})))))
 
-(defn- get-stop-times-by-stop-code [request]
-  (let [db-conn  (-> request :db-conn)
-        code     (-> request :params (get "code"))
-        time-min (-> request :params (get "time-min"))
-        time-max (-> request :params (get "time-max"))]
-    (ok-response
-     (api/get-stop-times-by-stop-code
-      db-conn
-      code
-      time-min time-max))))
-
-(defn- get-stops-by-coordinates [request]
-  (let [db-conn (-> request :db-conn)
-        lat-min (-> request :params (get "lat-min"))
-        lon-min (-> request :params (get "lon-min"))
-        lat-max (-> request :params (get "lat-max"))
-        lon-max (-> request :params (get "lon-max"))]
-    (ok-response
-     (api/get-stops-by-coordinates
-      db-conn
-      {:latitude-min  lat-min
-       :longitude-min lon-min
-       :latitude-max  lat-max
-       :longitude-max lon-max}))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ROUTES                                                                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (compojure/defroutes routes
-  (compojure/GET "/routes" [] get-routes)
-  (compojure/GET "/stop-times-by-stop-code" [] get-stop-times-by-stop-code)
-  (compojure/GET "/stops-by-coordinates" [] get-stops-by-coordinates))
+  (compojure/GET "/routes" [] get-routes))
 
-(defn- cors-response [response]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MIDDLEWARES                                                                ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn- add-cors [response]
   (assoc-in response [:headers "Access-Control-Allow-Origin"] "*"))
 
 (defn- wrap-cors [handler]
   (fn wrap-cors*
     ([request]
-     (-> (handler request) cors-response))
+     (add-cors (handler request)))
     ([request respond raise]
-     (handler request #(respond (cors-response %)) raise))))
+     (handler request #(respond (add-cors %)) raise))))
+
+(defn- add-db-conn [request db-conn]
+  (assoc request :db-conn db-conn))
 
 (defn- wrap-db-conn [handler db-conn]
   (fn wrap-db-conn*
     ([request]
-     (handler (assoc request :db-conn db-conn)))
+     (handler (add-db-conn request db-conn)))
     ([request respond raise]
-     (handler (assoc request :db-conn db-conn) #(respond %) raise))))
+     (handler (add-db-conn request db-conn) #(respond %) raise))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; START/STOP                                                                 ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn start!
   [{:keys [db-conn]
