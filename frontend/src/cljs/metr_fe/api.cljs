@@ -4,4 +4,4 @@
 
 (defmulti url identity)
 (defmethod url :routes [_ query limit]
-  (str base-url "routes" "?q=" query "&limit=" limit))
+  (str base-url "route" "?q=" query "&limit=" limit))
